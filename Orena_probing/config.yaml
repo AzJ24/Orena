@@ -1,0 +1,87 @@
+# Orena_probing — linear probing experiment config
+
+data:
+  source: local                 # "local" or "hub"
+  local_dir: ../probing_export  # relative to Orena_probing/, used when source == local
+  hub_repo: Machine-Learning-Oncology/orena_probing
+
+encoders:
+  clip:
+    model_id: openai/clip-vit-base-patch32
+    device: cuda:0
+  dino:
+    model_id: facebook/dinov2-base
+    device: cuda:1
+  biomedclip:
+    model_id: "hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224"
+    device: cuda:2
+  dinov3:
+    # Gated on HF — request access at https://huggingface.co/facebook/dinov3-vitb16-pretrain-lvd1689m
+    # and wait for approval before running extract_features.py with this encoder.
+    model_id: facebook/dinov3-vitb16-pretrain-lvd1689m
+    device: cuda:3
+  levjepa:
+    # LeJEPA ViT-L/16 video encoder (private org repo). Used on still images via
+    # 2-frame replication; embeddings are the [CLS] token (1024-dim).
+    model_id: Machine-Learning-Oncology/levjepa-vitl-k710
+    device: cuda:0
+  qwen:
+    # Vision tower of the Qwen3.5 multimodal LLM (only the ~300M vision encoder is
+    # loaded, not the 4B LLM). Mean-pooled merged patch tokens -> 2560-dim embedding.
+    model_id: Qwen/Qwen3.5-4B
+    device: cuda:1
+  levljepa:
+    # LeVLJEPA vision tower: timm vit_base_patch16_224 (DataComp-large pretrained).
+    # Loaded from local models/LeVLJEPA/vision_encoder.safetensors; probes the
+    # 768-dim ViT backbone feature (NOT the 256-dim cross-modal projection head).
+    model_id: lukaskuhndkfz/LeVLJEPA-ViT-B-DataComp-200k
+    device: cuda:0
+  gemma:
+    # Vision tower of Gemma 4 E2B (multimodal LLM); only the ~90M SigLIP-style
+    # ViT-B is loaded. Mean-pooled soft tokens -> 768-dim embedding.
+    # Small batch: its position-embedding one_hot is very memory-heavy per image.
+    model_id: google/gemma-4-E2B-it
+    device: cuda:2
+    batch_size: 8
+
+# Only single-frame tasks are wired up end-to-end right now.
+# Pair / window tasks are listed for completeness; extract_features.py and
+# train_probe.py will print a "not yet implemented" placeholder for them.
+tasks:
+  single_frame:
+    - fo_class_identification
+    - fo_class_identification_multilabel
+    - quadrant_localization
+    - closest_to_center
+    - grasped_by_instrument
+    - object_count
+  pair:
+    - instance_reidentification
+  window:
+    - fo_class_identification_window
+    - quadrant_localization_window
+    - object_count_window
+    - interaction_recognition
+    - temporal_ordering_pairwise
+    - co_occurrence_prediction
+    - longest_duration_class
+
+paths:
+  features_dir: features
+  results_dir: results
+  checkpoints_dir: probes/checkpoints
+
+wandb:
+  project: orena-probing
+  entity: null     # null = your default wandb entity
+  mode: online     # online, offline, or disabled
+
+training:
+  batch_size: 64
+  epochs: 150   # upper bound only — patience below decides the real stopping point
+  lr: 0.001
+  weight_decay: 0.0001
+  patience: 10
+  val_split: 0.2   # fraction of train.npz carved out as a validation set, for early stopping only
+  seed: 42
+  device: cuda

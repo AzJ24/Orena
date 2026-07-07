@@ -1,0 +1,69 @@
+{
+  "os": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.13.9",
+  "startedAt": "2026-06-28T14:12:13.296570Z",
+  "args": [
+    "--encoders",
+    "clip",
+    "dino",
+    "biomedclip",
+    "--tasks",
+    "all"
+  ],
+  "program": "/home/ajenane/orena/Orena_probing/train_probe.py",
+  "codePath": "Orena_probing/train_probe.py",
+  "codePathLocal": "train_probe.py",
+  "git": {
+    "remote": "git@github.com:MLO-lab/orena.git",
+    "commit": "08a1016e9406177627c1a0d55f3ecf91341ef7cc"
+  },
+  "email": "azza.jenane2@gmail.com",
+  "root": "/home/ajenane/orena/Orena_probing",
+  "host": "gpu26",
+  "executable": "/home/ajenane/orena/.venv/bin/python3",
+  "cpu_count": 32,
+  "cpu_count_logical": 64,
+  "gpu": "Quadro RTX 5000",
+  "gpu_count": 4,
+  "disk": {
+    "/": {
+      "total": "2015100878848",
+      "used": "34342068224"
+    }
+  },
+  "memory": {
+    "total": "270084931584"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "Quadro RTX 5000",
+      "memoryTotal": "17179869184",
+      "cudaCores": 3072,
+      "architecture": "Turing",
+      "uuid": "GPU-4b8d03b3-ffe2-36f0-9682-0f58d808da50"
+    },
+    {
+      "name": "Quadro RTX 5000",
+      "memoryTotal": "17179869184",
+      "cudaCores": 3072,
+      "architecture": "Turing",
+      "uuid": "GPU-56f619b8-01e7-967b-997e-9330f3517824"
+    },
+    {
+      "name": "Quadro RTX 5000",
+      "memoryTotal": "17179869184",
+      "cudaCores": 3072,
+      "architecture": "Turing",
+      "uuid": "GPU-6d28edaa-3f1c-9745-91d4-0776c814a2c6"
+    },
+    {
+      "name": "Quadro RTX 5000",
+      "memoryTotal": "17179869184",
+      "cudaCores": 3072,
+      "architecture": "Turing",
+      "uuid": "GPU-f04ceb6c-2eef-654d-18a8-b93e0101f81f"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "yivb07q41ha0hieiws93he4zgc1woanp"
+}

@@ -1,0 +1,21 @@
+2026-06-28 16:12:46,135 INFO    MainThread:1049301 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /home/ajenane/orena/Orena_probing/wandb/run-20260628_161246-eczmfcx0/logs/debug.log
+2026-06-28 16:12:46,135 INFO    MainThread:1049301 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /home/ajenane/orena/Orena_probing/wandb/run-20260628_161246-eczmfcx0/logs/debug-internal.log
+2026-06-28 16:12:46,136 INFO    MainThread:1049301 [wandb_init.py:init():851] calling init triggers
+2026-06-28 16:12:46,136 INFO    MainThread:1049301 [wandb_init.py:init():856] wandb.init called with sweep_config: {}
+config: {'encoder': 'clip', 'task': 'quadrant_localization', 'multi_label': False, 'num_classes': 4, 'n_train': 232, 'n_val': 59, 'n_test': 41, 'batch_size': 64, 'epochs': 150, 'lr': 0.001, 'weight_decay': 0.0001, 'patience': 10, 'val_split': 0.2, 'seed': 42, 'device': 'cuda:0', '_wandb': {}}
+2026-06-28 16:12:46,137 INFO    MainThread:1049301 [wandb_init.py:init():899] starting backend
+2026-06-28 16:12:46,137 INFO    MainThread:1049301 [wandb_init.py:init():914] sending inform_init request
+2026-06-28 16:12:46,422 INFO    MainThread:1049301 [wandb_init.py:init():919] backend started and connected
+2026-06-28 16:12:46,425 INFO    MainThread:1049301 [wandb_init.py:init():989] updated telemetry
+2026-06-28 16:12:46,439 INFO    MainThread:1049301 [wandb_init.py:init():1012] communicating run to backend with 90.0 second timeout
+2026-06-28 16:12:46,790 INFO    MainThread:1049301 [wandb_init.py:init():1057] starting run threads in backend
+2026-06-28 16:12:47,125 INFO    MainThread:1049301 [wandb_run.py:_console_start():2509] atexit reg
+2026-06-28 16:12:47,126 INFO    MainThread:1049301 [wandb_run.py:_redirect():2359] redirect: wrap_raw
+2026-06-28 16:12:47,126 INFO    MainThread:1049301 [wandb_run.py:_redirect():2428] Wrapping output streams.
+2026-06-28 16:12:47,126 INFO    MainThread:1049301 [wandb_run.py:_redirect():2451] Redirects installed.
+2026-06-28 16:12:47,128 INFO    MainThread:1049301 [wandb_init.py:init():1095] run started, returning control to user process
+2026-06-28 16:12:48,885 INFO    MainThread:1049301 [wandb_run.py:_finish():2271] finishing run azza-jenane2-technical-university-of-munich/orena-probing/eczmfcx0
+2026-06-28 16:12:48,886 INFO    MainThread:1049301 [wandb_run.py:_atexit_cleanup():2476] got exitcode: 0
+2026-06-28 16:12:48,886 INFO    MainThread:1049301 [wandb_run.py:_restore():2458] restore
+2026-06-28 16:12:48,887 INFO    MainThread:1049301 [wandb_run.py:_restore():2464] restore done
+2026-06-28 16:12:50,218 INFO    MainThread:1049301 [wandb_run.py:_footer_sync_info():3877] logging synced files

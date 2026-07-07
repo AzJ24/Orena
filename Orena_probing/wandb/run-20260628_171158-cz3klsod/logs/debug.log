@@ -1,0 +1,24 @@
+2026-06-28 17:11:58,695 INFO    MainThread:1138032 [wandb_setup.py:_flush():81] Current SDK version is 0.27.0
+2026-06-28 17:11:58,696 INFO    MainThread:1138032 [wandb_setup.py:_flush():81] Configure stats pid to 1138032
+2026-06-28 17:11:58,697 INFO    MainThread:1138032 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-06-28 17:11:58,697 INFO    MainThread:1138032 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /home/ajenane/orena/Orena_probing/wandb/run-20260628_171158-cz3klsod/logs/debug.log
+2026-06-28 17:11:58,698 INFO    MainThread:1138032 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /home/ajenane/orena/Orena_probing/wandb/run-20260628_171158-cz3klsod/logs/debug-internal.log
+2026-06-28 17:11:58,698 INFO    MainThread:1138032 [wandb_init.py:init():851] calling init triggers
+2026-06-28 17:11:58,698 INFO    MainThread:1138032 [wandb_init.py:init():856] wandb.init called with sweep_config: {}
+config: {'encoder': 'dinov3', 'task': 'fo_class_identification', 'multi_label': False, 'num_classes': 8, 'n_train': 1557, 'n_val': 390, 'n_test': 538, 'batch_size': 64, 'epochs': 150, 'lr': 0.001, 'weight_decay': 0.0001, 'patience': 10, 'val_split': 0.2, 'seed': 42, 'device': 'cuda:3', '_wandb': {}}
+2026-06-28 17:11:58,699 INFO    MainThread:1138032 [wandb_init.py:init():899] starting backend
+2026-06-28 17:11:59,098 INFO    MainThread:1138032 [wandb_init.py:init():914] sending inform_init request
+2026-06-28 17:12:01,943 INFO    MainThread:1138032 [wandb_init.py:init():919] backend started and connected
+2026-06-28 17:12:01,947 INFO    MainThread:1138032 [wandb_init.py:init():989] updated telemetry
+2026-06-28 17:12:01,970 INFO    MainThread:1138032 [wandb_init.py:init():1012] communicating run to backend with 90.0 second timeout
+2026-06-28 17:12:02,380 INFO    MainThread:1138032 [wandb_init.py:init():1057] starting run threads in backend
+2026-06-28 17:12:03,288 INFO    MainThread:1138032 [wandb_run.py:_console_start():2509] atexit reg
+2026-06-28 17:12:03,289 INFO    MainThread:1138032 [wandb_run.py:_redirect():2359] redirect: wrap_raw
+2026-06-28 17:12:03,289 INFO    MainThread:1138032 [wandb_run.py:_redirect():2428] Wrapping output streams.
+2026-06-28 17:12:03,289 INFO    MainThread:1138032 [wandb_run.py:_redirect():2451] Redirects installed.
+2026-06-28 17:12:03,299 INFO    MainThread:1138032 [wandb_init.py:init():1095] run started, returning control to user process
+2026-06-28 17:12:10,605 INFO    MainThread:1138032 [wandb_run.py:_finish():2271] finishing run azza-jenane2-technical-university-of-munich/orena-probing/cz3klsod
+2026-06-28 17:12:10,606 INFO    MainThread:1138032 [wandb_run.py:_atexit_cleanup():2476] got exitcode: 0
+2026-06-28 17:12:10,607 INFO    MainThread:1138032 [wandb_run.py:_restore():2458] restore
+2026-06-28 17:12:10,607 INFO    MainThread:1138032 [wandb_run.py:_restore():2464] restore done
+2026-06-28 17:12:11,516 INFO    MainThread:1138032 [wandb_run.py:_footer_sync_info():3877] logging synced files

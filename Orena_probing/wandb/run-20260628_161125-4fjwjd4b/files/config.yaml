@@ -1,0 +1,109 @@
+_wandb:
+    value:
+        cli_version: 0.27.0
+        e:
+            h5o6cs286f01kat3llxrgr98b0g5kn19:
+                args:
+                    - --encoders
+                    - clip
+                    - --tasks
+                    - grasped_by_instrument
+                codePath: Orena_probing/train_probe.py
+                codePathLocal: train_probe.py
+                cpu_count: 32
+                cpu_count_logical: 64
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "2015100878848"
+                        used: "34341507072"
+                email: azza.jenane2@gmail.com
+                executable: /home/ajenane/orena/.venv/bin/python3
+                git:
+                    commit: 08a1016e9406177627c1a0d55f3ecf91341ef7cc
+                    remote: git@github.com:MLO-lab/orena.git
+                gpu: Quadro RTX 5000
+                gpu_count: 4
+                gpu_nvidia:
+                    - architecture: Turing
+                      cudaCores: 3072
+                      memoryTotal: "17179869184"
+                      name: Quadro RTX 5000
+                      uuid: GPU-4b8d03b3-ffe2-36f0-9682-0f58d808da50
+                    - architecture: Turing
+                      cudaCores: 3072
+                      memoryTotal: "17179869184"
+                      name: Quadro RTX 5000
+                      uuid: GPU-56f619b8-01e7-967b-997e-9330f3517824
+                    - architecture: Turing
+                      cudaCores: 3072
+                      memoryTotal: "17179869184"
+                      name: Quadro RTX 5000
+                      uuid: GPU-6d28edaa-3f1c-9745-91d4-0776c814a2c6
+                    - architecture: Turing
+                      cudaCores: 3072
+                      memoryTotal: "17179869184"
+                      name: Quadro RTX 5000
+                      uuid: GPU-f04ceb6c-2eef-654d-18a8-b93e0101f81f
+                host: gpu26
+                memory:
+                    total: "270084931584"
+                os: Linux-6.8.0-124-generic-x86_64-with-glibc2.39
+                program: /home/ajenane/orena/Orena_probing/train_probe.py
+                python: CPython 3.13.9
+                root: /home/ajenane/orena/Orena_probing
+                startedAt: "2026-06-28T14:11:25.317549Z"
+                writerId: h5o6cs286f01kat3llxrgr98b0g5kn19
+        m: []
+        python_version: 3.13.9
+        t:
+            "1":
+                - 1
+                - 5
+                - 49
+                - 51
+                - 53
+            "2":
+                - 1
+                - 5
+                - 49
+                - 51
+                - 53
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.13.9
+            "5": 0.27.0
+            "12": 0.27.0
+            "13": linux-x86_64
+batch_size:
+    value: 64
+device:
+    value: cuda:0
+encoder:
+    value: clip
+epochs:
+    value: 150
+lr:
+    value: 0.001
+multi_label:
+    value: false
+n_test:
+    value: 7
+n_train:
+    value: 43
+n_val:
+    value: 11
+num_classes:
+    value: 2
+patience:
+    value: 10
+seed:
+    value: 42
+task:
+    value: grasped_by_instrument
+val_split:
+    value: 0.2
+weight_decay:
+    value: 0.0001
