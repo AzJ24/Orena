@@ -1,5 +1,39 @@
-PROBING_SUMMARY.md
-webapp/
-./venv/
+# secrets & env
+.env
+.venv/
+venv/
+
+# python
+__pycache__/
+*.pyc
+
+# model weights & checkpoints  (push to HF Hub instead of git)
+**/checkpoints/
+orena_grpo/base_plus_sft_8r/
+*.safetensors
+*.bin
+*.pt
+
+# large data / features / extracts
 probing_export/
 Orena_probing/models/
+Orena_probing/features/
+orena_sft/sft_export/
+*.npz
+*.arrow
+
+# training/eval logs & outputs
+wandb/
+**/logs/
+**/predictions.jsonl
+**/eval_samples.jsonl
+
+# GEPA run state (keep best_prompt.txt + the human-readable evolution.md)
+orena_gepa/runs/**
+!orena_gepa/runs/**/
+!orena_gepa/runs/**/best_prompt.txt
+!orena_gepa/runs/**/evolution.md
+
+# misc / pre-existing
+PROBING_SUMMARY.md
+webapp/
