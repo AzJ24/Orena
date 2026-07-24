@@ -7,16 +7,20 @@ requires-python = ">=3.13"
 dependencies = [
     "datasets>=4.8.5",
     "flask>=3.1.3",
+    "gepa>=0.1.4",
     "huggingface-hub>=1.17.0",
     "hydra-core>=1.3.2",
     "ipykernel>=7.3.0",
     "jupyter>=1.1.1",
+    "litellm>=1.93.0",
     "matplotlib>=3.10.9",
     "numpy>=2.4.6",
     "omegaconf>=2.3.0",
     "open-clip-torch>=3.3.0",
     "opencv-python>=4.13.0.92",
+    "orena-focus>=0.3.4",
     "pandas>=3.0.3",
+    "peft>=0.19.1",
     "pillow>=12.2.0",
     "pylance>=7.0.0",
     "pyyaml>=6.0.3",
@@ -30,5 +34,13 @@ dependencies = [
     "torchvision>=0.27.0",
     "tqdm>=4.67.3",
     "transformers>=5.9.0",
+    "trl>=1.8.0",
     "wandb>=0.27.0",
 ]
+
+[tool.pyright]
+# These sibling script dirs are added to sys.path at runtime (sys.path.insert),
+# so cross-folder imports like `from prompts import ...` resolve when run, but
+# Pylance can't follow that. Listing them here silences the false "could not be
+# resolved" underlines without changing runtime behaviour.
+extraPaths = ["orena_sft", "orena_gepa", "orena_rag"]

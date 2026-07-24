@@ -1,0 +1,14 @@
+level,name,accuracy,ci_low,ci_high,count
+leaf,object_aggregation,0.06666666666666667,0.0,0.2,15
+leaf,object_attributes,0.5,0.0,1.0,2
+leaf,object_identification,0.0,0.0,0.0,12
+leaf,spatial_localization_camera,0.6666666666666666,0.0,1.0,3
+group,aggregation,0.06666666666666667,0.0,0.2,15
+group,object_recognition,0.17647058823529413,0.0,0.35294117647058826,17
+answer_format,binary,0.5,0.0,1.0,2
+answer_format,fo_class,0.0,0.0,0.0,12
+answer_format,multiple_choice,1.0,1.0,1.0,2
+answer_format,number,0.0,0.0,0.0,13
+answer_format,open_ended,0.3333333333333333,0.0,1.0,3
+overall,MEAN,0.125,0.03125,0.25,32
+pre_evaluation,SCORE,0.1215686274509804,,,2

@@ -1,0 +1,18 @@
+{
+  "Laparoscopic Cholecystectomy": {
+    "anatomy": "gallbladder on the inferior surface of the liver (right upper quadrant); Hartmann's pouch; the cystic duct and cystic artery within Calot's (hepatocystic) triangle; the common bile duct and common hepatic duct; the liver bed / gallbladder fossa. Typical view: subhepatic, right upper quadrant.",
+    "fo_priors": "Clip (applied to the cystic duct and cystic artery); Specimen bag (to extract the gallbladder); Specimen; Sponge; occasionally an External drain."
+  },
+  "Sigmoid Resection": {
+    "anatomy": "sigmoid colon and descending colon; the rectum and rectosigmoid junction; the sigmoid mesocolon and its vessels; the inferior mesenteric artery and vein; the left ureter and gonadal vessels; the pelvic brim. Typical view: left lower quadrant and pelvis.",
+    "fo_priors": "Clip; Sponge; External drain; Needle (from suturing/anastomosis); Specimen bag; Silicone loop."
+  },
+  "Proctocolectomy": {
+    "anatomy": "the entire colon (ascending, transverse, descending, sigmoid), the rectum and anal canal; the terminal ileum (used for pouch formation); the mesocolon and mesentery; ileocolic and inferior mesenteric vessels. Typical view: across the abdomen and pelvis.",
+    "fo_priors": "Clip; Sponge; External drain; Needle; Specimen bag; Silicone loop."
+  },
+  "Rectal Resection": {
+    "anatomy": "the rectum and its mesorectum; the sigmoid colon; the presacral space and pelvic floor; the inferior mesenteric artery; both ureters; the pelvic autonomic nerves. Typical view: deep pelvis.",
+    "fo_priors": "Clip; Sponge; External drain; Needle; Specimen bag; Silicone loop."
+  }
+}

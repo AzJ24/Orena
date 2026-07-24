@@ -1,0 +1,6 @@
+{
+  "embed_model": "all-MiniLM-L6-v2",
+  "n_articles": 1282,
+  "n_passages": 2013,
+  "top_k": 4
+}
