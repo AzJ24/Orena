@@ -1,0 +1,698 @@
+{
+  "_comment": "Pinned video->split assignment for the combined FRAME-track export. The JSONL exports themselves are gitignored (regenerate with build_frame_sft_dataset.py); this file pins WHICH videos landed in which split so runs stay comparable across regenerations.",
+  "generator": "orena_sft/build_frame_sft_dataset.py",
+  "params": {
+    "eval_frac": 0.12,
+    "seed": 42,
+    "level": "video",
+    "stratified_by": "procedure_type",
+    "rule": "n_eval = max(1, round(n_videos_in_procedure * eval_frac))"
+  },
+  "splits": {
+    "train": {
+      "n_rows": 12225,
+      "n_videos": 81,
+      "rows_per_procedure": {
+        "Laparoscopic Cholecystectomy": 5025,
+        "Proctocolectomy": 3600,
+        "Rectal Resection": 3600
+      },
+      "videos": {
+        "heico/0000 - Heico - Prokto - 1.avi": {
+          "procedure_type": "Proctocolectomy",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0001 - Heico - Prokto - 2.avi": {
+          "procedure_type": "Proctocolectomy",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0002 - Heico - Prokto - 3.avi": {
+          "procedure_type": "Proctocolectomy",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0003 - Heico - Prokto - 4.avi": {
+          "procedure_type": "Proctocolectomy",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0004 - Heico - Prokto - 5.avi": {
+          "procedure_type": "Proctocolectomy",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0005 - Heico - Prokto - 6.avi": {
+          "procedure_type": "Proctocolectomy",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0006 - Heico - Prokto - 7.avi": {
+          "procedure_type": "Proctocolectomy",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0007 - Heico - Prokto - 8.avi": {
+          "procedure_type": "Proctocolectomy",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0009 - Heico - Prokto - 10.avi": {
+          "procedure_type": "Proctocolectomy",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0011 - Heico - Rektum - 2.avi": {
+          "procedure_type": "Rectal Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0012 - Heico - Rektum - 3.avi": {
+          "procedure_type": "Rectal Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0013 - Heico - Rektum - 4.avi": {
+          "procedure_type": "Rectal Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0014 - Heico - Rektum - 5.avi": {
+          "procedure_type": "Rectal Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0015 - Heico - Rektum - 6.avi": {
+          "procedure_type": "Rectal Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0016 - Heico - Rektum - 7.avi": {
+          "procedure_type": "Rectal Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0017 - Heico - Rektum - 8.avi": {
+          "procedure_type": "Rectal Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0018 - Heico - Rektum - 9.avi": {
+          "procedure_type": "Rectal Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0019 - Heico - Rektum - 10.avi": {
+          "procedure_type": "Rectal Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "lapchole/0002 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0005 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0006 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0008 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0009 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0010 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0011 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0013 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0018 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0020 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0023 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0024 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0029 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0030 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0034 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0037 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0039 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0040 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0042 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0044 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0049 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 38
+        },
+        "lapchole/0050 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 78
+        },
+        "lapchole/0052 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0054 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0057 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0058 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0059 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0062 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0063 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0068 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0071 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0073 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0076 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0081 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0082 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 79
+        },
+        "lapchole/0083 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0086 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0092 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0094 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0096 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0097 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0099 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0101 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0102 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0105 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0107 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0108 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0114 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0115 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0128 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0129 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0133 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0137 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0138 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0144 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0146 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0147 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0160 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0167 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0169 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0180 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0182 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0184 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        }
+      },
+      "videoid_sha256_16": "46d4515c70e8f1c4"
+    },
+    "eval": {
+      "n_rows": 1523,
+      "n_videos": 11,
+      "rows_per_procedure": {
+        "Laparoscopic Cholecystectomy": 723,
+        "Proctocolectomy": 400,
+        "Rectal Resection": 400
+      },
+      "videos": {
+        "heico/0008 - Heico - Prokto - 9.avi": {
+          "procedure_type": "Proctocolectomy",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0010 - Heico - Rektum - 1.avi": {
+          "procedure_type": "Rectal Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "lapchole/0001 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0007 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0014 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0036 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0041 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0053 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0055 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0056 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0106 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        }
+      },
+      "videoid_sha256_16": "1f319a22dc7315e8"
+    },
+    "test": {
+      "n_rows": 6252,
+      "n_videos": 38,
+      "rows_per_procedure": {
+        "Laparoscopic Cholecystectomy": 2252,
+        "Sigmoid Resection": 4000
+      },
+      "videos": {
+        "heico/0020 - Heico - Sigma - 1.avi": {
+          "procedure_type": "Sigmoid Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0021 - Heico - Sigma - 2.avi": {
+          "procedure_type": "Sigmoid Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0022 - Heico - Sigma - 3.avi": {
+          "procedure_type": "Sigmoid Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0023 - Heico - Sigma - 4.avi": {
+          "procedure_type": "Sigmoid Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0024 - Heico - Sigma - 5.avi": {
+          "procedure_type": "Sigmoid Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0025 - Heico - Sigma - 6.avi": {
+          "procedure_type": "Sigmoid Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0026 - Heico - Sigma - 7.avi": {
+          "procedure_type": "Sigmoid Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0027 - Heico - Sigma - 8.avi": {
+          "procedure_type": "Sigmoid Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0028 - Heico - Sigma - 9.avi": {
+          "procedure_type": "Sigmoid Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "heico/0029 - Heico - Sigma - 10.avi": {
+          "procedure_type": "Sigmoid Resection",
+          "source_dataset": "heico",
+          "n_rows": 400
+        },
+        "lapchole/0000 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0004 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0016 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0017 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0019 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0026 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0027 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0028 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0032 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0033 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0043 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0045 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0048 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0060 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0061 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0065 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0066 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0070 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0072 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0074 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0078 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0079 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0089 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0093 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0100 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 81
+        },
+        "lapchole/0149 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0158 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        },
+        "lapchole/0183 - Laparoscopic Cholecystectomy.mp4": {
+          "procedure_type": "Laparoscopic Cholecystectomy",
+          "source_dataset": "lapchole",
+          "n_rows": 80
+        }
+      },
+      "videoid_sha256_16": "07c79cb86c3ce758"
+    }
+  }
+}
