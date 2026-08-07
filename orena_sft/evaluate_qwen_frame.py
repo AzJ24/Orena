@@ -297,6 +297,11 @@ def main():
     ap.add_argument("--fo-definitions", action="store_true",
                      help="with a non-plain --prompt-style, include the full per-class descriptions "
                           "instead of the class names alone.")
+    ap.add_argument("--system-prompt-file", type=Path, default=None,
+                     help="evaluate with a system prompt read verbatim from this file (e.g. a "
+                          "GEPA-evolved best_prompt.txt) instead of build_system_prompt(). Overrides "
+                          "--prompt-style / --fo-definitions. Use the SAME file the checkpoint was "
+                          "trained with; output is parsed with extract_answer.")
     ap.add_argument("--max-new-tokens", type=int, default=None,
                      help="default: 32 for plain/direct (terse answers), 128 for structured "
                           "(the REASONING line needs room). NOTE: raising this on a model that "
@@ -314,18 +319,23 @@ def main():
     ap.add_argument("--judge-workers", type=int, default=1)
     args = ap.parse_args()
 
-    if args.fo_definitions and args.prompt_style == "plain":
+    if args.fo_definitions and args.prompt_style == "plain" and args.system_prompt_file is None:
         ap.error("--fo-definitions has no effect with --prompt-style plain.")
-    args.system_prompt = (
-        build_system_prompt(args.fo_definitions, style=args.prompt_style)
-        if args.prompt_style != "plain" else None
-    )
+    if args.system_prompt_file is not None:
+        args.system_prompt = args.system_prompt_file.read_text()
+    elif args.prompt_style != "plain":
+        args.system_prompt = build_system_prompt(args.fo_definitions, style=args.prompt_style)
+    else:
+        args.system_prompt = None
     if args.max_new_tokens is None:
         args.max_new_tokens = 128 if args.prompt_style == "structured" else 32
 
     # One sub-folder per prompt arm so evaluating the same checkpoint under
     # different prompts never overwrites a previous result.
-    style_tag = "" if args.prompt_style == "plain" else f"_{args.prompt_style}"
+    if args.system_prompt_file is not None:
+        style_tag = "_gepa_" + args.system_prompt_file.resolve().parent.name
+    else:
+        style_tag = "" if args.prompt_style == "plain" else f"_{args.prompt_style}"
     if style_tag and args.fo_definitions:
         style_tag += "_defs"
     if args.condition_procedure and args.inject_knowledge == "none":

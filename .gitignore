@@ -9,6 +9,7 @@ __pycache__/
 
 # model weights & checkpoints  (push to HF Hub instead of git)
 **/checkpoints/
+models/
 orena_grpo/base_plus_sft_8r/
 *.safetensors
 *.bin
@@ -18,7 +19,7 @@ orena_grpo/base_plus_sft_8r/
 probing_export/
 Orena_probing/models/
 Orena_probing/features/
-orena_sft/sft_export/
+**/sft_export*/
 *.npz
 *.arrow
 
@@ -37,3 +38,16 @@ orena_gepa/runs/**
 # misc / pre-existing
 PROBING_SUMMARY.md
 webapp/
+
+# per-CUDA virtualenvs (venv-cu124/126/128)
+venv-*/
+
+# submission export artifacts (multi-GB tarballs; rebuild with export_artifacts.sh)
+*.tar.gz
+*.tar.gz.sha256
+**/real_batch/
+
+# media test fixtures (regenerate from the challenge data)
+*.mp4
+*.avi
+*.zip

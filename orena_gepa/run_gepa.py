@@ -79,6 +79,9 @@ def main():
     ap.add_argument("--max-new-tokens", type=int, default=128)
     ap.add_argument("--with-judge", action="store_true",
                      help="load a TransformersJudge for open_ended/matching/multiple_choice examples")
+    ap.add_argument("--judge-device", default="cuda",
+                     help="device for the judge model (TransformersJudge defaults to cpu, which is "
+                          "far too slow in the loop); shares the GPU with the task model")
     args = ap.parse_args()
 
     if args.out_dir is None:
@@ -106,7 +109,7 @@ def main():
     judge = None
     if args.with_judge:
         from focus.evaluation.judges import TransformersJudge
-        judge = TransformersJudge()
+        judge = TransformersJudge(device=args.judge_device)
 
     adapter = FocusFrameAdapter(runner, judge=judge)
     seed = {COMPONENT: build_system_prompt(args.fo_definitions, style=args.seed_style)}

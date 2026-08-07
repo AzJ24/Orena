@@ -1,0 +1,37 @@
+name, memory.total [MiB], driver_version
+NVIDIA H200 NVL, 143771 MiB, 580.173.02
+########## FULL RUN (timed as the platform times it) ##########
+########## VERDICT ##########
+exit code            : 0
+questions in batch   : 20
+WALL CLOCK (total)   : 169.4s
+BUDGET               : 120 + 20x5 = 220s
+margin               : 50.6s  (77.0% of budget used)
+forfeit threshold    : 264s (>20% over = whole batch lost)
+
+responses            : 20 / 20
+empty answers        : 0 
+
+--- answers ---
+  q001  'Clip, Sponge'                <- Which combination of foreign object classes is visible in this f
+  q002  'Clip'                        <- There is one surgical foreign object visible in the frame. What 
+  q003  'External drain'              <- There is one surgical foreign object visible in the frame. What 
+  q004  'Sponge'                      <- There is one surgical foreign object visible in the frame. What 
+  q005  'Clip'                        <- List all foreign objects that are visible in this video frame. P
+  q006  'Clip, Sponge'                <- List all foreign objects that are visible in this video frame. P
+  q007  'External drain'              <- List all foreign objects that are visible in this video frame. P
+  q008  'Sponge'                      <- List all foreign objects that are visible in this video frame. P
+  q009  'Clip'                        <- What class is the foreign object located in the bottom/left rela
+  q010  'External drain'              <- What class is the foreign object located in the bottom/right rel
+  q011  'Specimen'                    <- There is one surgical foreign object visible in the frame. What 
+  q012  'Specimen bag'                <- There is one surgical foreign object visible in the frame. What 
+  q013  'Specimen'                    <- There is one surgical foreign object visible in the frame. What 
+  q014  'Clip'                        <- List all foreign objects that are visible in this video frame. P
+  q015  'Specimen, Specimen bag'      <- List all foreign objects that are visible in this video frame. P
+  q016  'Needle'                      <- List all foreign objects that are visible in this video frame. P
+  q017  'Specimen'                    <- What class is the foreign object located in the bottom/left rela
+  q018  'Sponge'                      <- What class is the foreign object located in the top/right relati
+  q019  'No'                          <- There is one specimen visible in this frame. Is this foreign obj
+  q020  'none'                        <- Which foreign object class is partially occluded or not fully vi
+
+>>> PASS: 169.4s within 220s budget <<<

@@ -1,0 +1,17 @@
++ SUB=/home/ajenane/orena/orena_submission
++ IN=/home/ajenane/orena/orena_submission/real_batch/interface_1
++ OUT=/home/ajenane/orena/orena_submission/real_batch/output_plain
++ WEIGHTS=/home/ajenane/orena/orena_submission/frame-algorithm/resources/frame_model
++ SIF=/home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif
++ rm -rf /home/ajenane/orena/orena_submission/real_batch/output_plain
++ mkdir -p /home/ajenane/orena/orena_submission/real_batch/output_plain
+++ date +%s.%N
++ START=1785143902.098739237
++ apptainer exec --nv --pwd /opt/app --no-home --bind /home/ajenane/orena/orena_submission/real_batch/interface_1:/input:ro --bind /home/ajenane/orena/orena_submission/real_batch/output_plain:/output --bind /home/ajenane/orena/orena_submission/frame-algorithm/resources/frame_model:/opt/app/resources/frame_model:ro /home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif bash -c 'export HOME=/home/user; exec python inference.py'
++ grep -E 'Device:|setup took|Inference complete|inference done'
+++ date +%s.%N
++ END=1785143923.027372059
+++ echo '1785143923.027372059 - 1785143902.098739237'
+++ bc
++ echo 'WALL CLOCK (plain-file weights): 20.928632822s'
++ echo '   squashfs runs were: 169.4s (NFS) / 152.5s (local) / 145.8s (cached)'

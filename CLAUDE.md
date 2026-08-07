@@ -1,0 +1,1 @@
+When writing code, only include necessary, clean and informative comment. Do not include a comment of every fix in the code. Do not add long docstrings that explain changes in details. 

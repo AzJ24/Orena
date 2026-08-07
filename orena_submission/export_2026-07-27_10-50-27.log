@@ -1,0 +1,49 @@
+logging to /home/ajenane/orena/orena_submission/export_2026-07-27_10-50-27.log
+started Mon Jul 27 10:50:27 AM CEST 2026
+localhost/frame-algorithm:1.0  25.9 GB
+/dev/mapper/ubuntu--vg-lv--0  3.4T  1.2T  2.1T  38% /
+
+=== 1/2 submission artifact: docker-archive .tar.gz ===
+-rw-r--r-- 1 ajenane buettnerlab 18G Jul 27 11:30 /home/ajenane/orena/orena_submission/frame-algorithm_2026-07-27_10-50-27.tar.gz
+
+=== 2/2 test artifact: .sif for apptainer ===
+Copying blob sha256:2573e0d8158209ed54ab25c87bcdcb00bd3d2539246960a3d592a1c599d70465
+Copying blob sha256:4f13a915e11d26ce399e291f73ad666f176caddded6d90b7fb966db69d81bfde
+Copying blob sha256:ab6422ad52285d8ee4e7f985d118a0abf4b14e5156aa7960ba40bddc5916b56e
+Copying blob sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+Copying blob sha256:8d84350553f45c546fa42fd2a6e589b2c4336b2675b05b9b01a09668b28486ca
+Copying blob sha256:f841cb8e5b624f53efc8f4277032e7e5bca70c116a378a4bbb4fe2f66a26107c
+Copying blob sha256:6854978cc579eccc66729b57b253d0739f549ffbd3b2a302fdd6d5e20f308b36
+Copying blob sha256:1cfee8646f363bd8abeaf48f4a50c7fea4f9355e502a7c25f5897fc76589ccbb
+Copying blob sha256:c2014219f93851a140aeb7a53d7f9b9ba506b14a7017b6af05f93ff996417361
+Copying blob sha256:0a8df54b62b8264487cb1c416d68615f79b1cd82adb16fbf2637363c2c0cc1df
+Copying blob sha256:c879aba4d7ea28782fb4ba4d4ee8843d4f59640b9fbfeb66e512e5ea96cb2ea2
+Copying blob sha256:cd7bae3087f44f3b639bceca1f487d26f6b9708c068c7a104d3a5c67ee7d1994
+Copying config sha256:e923a7ed4c986ceef11db1c4b7902117f72b2234c9857d784efc8fb257377e33
+Writing manifest to image destination
+INFO:    Starting build...
+INFO:    Fetching OCI image...
+INFO:    Extracting OCI image...
+INFO:    Inserting Apptainer configuration...
+INFO:    Creating SIF file...
+INFO:    Build complete: /home/ajenane/images/frame-algorithm-2026-07-27_10-50-27.sif
+-rwxr-xr-x 1 ajenane buettnerlab 18G Jul 27 11:45 /home/ajenane/images/frame-algorithm-2026-07-27_10-50-27.sif
+
+=== done Mon Jul 27 11:45:27 AM CEST 2026 ===
+  submit : /home/ajenane/orena/orena_submission/frame-algorithm_2026-07-27_10-50-27.tar.gz
+  test   : /home/ajenane/images/frame-algorithm-2026-07-27_10-50-27.sif
+  log    : /home/ajenane/orena/orena_submission/export_2026-07-27_10-50-27.log
+
+Verify CUDA inside the shipped image on an H200 (NOT the RTX PRO 6000 --
+that is Blackwell sm_120, unsupported by this image's CUDA 12.4 torch):
+
+  srun -p gpu-large -w gpu38 --gres=gpu:h200:1 --time=00:20:00 \
+    apptainer exec --nv /home/ajenane/images/frame-algorithm-2026-07-27_10-50-27.sif \
+    python -c "import torch;print(torch.__version__,torch.version.cuda,torch.cuda.is_available(),torch.cuda.get_device_name(0))"
+
+Then a full 3-question batch through the real entrypoint:
+  mkdir -p /tmp/fa-output && srun -p gpu-large -w gpu38 --gres=gpu:h200:1 --time=00:30:00 \
+    apptainer run --nv \
+      --bind /home/ajenane/orena/orena_submission/frame-algorithm/test/input/interface_1:/input:ro \
+      --bind /tmp/fa-output:/output \
+      /home/ajenane/images/frame-algorithm-2026-07-27_10-50-27.sif && cat /tmp/fa-output/answer.json

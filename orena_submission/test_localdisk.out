@@ -1,0 +1,12 @@
+/dev/nvme0n1p1  1.8T  393G  1.3T  24% /scratch
+### staging .sif to LOCAL disk (not charged; mimics platform pre-extracting the image) ###
+### RUN FROM LOCAL DISK ###
+11:12:42  INFO      __main__  Device: cuda
+11:14:55  INFO      __main__  Model loaded and set to eval mode (setup took 132.79 s)
+11:15:04  INFO      __main__  Inference complete: 20 answered (0 failed)
+11:15:04  INFO      __main__  === inference done in 141.61 s total ===
+WALL CLOCK (local disk): 152.513659429s   [NFS+squashfs run was 169.4s]
+### second run: same file, now in page cache (upper bound on how fast I/O can get) ###
+11:17:21  INFO      __main__  Model loaded and set to eval mode (setup took 126.93 s)
+11:17:30  INFO      __main__  === inference done in 135.34 s total ===
+WALL CLOCK (warm cache): 145.763227148s

@@ -1,0 +1,42 @@
+[
+  {
+    "qID": "q006",
+    "videoID": "0029 - Heico - Sigma - 10.avi",
+    "start_time": 9353.0,
+    "end_time": 9382.0,
+    "procedure_type": "Sigmoid Resection",
+    "question": "During the video, at what time is the 1st visible External drain inserted in the abdomen for the first time? Please provide the answer in hh:mm:ss."
+  },
+  {
+    "qID": "q008",
+    "videoID": "0029 - Heico - Sigma - 10.avi",
+    "start_time": 9367.0,
+    "end_time": 9396.0,
+    "procedure_type": "Sigmoid Resection",
+    "question": "Which surgical foreign object is inserted or created (in case of a specimen) in the abdominal cavity in this video? Please provide a class name or answer with none."
+  },
+  {
+    "qID": "q003",
+    "videoID": "0029 - Heico - Sigma - 10.avi",
+    "start_time": 1558.0,
+    "end_time": 1587.0,
+    "procedure_type": "Sigmoid Resection",
+    "question": "What is the maximum number of Sponges appearing at once in a single frame? Please provide a number."
+  },
+  {
+    "qID": "q004",
+    "videoID": "0029 - Heico - Sigma - 10.avi",
+    "start_time": 1742.0,
+    "end_time": 1752.0,
+    "procedure_type": "Sigmoid Resection",
+    "question": "Does the surgical foreign object visible here usually remain intra-abdominally at the end of the procedure? Please answer with 'yes' or 'no'."
+  },
+  {
+    "qID": "q010",
+    "videoID": "0029 - Heico - Sigma - 10.avi",
+    "start_time": 1129.0,
+    "end_time": 1139.0,
+    "procedure_type": "Sigmoid Resection",
+    "question": "What color is the inserted sponge at the moment of insertion? Please answer with one word."
+  }
+]

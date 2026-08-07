@@ -1,0 +1,39 @@
++ SUB=/home/ajenane/orena/orena_submission
++ IN=/home/ajenane/orena/orena_submission/real_batch/interface_1
++ OUT=/home/ajenane/orena/orena_submission/real_batch/output_local
++ SRC=/home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif
++ LOCAL=/scratch/ajenane-fa.sif
++ df -h /scratch
++ tail -1
++ echo '### staging .sif to LOCAL disk (not charged; mimics platform pre-extracting the image) ###'
++ mkdir -p /scratch/ajenane
++ cp /home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif /scratch/ajenane-fa.sif
+
+real	0m42.827s
+user	0m0.003s
+sys	0m6.803s
++ rm -rf /home/ajenane/orena/orena_submission/real_batch/output_local
++ mkdir -p /home/ajenane/orena/orena_submission/real_batch/output_local
++ echo '### RUN FROM LOCAL DISK ###'
+++ date +%s.%N
++ START=1785143553.974435796
++ apptainer exec --nv --pwd /opt/app --no-home --bind /home/ajenane/orena/orena_submission/real_batch/interface_1:/input:ro --bind /home/ajenane/orena/orena_submission/real_batch/output_local:/output /scratch/ajenane-fa.sif bash -c 'export HOME=/home/user; exec python inference.py'
++ grep -E 'Device:|setup took|Inference complete|inference done'
+++ date +%s.%N
++ END=1785143706.488095225
+++ bc
+++ echo '1785143706.488095225 - 1785143553.974435796'
++ echo 'WALL CLOCK (local disk): 152.513659429s   [NFS+squashfs run was 169.4s]'
++ echo '### second run: same file, now in page cache (upper bound on how fast I/O can get) ###'
++ rm -rf /home/ajenane/orena/orena_submission/real_batch/output_local
++ mkdir -p /home/ajenane/orena/orena_submission/real_batch/output_local
+++ date +%s.%N
++ START=1785143706.496134617
++ apptainer exec --nv --pwd /opt/app --no-home --bind /home/ajenane/orena/orena_submission/real_batch/interface_1:/input:ro --bind /home/ajenane/orena/orena_submission/real_batch/output_local:/output /scratch/ajenane-fa.sif bash -c 'export HOME=/home/user; exec python inference.py'
++ grep -E 'setup took|inference done'
+++ date +%s.%N
++ END=1785143852.259361765
+++ echo '1785143852.259361765 - 1785143706.496134617'
+++ bc
++ echo 'WALL CLOCK (warm cache): 145.763227148s'
++ rm -f /scratch/ajenane-fa.sif

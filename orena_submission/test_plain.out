@@ -1,0 +1,6 @@
+11:18:30  INFO      __main__  Device: cuda
+11:18:33  INFO      __main__  Model loaded and set to eval mode (setup took 3.05 s)
+11:18:41  INFO      __main__  Inference complete: 20 answered (0 failed)
+11:18:41  INFO      __main__  === inference done in 11.04 s total ===
+WALL CLOCK (plain-file weights): 20.928632822s
+   squashfs runs were: 169.4s (NFS) / 152.5s (local) / 145.8s (cached)

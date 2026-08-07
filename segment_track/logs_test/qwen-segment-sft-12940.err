@@ -1,0 +1,809 @@
+W0729 10:28:54.794000 319400 torch/distributed/run.py:862] 
+W0729 10:28:54.794000 319400 torch/distributed/run.py:862] *****************************************
+W0729 10:28:54.794000 319400 torch/distributed/run.py:862] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0729 10:28:54.794000 319400 torch/distributed/run.py:862] *****************************************
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:11  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+10:29:11  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:11  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.json "HTTP/1.1 404 Not Found"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.json "HTTP/1.1 404 Not Found"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.jinja "HTTP/1.1 307 Temporary Redirect"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.jinja "HTTP/1.1 307 Temporary Redirect"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/chat_template.jinja "HTTP/1.1 200 OK"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/chat_template.jinja "HTTP/1.1 200 OK"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:29:12  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:29:13  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:13  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+10:29:13  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:13  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+10:29:13  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:13  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:13  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+10:29:13  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+10:29:13  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+10:29:13  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+10:29:13  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+10:29:13  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+10:29:13  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B "HTTP/1.1 200 OK"
+10:29:13  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:29:14  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:29:15  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+10:29:15  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+10:29:15  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+10:29:15  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+10:29:15  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/model.safetensors.index.json "HTTP/1.1 200 OK"
+10:29:15  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/model.safetensors.index.json "HTTP/1.1 200 OK"
+10:29:15  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/revision/main "HTTP/1.1 200 OK"
+10:29:15  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/revision/main "HTTP/1.1 200 OK"
+Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Fetching 15 files: 100%|██████████| 15/15 [00:00<00:00, 19710.08it/s]
+Fetching 15 files: 100%|██████████| 15/15 [00:00<00:00, 8920.26it/s]
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/1184 [00:00<?, ?it/s]Loading weights:   0%|          | 0/1184 [00:00<?, ?it/s]Loading weights:   0%|          | 1/1184 [00:00<03:43,  5.30it/s]Loading weights:   0%|          | 1/1184 [00:00<01:58,  9.97it/s]Loading weights:   0%|          | 2/1184 [00:00<04:14,  4.65it/s]Loading weights:   0%|          | 2/1184 [00:00<03:14,  6.08it/s]Loading weights:   2%|▏         | 26/1184 [00:00<00:13, 84.91it/s]Loading weights:   2%|▏         | 24/1184 [00:00<00:18, 62.15it/s]Loading weights:   3%|▎         | 41/1184 [00:00<00:11, 103.10it/s]Loading weights:   4%|▎         | 42/1184 [00:00<00:12, 91.63it/s]Loading weights:   5%|▍         | 54/1184 [00:00<00:11, 95.19it/s]Loading weights:   5%|▍         | 54/1184 [00:00<00:11, 100.65it/s]Loading weights:   6%|▌         | 68/1184 [00:00<00:10, 105.74it/s]Loading weights:   6%|▋         | 74/1184 [00:00<00:09, 122.76it/s]Loading weights:   7%|▋         | 88/1184 [00:00<00:08, 127.47it/s]Loading weights:   8%|▊         | 93/1184 [00:00<00:07, 140.35it/s]Loading weights:   9%|▊         | 102/1184 [00:01<00:09, 113.48it/s]Loading weights:   9%|▉         | 108/1184 [00:01<00:08, 122.63it/s]Loading weights:  10%|█         | 120/1184 [00:01<00:08, 129.44it/s]Loading weights:  11%|█         | 127/1184 [00:01<00:07, 137.19it/s]Loading weights:  11%|█▏        | 134/1184 [00:01<00:07, 132.23it/s]Loading weights:  12%|█▏        | 144/1184 [00:01<00:07, 144.87it/s]Loading weights:  13%|█▎        | 149/1184 [00:01<00:07, 130.16it/s]Loading weights:  14%|█▎        | 160/1184 [00:01<00:08, 127.60it/s]Loading weights:  14%|█▍        | 168/1184 [00:01<00:07, 143.39it/s]Loading weights:  15%|█▌        | 180/1184 [00:01<00:07, 139.58it/s]Loading weights:  15%|█▌        | 183/1184 [00:01<00:07, 139.52it/s]Loading weights:  17%|█▋        | 199/1184 [00:01<00:06, 144.07it/s]Loading weights:  17%|█▋        | 200/1184 [00:01<00:06, 140.69it/s]Loading weights:  18%|█▊        | 214/1184 [00:01<00:07, 133.90it/s]Loading weights:  18%|█▊        | 215/1184 [00:01<00:07, 129.77it/s]Loading weights:  20%|█▉        | 235/1184 [00:01<00:06, 149.64it/s]Loading weights:  20%|█▉        | 231/1184 [00:02<00:07, 133.71it/s]Loading weights:  21%|██        | 251/1184 [00:01<00:06, 151.29it/s]Loading weights:  21%|██        | 250/1184 [00:02<00:06, 146.79it/s]Loading weights:  23%|██▎       | 267/1184 [00:02<00:06, 131.50it/s]Loading weights:  22%|██▏       | 265/1184 [00:02<00:07, 124.71it/s]Loading weights:  24%|██▍       | 285/1184 [00:02<00:06, 140.81it/s]Loading weights:  24%|██▍       | 286/1184 [00:02<00:06, 141.41it/s]Loading weights:  26%|██▌       | 303/1184 [00:02<00:05, 150.17it/s]Loading weights:  26%|██▌       | 303/1184 [00:02<00:05, 146.90it/s]Loading weights:  27%|██▋       | 319/1184 [00:02<00:06, 131.18it/s]Loading weights:  27%|██▋       | 319/1184 [00:02<00:06, 128.34it/s]Loading weights:  29%|██▉       | 341/1184 [00:02<00:05, 150.19it/s]Loading weights:  29%|██▉       | 341/1184 [00:02<00:05, 146.97it/s]Loading weights:  30%|███       | 357/1184 [00:02<00:05, 148.97it/s]Loading weights:  30%|███       | 357/1184 [00:02<00:05, 148.32it/s]Loading weights:  32%|███▏      | 373/1184 [00:02<00:06, 131.89it/s]Loading weights:  32%|███▏      | 373/1184 [00:03<00:06, 128.15it/s]Loading weights:  33%|███▎      | 393/1184 [00:03<00:05, 145.88it/s]Loading weights:  33%|███▎      | 394/1184 [00:03<00:05, 141.54it/s]Loading weights:  35%|███▍      | 409/1184 [00:03<00:05, 148.94it/s]Loading weights:  35%|███▍      | 409/1184 [00:03<00:05, 141.32it/s]Loading weights:  36%|███▌      | 425/1184 [00:03<00:05, 130.35it/s]Loading weights:  36%|███▌      | 424/1184 [00:03<00:06, 125.65it/s]Loading weights:  38%|███▊      | 447/1184 [00:03<00:04, 149.94it/s]Loading weights:  38%|███▊      | 445/1184 [00:03<00:05, 139.71it/s]Loading weights:  39%|███▉      | 463/1184 [00:03<00:04, 151.23it/s]Loading weights:  39%|███▉      | 464/1184 [00:03<00:04, 150.17it/s]Loading weights:  40%|████      | 479/1184 [00:03<00:05, 131.73it/s]Loading weights:  41%|████      | 480/1184 [00:03<00:05, 132.06it/s]Loading weights:  42%|████▏     | 496/1184 [00:03<00:04, 139.54it/s]Loading weights:  42%|████▏     | 499/1184 [00:03<00:04, 144.47it/s]Loading weights:  43%|████▎     | 514/1184 [00:03<00:04, 149.22it/s]Loading weights:  43%|████▎     | 515/1184 [00:04<00:04, 144.74it/s]Loading weights:  45%|████▍     | 530/1184 [00:03<00:04, 135.49it/s]Loading weights:  46%|████▌     | 545/1184 [00:04<00:04, 135.82it/s]Loading weights:  45%|████▍     | 530/1184 [00:04<00:05, 129.27it/s]Loading weights:  48%|████▊     | 567/1184 [00:04<00:03, 154.63it/s]Loading weights:  46%|████▌     | 545/1184 [00:04<00:04, 130.17it/s]Loading weights:  48%|████▊     | 567/1184 [00:04<00:04, 149.22it/s]Loading weights:  49%|████▉     | 583/1184 [00:04<00:04, 136.21it/s]Loading weights:  51%|█████     | 598/1184 [00:04<00:04, 136.13it/s]Loading weights:  49%|████▉     | 583/1184 [00:04<00:04, 131.65it/s]Loading weights:  52%|█████▏    | 619/1184 [00:04<00:03, 149.58it/s]Loading weights:  50%|█████     | 597/1184 [00:04<00:04, 129.97it/s]Loading weights:  52%|█████▏    | 619/1184 [00:04<00:03, 146.69it/s]Loading weights:  54%|█████▎    | 635/1184 [00:04<00:04, 135.65it/s]Loading weights:  55%|█████▍    | 651/1184 [00:04<00:03, 140.52it/s]Loading weights:  54%|█████▎    | 635/1184 [00:04<00:04, 133.40it/s]Loading weights:  57%|█████▋    | 671/1184 [00:04<00:03, 154.54it/s]Loading weights:  55%|█████▍    | 651/1184 [00:05<00:03, 136.11it/s]Loading weights:  57%|█████▋    | 671/1184 [00:05<00:03, 148.62it/s]Loading weights:  58%|█████▊    | 687/1184 [00:05<00:03, 139.09it/s]Loading weights:  59%|█████▉    | 704/1184 [00:05<00:03, 140.74it/s]Loading weights:  58%|█████▊    | 687/1184 [00:05<00:03, 134.55it/s]Loading weights:  61%|██████    | 722/1184 [00:05<00:03, 150.00it/s]Loading weights:  59%|█████▉    | 704/1184 [00:05<00:03, 136.77it/s]Loading weights:  62%|██████▏   | 738/1184 [00:05<00:03, 133.98it/s]Loading weights:  61%|██████▏   | 726/1184 [00:05<00:03, 150.99it/s]Loading weights:  64%|██████▍   | 756/1184 [00:05<00:03, 139.39it/s]Loading weights:  63%|██████▎   | 742/1184 [00:05<00:03, 135.70it/s]Loading weights:  66%|██████▌   | 778/1184 [00:05<00:02, 154.52it/s]Loading weights:  64%|██████▍   | 757/1184 [00:05<00:03, 135.01it/s]Loading weights:  67%|██████▋   | 794/1184 [00:05<00:02, 139.55it/s]Loading weights:  66%|██████▌   | 779/1184 [00:05<00:02, 152.41it/s]Loading weights:  68%|██████▊   | 809/1184 [00:05<00:02, 138.98it/s]Loading weights:  67%|██████▋   | 795/1184 [00:06<00:02, 129.70it/s]Loading weights:  70%|███████   | 830/1184 [00:06<00:02, 154.24it/s]Loading weights:  69%|██████▉   | 815/1184 [00:06<00:02, 144.51it/s]Loading weights:  71%|███████▏  | 846/1184 [00:06<00:02, 139.16it/s]Loading weights:  70%|███████   | 831/1184 [00:06<00:02, 144.78it/s]Loading weights:  90%|████████▉ | 1062/1184 [00:06<00:00, 651.57it/s]Loading weights: 100%|██████████| 1184/1184 [00:06<00:00, 186.31it/s]
+Loading weights:  72%|███████▏  | 847/1184 [00:06<00:02, 132.89it/s]Loading weights:  92%|█████████▏| 1086/1184 [00:06<00:00, 693.46it/s]Loading weights: 100%|██████████| 1184/1184 [00:06<00:00, 178.23it/s]
+10:29:22  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:22  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/generation_config.json "HTTP/1.1 200 OK"
+10:29:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+10:29:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/generation_config.json "HTTP/1.1 200 OK"
+10:29:23  INFO      httpx  HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+10:29:23  INFO      httpx  HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ajenane/.netrc.
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046, 'bos_token_id': None, 'pad_token_id': 248044}.
+wandb: Currently logged in as: azza-jenane2 (azza-jenane2-technical-university-of-munich) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 4dvqawto
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /home/ajenane/orena/wandb/run-20260729_102924-4dvqawto
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fla2-1028
+wandb: ⭐️ View project at https://wandb.ai/azza-jenane2-technical-university-of-munich/orena-segment-sft
+wandb: 🚀 View run at https://wandb.ai/azza-jenane2-technical-university-of-munich/orena-segment-sft/runs/4dvqawto
+10:29:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/telemetry/trl/SFTTrainer "HTTP/1.1 200 OK"
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046, 'bos_token_id': None, 'pad_token_id': 248044}.
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [02:13<04:27, 133.93s/it]                                               33%|███▎      | 1/3 [02:13<04:27, 133.93s/it] 67%|██████▋   | 2/3 [03:19<01:33, 93.58s/it]                                               67%|██████▋   | 2/3 [03:19<01:33, 93.58s/it]100%|██████████| 3/3 [04:25<00:00, 81.01s/it]                                             100%|██████████| 3/3 [04:25<00:00, 81.01s/it]
+  0%|          | 0/680 [00:00<?, ?it/s][A
+  0%|          | 2/680 [00:01<09:24,  1.20it/s][A
+  0%|          | 3/680 [00:02<11:10,  1.01it/s][A
+  1%|          | 4/680 [00:04<12:06,  1.08s/it][A
+  1%|          | 5/680 [00:05<12:39,  1.13s/it][A
+  1%|          | 6/680 [00:06<12:59,  1.16s/it][A
+  1%|          | 7/680 [00:07<13:11,  1.18s/it][A
+  1%|          | 8/680 [00:08<13:20,  1.19s/it][A
+  1%|▏         | 9/680 [00:10<13:25,  1.20s/it][A
+  1%|▏         | 10/680 [00:11<13:27,  1.21s/it][A
+  2%|▏         | 11/680 [00:12<13:30,  1.21s/it][A
+  2%|▏         | 12/680 [00:13<13:31,  1.21s/it][A
+  2%|▏         | 13/680 [00:15<13:31,  1.22s/it][A
+  2%|▏         | 14/680 [00:16<13:32,  1.22s/it][A
+  2%|▏         | 15/680 [00:17<13:32,  1.22s/it][A
+  2%|▏         | 16/680 [00:18<13:31,  1.22s/it][A
+  2%|▎         | 17/680 [00:19<13:30,  1.22s/it][A
+  3%|▎         | 18/680 [00:21<13:29,  1.22s/it][A
+  3%|▎         | 19/680 [00:22<13:28,  1.22s/it][A
+  3%|▎         | 20/680 [00:23<13:27,  1.22s/it][A
+  3%|▎         | 21/680 [00:24<13:27,  1.23s/it][A
+  3%|▎         | 22/680 [00:26<13:25,  1.22s/it][A
+  3%|▎         | 23/680 [00:27<13:24,  1.22s/it][A
+  4%|▎         | 24/680 [00:28<13:22,  1.22s/it][A
+  4%|▎         | 25/680 [00:29<13:22,  1.22s/it][A
+  4%|▍         | 26/680 [00:31<13:20,  1.22s/it][A
+  4%|▍         | 27/680 [00:32<13:19,  1.22s/it][A
+  4%|▍         | 28/680 [00:33<13:18,  1.23s/it][A
+  4%|▍         | 29/680 [00:34<13:17,  1.23s/it][A
+  4%|▍         | 30/680 [00:35<13:16,  1.23s/it][A
+  5%|▍         | 31/680 [00:37<13:15,  1.23s/it][A
+  5%|▍         | 32/680 [00:38<13:14,  1.23s/it][A
+  5%|▍         | 33/680 [00:39<13:14,  1.23s/it][A
+  5%|▌         | 34/680 [00:40<13:12,  1.23s/it][A
+  5%|▌         | 35/680 [00:42<13:10,  1.23s/it][A
+  5%|▌         | 36/680 [00:43<13:25,  1.25s/it][A
+  5%|▌         | 37/680 [00:44<13:19,  1.24s/it][A
+  6%|▌         | 38/680 [00:45<13:14,  1.24s/it][A
+  6%|▌         | 39/680 [00:47<13:11,  1.23s/it][A
+  6%|▌         | 40/680 [00:48<13:08,  1.23s/it][A
+  6%|▌         | 41/680 [00:49<13:06,  1.23s/it][A
+  6%|▌         | 42/680 [00:50<13:03,  1.23s/it][A
+  6%|▋         | 43/680 [00:51<13:01,  1.23s/it][A
+  6%|▋         | 44/680 [00:53<12:59,  1.23s/it][A
+  7%|▋         | 45/680 [00:54<12:58,  1.23s/it][A
+  7%|▋         | 46/680 [00:55<12:56,  1.23s/it][A
+  7%|▋         | 47/680 [00:56<12:56,  1.23s/it][A
+  7%|▋         | 48/680 [00:58<12:54,  1.23s/it][A
+  7%|▋         | 49/680 [00:59<12:53,  1.23s/it][A
+  7%|▋         | 50/680 [01:00<12:51,  1.23s/it][A
+  8%|▊         | 51/680 [01:01<12:50,  1.23s/it][A
+  8%|▊         | 52/680 [01:02<12:49,  1.23s/it][A
+  8%|▊         | 53/680 [01:04<12:48,  1.23s/it][A
+  8%|▊         | 54/680 [01:05<12:46,  1.22s/it][A
+  8%|▊         | 55/680 [01:06<12:45,  1.22s/it][A
+  8%|▊         | 56/680 [01:07<12:44,  1.23s/it][A
+  8%|▊         | 57/680 [01:09<12:44,  1.23s/it][A
+  9%|▊         | 58/680 [01:10<12:43,  1.23s/it][A
+  9%|▊         | 59/680 [01:11<12:43,  1.23s/it][A
+  9%|▉         | 60/680 [01:12<12:41,  1.23s/it][A
+  9%|▉         | 61/680 [01:14<12:39,  1.23s/it][A
+  9%|▉         | 62/680 [01:15<12:38,  1.23s/it][A
+  9%|▉         | 63/680 [01:16<12:36,  1.23s/it][A
+  9%|▉         | 64/680 [01:17<12:35,  1.23s/it][A
+ 10%|▉         | 65/680 [01:18<12:33,  1.23s/it][A
+ 10%|▉         | 66/680 [01:20<12:32,  1.23s/it][A
+ 10%|▉         | 67/680 [01:21<12:31,  1.23s/it][A
+ 10%|█         | 68/680 [01:22<12:29,  1.22s/it][A
+ 10%|█         | 69/680 [01:23<12:28,  1.22s/it][A
+ 10%|█         | 70/680 [01:25<12:27,  1.23s/it][A
+ 10%|█         | 71/680 [01:26<12:24,  1.22s/it][A
+ 11%|█         | 72/680 [01:27<12:23,  1.22s/it][A
+ 11%|█         | 73/680 [01:28<12:22,  1.22s/it][A
+ 11%|█         | 74/680 [01:29<12:19,  1.22s/it][A
+ 11%|█         | 75/680 [01:31<12:19,  1.22s/it][A
+ 11%|█         | 76/680 [01:32<12:19,  1.22s/it][A
+ 11%|█▏        | 77/680 [01:33<12:18,  1.22s/it][A
+ 11%|█▏        | 78/680 [01:34<12:15,  1.22s/it][A
+ 12%|█▏        | 79/680 [01:36<12:15,  1.22s/it][A
+ 12%|█▏        | 80/680 [01:37<12:15,  1.23s/it][A
+ 12%|█▏        | 81/680 [01:38<12:14,  1.23s/it][A
+ 12%|█▏        | 82/680 [01:39<12:12,  1.23s/it][A
+ 12%|█▏        | 83/680 [01:40<12:11,  1.23s/it][A
+ 12%|█▏        | 84/680 [01:42<12:10,  1.22s/it][A
+ 12%|█▎        | 85/680 [01:43<12:08,  1.22s/it][A
+ 13%|█▎        | 86/680 [01:44<12:10,  1.23s/it][A
+ 13%|█▎        | 87/680 [01:45<12:10,  1.23s/it][A
+ 13%|█▎        | 88/680 [01:47<12:08,  1.23s/it][A
+ 13%|█▎        | 89/680 [01:48<12:06,  1.23s/it][A
+ 13%|█▎        | 90/680 [01:49<12:04,  1.23s/it][A
+ 13%|█▎        | 91/680 [01:50<12:02,  1.23s/it][A
+ 14%|█▎        | 92/680 [01:51<12:00,  1.23s/it][A
+ 14%|█▎        | 93/680 [01:53<11:59,  1.23s/it][A
+ 14%|█▍        | 94/680 [01:54<11:58,  1.23s/it][A
+ 14%|█▍        | 95/680 [01:55<11:56,  1.23s/it][A
+ 14%|█▍        | 96/680 [01:56<11:55,  1.23s/it][A
+ 14%|█▍        | 97/680 [01:58<11:54,  1.23s/it][A
+ 14%|█▍        | 98/680 [01:59<11:52,  1.22s/it][A
+ 15%|█▍        | 99/680 [02:00<11:51,  1.22s/it][A
+ 15%|█▍        | 100/680 [02:01<11:49,  1.22s/it][A
+ 15%|█▍        | 101/680 [02:03<11:48,  1.22s/it][A
+ 15%|█▌        | 102/680 [02:04<11:47,  1.22s/it][A
+ 15%|█▌        | 103/680 [02:05<11:46,  1.22s/it][A
+ 15%|█▌        | 104/680 [02:06<11:45,  1.22s/it][A
+ 15%|█▌        | 105/680 [02:07<11:43,  1.22s/it][A
+ 16%|█▌        | 106/680 [02:09<11:42,  1.22s/it][A
+ 16%|█▌        | 107/680 [02:10<11:41,  1.22s/it][A
+ 16%|█▌        | 108/680 [02:11<11:40,  1.22s/it][A
+ 16%|█▌        | 109/680 [02:12<11:38,  1.22s/it][A
+ 16%|█▌        | 110/680 [02:14<11:38,  1.23s/it][A
+ 16%|█▋        | 111/680 [02:15<11:37,  1.23s/it][A
+ 16%|█▋        | 112/680 [02:16<11:36,  1.23s/it][A
+ 17%|█▋        | 113/680 [02:17<11:34,  1.22s/it][A
+ 17%|█▋        | 114/680 [02:18<11:33,  1.22s/it][A
+ 17%|█▋        | 115/680 [02:20<11:32,  1.23s/it][A
+ 17%|█▋        | 116/680 [02:21<11:30,  1.23s/it][A
+ 17%|█▋        | 117/680 [02:22<11:29,  1.23s/it][A
+ 17%|█▋        | 118/680 [02:23<11:28,  1.23s/it][A
+ 18%|█▊        | 119/680 [02:25<11:27,  1.23s/it][A
+ 18%|█▊        | 120/680 [02:26<11:26,  1.23s/it][A
+ 18%|█▊        | 121/680 [02:27<11:24,  1.22s/it][A
+ 18%|█▊        | 122/680 [02:28<11:23,  1.23s/it][A
+ 18%|█▊        | 123/680 [02:29<11:22,  1.23s/it][A
+ 18%|█▊        | 124/680 [02:31<11:21,  1.23s/it][A
+ 18%|█▊        | 125/680 [02:32<11:20,  1.23s/it][A
+ 19%|█▊        | 126/680 [02:33<11:19,  1.23s/it][A
+ 19%|█▊        | 127/680 [02:34<11:17,  1.23s/it][A
+ 19%|█▉        | 128/680 [02:36<11:16,  1.23s/it][A
+ 19%|█▉        | 129/680 [02:37<11:15,  1.23s/it][A
+ 19%|█▉        | 130/680 [02:38<11:14,  1.23s/it][A
+ 19%|█▉        | 131/680 [02:39<11:12,  1.23s/it][A
+ 19%|█▉        | 132/680 [02:40<11:11,  1.23s/it][A
+ 20%|█▉        | 133/680 [02:42<11:10,  1.23s/it][A
+ 20%|█▉        | 134/680 [02:43<11:09,  1.23s/it][A
+ 20%|█▉        | 135/680 [02:44<11:07,  1.23s/it][A
+ 20%|██        | 136/680 [02:45<11:06,  1.23s/it][A
+ 20%|██        | 137/680 [02:47<11:06,  1.23s/it][A
+ 20%|██        | 138/680 [02:48<11:05,  1.23s/it][A
+ 20%|██        | 139/680 [02:49<11:03,  1.23s/it][A
+ 21%|██        | 140/680 [02:50<11:02,  1.23s/it][A
+ 21%|██        | 141/680 [02:52<11:02,  1.23s/it][A
+ 21%|██        | 142/680 [02:53<11:00,  1.23s/it][A
+ 21%|██        | 143/680 [02:54<10:59,  1.23s/it][A
+ 21%|██        | 144/680 [02:55<10:57,  1.23s/it][A
+ 21%|██▏       | 145/680 [02:56<10:56,  1.23s/it][A
+ 21%|██▏       | 146/680 [02:58<10:55,  1.23s/it][A
+ 22%|██▏       | 147/680 [02:59<10:53,  1.23s/it][A
+ 22%|██▏       | 148/680 [03:00<10:52,  1.23s/it][A
+ 22%|██▏       | 149/680 [03:01<10:51,  1.23s/it][A
+ 22%|██▏       | 150/680 [03:03<10:49,  1.22s/it][A
+ 22%|██▏       | 151/680 [03:04<10:47,  1.22s/it][A
+ 22%|██▏       | 152/680 [03:05<10:46,  1.22s/it][A
+ 22%|██▎       | 153/680 [03:06<10:45,  1.22s/it][A
+ 23%|██▎       | 154/680 [03:07<10:44,  1.22s/it][A
+ 23%|██▎       | 155/680 [03:09<10:42,  1.22s/it][A
+ 23%|██▎       | 156/680 [03:10<10:41,  1.22s/it][A
+ 23%|██▎       | 157/680 [03:11<10:40,  1.23s/it][A
+ 23%|██▎       | 158/680 [03:12<10:39,  1.23s/it][A
+ 23%|██▎       | 159/680 [03:14<10:39,  1.23s/it][A
+ 24%|██▎       | 160/680 [03:15<10:37,  1.23s/it][A
+ 24%|██▎       | 161/680 [03:16<10:36,  1.23s/it][A
+ 24%|██▍       | 162/680 [03:17<10:35,  1.23s/it][A
+ 24%|██▍       | 163/680 [03:19<10:34,  1.23s/it][A
+ 24%|██▍       | 164/680 [03:20<10:33,  1.23s/it][A
+ 24%|██▍       | 165/680 [03:21<10:32,  1.23s/it][A
+ 24%|██▍       | 166/680 [03:22<10:30,  1.23s/it][A
+ 25%|██▍       | 167/680 [03:23<10:29,  1.23s/it][A
+ 25%|██▍       | 168/680 [03:25<10:28,  1.23s/it][A
+ 25%|██▍       | 169/680 [03:26<10:26,  1.23s/it][A
+ 25%|██▌       | 170/680 [03:27<10:24,  1.23s/it][A
+ 25%|██▌       | 171/680 [03:28<10:23,  1.23s/it][A
+ 25%|██▌       | 172/680 [03:30<10:21,  1.22s/it][A
+ 25%|██▌       | 173/680 [03:31<10:20,  1.22s/it][A
+ 26%|██▌       | 174/680 [03:32<10:18,  1.22s/it][A
+ 26%|██▌       | 175/680 [03:33<10:17,  1.22s/it][A
+ 26%|██▌       | 176/680 [03:34<10:16,  1.22s/it][A
+ 26%|██▌       | 177/680 [03:36<10:14,  1.22s/it][A
+ 26%|██▌       | 178/680 [03:37<10:14,  1.22s/it][A
+ 26%|██▋       | 179/680 [03:38<10:12,  1.22s/it][A
+ 26%|██▋       | 180/680 [03:39<10:12,  1.22s/it][A
+ 27%|██▋       | 181/680 [03:41<10:10,  1.22s/it][A
+ 27%|██▋       | 182/680 [03:42<10:09,  1.22s/it][A
+ 27%|██▋       | 183/680 [03:43<10:08,  1.22s/it][A
+ 27%|██▋       | 184/680 [03:44<10:07,  1.22s/it][A
+ 27%|██▋       | 185/680 [03:45<10:05,  1.22s/it][A
+ 27%|██▋       | 186/680 [03:47<10:04,  1.22s/it][A
+ 28%|██▊       | 187/680 [03:48<10:03,  1.22s/it][A
+ 28%|██▊       | 188/680 [03:49<10:01,  1.22s/it][A
+ 28%|██▊       | 189/680 [03:50<10:00,  1.22s/it][A
+ 28%|██▊       | 190/680 [03:52<10:00,  1.22s/it][A
+ 28%|██▊       | 191/680 [03:53<09:58,  1.22s/it][A
+ 28%|██▊       | 192/680 [03:54<09:57,  1.22s/it][A
+ 28%|██▊       | 193/680 [03:55<09:56,  1.23s/it][A
+ 29%|██▊       | 194/680 [03:56<09:55,  1.22s/it][A
+ 29%|██▊       | 195/680 [03:58<09:52,  1.22s/it][A
+ 29%|██▉       | 196/680 [03:59<09:51,  1.22s/it][A
+ 29%|██▉       | 197/680 [04:00<09:50,  1.22s/it][A
+ 29%|██▉       | 198/680 [04:01<09:50,  1.22s/it][A
+ 29%|██▉       | 199/680 [04:03<09:48,  1.22s/it][A
+ 29%|██▉       | 200/680 [04:04<09:46,  1.22s/it][A
+ 30%|██▉       | 201/680 [04:05<09:45,  1.22s/it][A
+ 30%|██▉       | 202/680 [04:06<09:44,  1.22s/it][A
+ 30%|██▉       | 203/680 [04:07<09:43,  1.22s/it][A
+ 30%|███       | 204/680 [04:09<09:42,  1.22s/it][A
+ 30%|███       | 205/680 [04:10<09:41,  1.22s/it][A
+ 30%|███       | 206/680 [04:11<09:39,  1.22s/it][A
+ 30%|███       | 207/680 [04:12<09:39,  1.22s/it][A
+ 31%|███       | 208/680 [04:14<09:37,  1.22s/it][A
+ 31%|███       | 209/680 [04:15<09:37,  1.23s/it][A
+ 31%|███       | 210/680 [04:16<09:36,  1.23s/it][A
+ 31%|███       | 211/680 [04:17<09:35,  1.23s/it][A
+ 31%|███       | 212/680 [04:18<09:33,  1.23s/it][A
+ 31%|███▏      | 213/680 [04:20<09:32,  1.23s/it][A
+ 31%|███▏      | 214/680 [04:21<09:31,  1.23s/it][A
+ 32%|███▏      | 215/680 [04:22<09:30,  1.23s/it][A
+ 32%|███▏      | 216/680 [04:23<09:29,  1.23s/it][A
+ 32%|███▏      | 217/680 [04:25<09:28,  1.23s/it][A
+ 32%|███▏      | 218/680 [04:26<09:26,  1.23s/it][A
+ 32%|███▏      | 219/680 [04:27<09:25,  1.23s/it][A
+ 32%|███▏      | 220/680 [04:28<09:23,  1.23s/it][A
+ 32%|███▎      | 221/680 [04:30<09:22,  1.23s/it][A
+ 33%|███▎      | 222/680 [04:31<09:21,  1.23s/it][A
+ 33%|███▎      | 223/680 [04:32<09:19,  1.22s/it][A
+ 33%|███▎      | 224/680 [04:33<09:18,  1.22s/it][A
+ 33%|███▎      | 225/680 [04:34<09:18,  1.23s/it][A
+ 33%|███▎      | 226/680 [04:36<09:16,  1.23s/it][A
+ 33%|███▎      | 227/680 [04:37<09:14,  1.22s/it][A
+ 34%|███▎      | 228/680 [04:38<09:13,  1.22s/it][A
+ 34%|███▎      | 229/680 [04:39<09:12,  1.22s/it][A
+ 34%|███▍      | 230/680 [04:41<09:10,  1.22s/it][A
+ 34%|███▍      | 231/680 [04:42<09:09,  1.22s/it][A
+ 34%|███▍      | 232/680 [04:43<09:07,  1.22s/it][A
+ 34%|███▍      | 233/680 [04:44<09:06,  1.22s/it][A
+ 34%|███▍      | 234/680 [04:45<09:05,  1.22s/it][A
+ 35%|███▍      | 235/680 [04:47<09:04,  1.22s/it][A
+ 35%|███▍      | 236/680 [04:48<09:03,  1.22s/it][A
+ 35%|███▍      | 237/680 [04:49<09:02,  1.22s/it][A
+ 35%|███▌      | 238/680 [04:50<09:00,  1.22s/it][A
+ 35%|███▌      | 239/680 [04:52<08:59,  1.22s/it][A
+ 35%|███▌      | 240/680 [04:53<08:58,  1.22s/it][A
+ 35%|███▌      | 241/680 [04:54<08:57,  1.22s/it][A
+ 36%|███▌      | 242/680 [04:55<08:55,  1.22s/it][A
+ 36%|███▌      | 243/680 [04:56<08:54,  1.22s/it][A
+ 36%|███▌      | 244/680 [04:58<08:54,  1.23s/it][A
+ 36%|███▌      | 245/680 [04:59<08:53,  1.23s/it][A
+ 36%|███▌      | 246/680 [05:00<08:52,  1.23s/it][A
+ 36%|███▋      | 247/680 [05:01<08:51,  1.23s/it][A
+ 36%|███▋      | 248/680 [05:03<08:49,  1.22s/it][A
+ 37%|███▋      | 249/680 [05:04<08:47,  1.22s/it][A
+ 37%|███▋      | 250/680 [05:05<08:46,  1.22s/it][A
+ 37%|███▋      | 251/680 [05:06<08:45,  1.22s/it][A
+ 37%|███▋      | 252/680 [05:07<08:43,  1.22s/it][A
+ 37%|███▋      | 253/680 [05:09<08:42,  1.22s/it][A
+ 37%|███▋      | 254/680 [05:10<08:40,  1.22s/it][A
+ 38%|███▊      | 255/680 [05:11<08:39,  1.22s/it][A
+ 38%|███▊      | 256/680 [05:12<08:38,  1.22s/it][A
+ 38%|███▊      | 257/680 [05:14<08:35,  1.22s/it][A
+ 38%|███▊      | 258/680 [05:15<08:33,  1.22s/it][A
+ 38%|███▊      | 259/680 [05:16<08:32,  1.22s/it][A
+ 38%|███▊      | 260/680 [05:17<08:30,  1.22s/it][A
+ 38%|███▊      | 261/680 [05:18<08:29,  1.22s/it][A
+ 39%|███▊      | 262/680 [05:20<08:28,  1.22s/it][A
+ 39%|███▊      | 263/680 [05:21<08:28,  1.22s/it][A
+ 39%|███▉      | 264/680 [05:22<08:27,  1.22s/it][A
+ 39%|███▉      | 265/680 [05:23<08:26,  1.22s/it][A
+ 39%|███▉      | 266/680 [05:25<08:25,  1.22s/it][A
+ 39%|███▉      | 267/680 [05:26<08:24,  1.22s/it][A
+ 39%|███▉      | 268/680 [05:27<08:23,  1.22s/it][A
+ 40%|███▉      | 269/680 [05:28<08:22,  1.22s/it][A
+ 40%|███▉      | 270/680 [05:29<08:21,  1.22s/it][A
+ 40%|███▉      | 271/680 [05:31<08:20,  1.22s/it][A
+ 40%|████      | 272/680 [05:32<08:24,  1.24s/it][A
+ 40%|████      | 273/680 [05:33<08:21,  1.23s/it][A
+ 40%|████      | 274/680 [05:34<08:19,  1.23s/it][A
+ 40%|████      | 275/680 [05:36<08:16,  1.23s/it][A
+ 41%|████      | 276/680 [05:37<08:15,  1.23s/it][A
+ 41%|████      | 277/680 [05:38<08:13,  1.23s/it][A
+ 41%|████      | 278/680 [05:39<08:12,  1.22s/it][A
+ 41%|████      | 279/680 [05:40<08:10,  1.22s/it][A
+ 41%|████      | 280/680 [05:42<08:09,  1.22s/it][A
+ 41%|████▏     | 281/680 [05:43<08:07,  1.22s/it][A
+ 41%|████▏     | 282/680 [05:44<08:06,  1.22s/it][A
+ 42%|████▏     | 283/680 [05:45<08:05,  1.22s/it][A
+ 42%|████▏     | 284/680 [05:47<08:04,  1.22s/it][A
+ 42%|████▏     | 285/680 [05:48<08:03,  1.22s/it][A
+ 42%|████▏     | 286/680 [05:49<08:01,  1.22s/it][A
+ 42%|████▏     | 287/680 [05:50<08:00,  1.22s/it][A
+ 42%|████▏     | 288/680 [05:52<07:59,  1.22s/it][A
+ 42%|████▎     | 289/680 [05:53<07:58,  1.22s/it][A
+ 43%|████▎     | 290/680 [05:54<07:57,  1.22s/it][A
+ 43%|████▎     | 291/680 [05:55<07:56,  1.22s/it][A
+ 43%|████▎     | 292/680 [05:56<07:54,  1.22s/it][A
+ 43%|████▎     | 293/680 [05:58<07:53,  1.22s/it][A
+ 43%|████▎     | 294/680 [05:59<07:52,  1.22s/it][A
+ 43%|████▎     | 295/680 [06:00<07:51,  1.23s/it][A
+ 44%|████▎     | 296/680 [06:01<07:50,  1.22s/it][A
+ 44%|████▎     | 297/680 [06:03<07:49,  1.23s/it][A
+ 44%|████▍     | 298/680 [06:04<07:48,  1.23s/it][A
+ 44%|████▍     | 299/680 [06:05<07:46,  1.23s/it][A
+ 44%|████▍     | 300/680 [06:06<07:45,  1.23s/it][A
+ 44%|████▍     | 301/680 [06:07<07:44,  1.22s/it][A
+ 44%|████▍     | 302/680 [06:09<07:43,  1.23s/it][A
+ 45%|████▍     | 303/680 [06:10<07:42,  1.23s/it][A
+ 45%|████▍     | 304/680 [06:11<07:40,  1.23s/it][A
+ 45%|████▍     | 305/680 [06:12<07:39,  1.23s/it][A
+ 45%|████▌     | 306/680 [06:14<07:38,  1.23s/it][A
+ 45%|████▌     | 307/680 [06:15<07:37,  1.23s/it][A
+ 45%|████▌     | 308/680 [06:16<07:36,  1.23s/it][A
+ 45%|████▌     | 309/680 [06:17<07:34,  1.23s/it][A
+ 46%|████▌     | 310/680 [06:18<07:33,  1.23s/it][A
+ 46%|████▌     | 311/680 [06:20<07:31,  1.22s/it][A
+ 46%|████▌     | 312/680 [06:21<07:31,  1.23s/it][A
+ 46%|████▌     | 313/680 [06:22<07:29,  1.23s/it][A
+ 46%|████▌     | 314/680 [06:23<07:28,  1.22s/it][A
+ 46%|████▋     | 315/680 [06:25<07:27,  1.23s/it][A
+ 46%|████▋     | 316/680 [06:26<07:25,  1.22s/it][A
+ 47%|████▋     | 317/680 [06:27<07:24,  1.23s/it][A
+ 47%|████▋     | 318/680 [06:28<07:23,  1.22s/it][A
+ 47%|████▋     | 319/680 [06:29<07:21,  1.22s/it][A
+ 47%|████▋     | 320/680 [06:31<07:20,  1.22s/it][A
+ 47%|████▋     | 321/680 [06:32<07:19,  1.22s/it][A
+ 47%|████▋     | 322/680 [06:33<07:18,  1.22s/it][A
+ 48%|████▊     | 323/680 [06:34<07:16,  1.22s/it][A
+ 48%|████▊     | 324/680 [06:36<07:15,  1.22s/it][A
+ 48%|████▊     | 325/680 [06:37<07:14,  1.22s/it][A
+ 48%|████▊     | 326/680 [06:38<07:13,  1.22s/it][A
+ 48%|████▊     | 327/680 [06:39<07:12,  1.22s/it][A
+ 48%|████▊     | 328/680 [06:40<07:11,  1.22s/it][A
+ 48%|████▊     | 329/680 [06:42<07:09,  1.22s/it][A
+ 49%|████▊     | 330/680 [06:43<07:08,  1.22s/it][A
+ 49%|████▊     | 331/680 [06:44<07:07,  1.23s/it][A
+ 49%|████▉     | 332/680 [06:45<07:06,  1.23s/it][A
+ 49%|████▉     | 333/680 [06:47<07:05,  1.23s/it][A
+ 49%|████▉     | 334/680 [06:48<07:04,  1.23s/it][A
+ 49%|████▉     | 335/680 [06:49<07:02,  1.23s/it][A
+ 49%|████▉     | 336/680 [06:50<07:01,  1.23s/it][A
+ 50%|████▉     | 337/680 [06:52<07:00,  1.23s/it][A
+ 50%|████▉     | 338/680 [06:53<06:58,  1.22s/it][A
+ 50%|████▉     | 339/680 [06:54<06:57,  1.22s/it][A
+ 50%|█████     | 340/680 [06:55<06:56,  1.22s/it][A
+ 50%|█████     | 341/680 [06:56<06:54,  1.22s/it][A
+ 50%|█████     | 342/680 [06:58<06:53,  1.22s/it][A
+ 50%|█████     | 343/680 [06:59<06:52,  1.22s/it][A
+ 51%|█████     | 344/680 [07:00<06:50,  1.22s/it][A
+ 51%|█████     | 345/680 [07:01<06:49,  1.22s/it][A
+ 51%|█████     | 346/680 [07:03<06:48,  1.22s/it][A
+ 51%|█████     | 347/680 [07:04<06:47,  1.22s/it][A
+ 51%|█████     | 348/680 [07:05<06:46,  1.22s/it][A
+ 51%|█████▏    | 349/680 [07:06<06:45,  1.22s/it][A
+ 51%|█████▏    | 350/680 [07:07<06:44,  1.23s/it][A
+ 52%|█████▏    | 351/680 [07:09<06:43,  1.23s/it][A
+ 52%|█████▏    | 352/680 [07:10<06:41,  1.22s/it][A
+ 52%|█████▏    | 353/680 [07:11<06:40,  1.23s/it][A
+ 52%|█████▏    | 354/680 [07:12<06:39,  1.23s/it][A
+ 52%|█████▏    | 355/680 [07:14<06:38,  1.23s/it][A
+ 52%|█████▏    | 356/680 [07:15<06:37,  1.23s/it][A
+ 52%|█████▎    | 357/680 [07:16<06:36,  1.23s/it][A
+ 53%|█████▎    | 358/680 [07:17<06:35,  1.23s/it][A
+ 53%|█████▎    | 359/680 [07:18<06:34,  1.23s/it][A
+ 53%|█████▎    | 360/680 [07:20<06:32,  1.23s/it][A
+ 53%|█████▎    | 361/680 [07:21<06:31,  1.23s/it][A
+ 53%|█████▎    | 362/680 [07:22<06:30,  1.23s/it][A
+ 53%|█████▎    | 363/680 [07:23<06:28,  1.23s/it][A
+ 54%|█████▎    | 364/680 [07:25<06:27,  1.23s/it][A
+ 54%|█████▎    | 365/680 [07:26<06:25,  1.22s/it][A
+ 54%|█████▍    | 366/680 [07:27<06:24,  1.22s/it][A
+ 54%|█████▍    | 367/680 [07:28<06:23,  1.22s/it][A
+ 54%|█████▍    | 368/680 [07:30<06:21,  1.22s/it][A
+ 54%|█████▍    | 369/680 [07:31<06:22,  1.23s/it][A
+ 54%|█████▍    | 370/680 [07:32<06:20,  1.23s/it][A
+ 55%|█████▍    | 371/680 [07:33<06:21,  1.24s/it][A
+ 55%|█████▍    | 372/680 [07:34<06:23,  1.24s/it][A
+ 55%|█████▍    | 373/680 [07:36<06:20,  1.24s/it][A
+ 55%|█████▌    | 374/680 [07:37<06:17,  1.23s/it][A
+ 55%|█████▌    | 375/680 [07:38<06:16,  1.24s/it][A
+ 55%|█████▌    | 376/680 [07:39<06:15,  1.23s/it][A
+ 55%|█████▌    | 377/680 [07:41<06:13,  1.23s/it][A
+ 56%|█████▌    | 378/680 [07:42<06:11,  1.23s/it][A
+ 56%|█████▌    | 379/680 [07:43<06:10,  1.23s/it][A
+ 56%|█████▌    | 380/680 [07:44<06:09,  1.23s/it][A
+ 56%|█████▌    | 381/680 [07:46<06:07,  1.23s/it][A
+ 56%|█████▌    | 382/680 [07:47<06:05,  1.23s/it][A
+ 56%|█████▋    | 383/680 [07:48<06:08,  1.24s/it][A
+ 56%|█████▋    | 384/680 [07:49<06:05,  1.24s/it][A
+ 57%|█████▋    | 385/680 [07:51<06:05,  1.24s/it][A
+ 57%|█████▋    | 386/680 [07:52<06:02,  1.23s/it][A
+ 57%|█████▋    | 387/680 [07:53<06:02,  1.24s/it][A
+ 57%|█████▋    | 388/680 [07:54<05:59,  1.23s/it][A
+ 57%|█████▋    | 389/680 [07:55<05:57,  1.23s/it][A
+ 57%|█████▋    | 390/680 [07:57<05:56,  1.23s/it][A
+ 57%|█████▊    | 391/680 [07:58<05:56,  1.24s/it][A
+ 58%|█████▊    | 392/680 [07:59<05:54,  1.23s/it][A
+ 58%|█████▊    | 393/680 [08:00<05:56,  1.24s/it][A
+ 58%|█████▊    | 394/680 [08:02<05:53,  1.24s/it][A
+ 58%|█████▊    | 395/680 [08:03<05:51,  1.23s/it][A
+ 58%|█████▊    | 396/680 [08:04<05:52,  1.24s/it][A
+ 58%|█████▊    | 397/680 [08:05<05:51,  1.24s/it][A
+ 59%|█████▊    | 398/680 [08:07<05:48,  1.24s/it][A
+ 59%|█████▊    | 399/680 [08:08<05:49,  1.24s/it][A
+ 59%|█████▉    | 400/680 [08:09<05:47,  1.24s/it][A
+ 59%|█████▉    | 401/680 [08:10<05:44,  1.23s/it][A
+ 59%|█████▉    | 402/680 [08:12<05:42,  1.23s/it][A
+ 59%|█████▉    | 403/680 [08:13<05:40,  1.23s/it][A
+ 59%|█████▉    | 404/680 [08:14<05:38,  1.23s/it][A
+ 60%|█████▉    | 405/680 [08:15<05:37,  1.23s/it][A
+ 60%|█████▉    | 406/680 [08:16<05:35,  1.22s/it][A
+ 60%|█████▉    | 407/680 [08:18<05:34,  1.22s/it][A
+ 60%|██████    | 408/680 [08:19<05:32,  1.22s/it][A
+ 60%|██████    | 409/680 [08:20<05:31,  1.22s/it][A
+ 60%|██████    | 410/680 [08:21<05:30,  1.22s/it][A
+ 60%|██████    | 411/680 [08:23<05:28,  1.22s/it][A
+ 61%|██████    | 412/680 [08:24<05:27,  1.22s/it][A
+ 61%|██████    | 413/680 [08:25<05:26,  1.22s/it][A
+ 61%|██████    | 414/680 [08:26<05:24,  1.22s/it][A
+ 61%|██████    | 415/680 [08:27<05:23,  1.22s/it][A
+ 61%|██████    | 416/680 [08:29<05:23,  1.22s/it][A
+ 61%|██████▏   | 417/680 [08:30<05:22,  1.23s/it][A
+ 61%|██████▏   | 418/680 [08:31<05:21,  1.23s/it][A
+ 62%|██████▏   | 419/680 [08:32<05:19,  1.22s/it][A
+ 62%|██████▏   | 420/680 [08:34<05:18,  1.22s/it][A
+ 62%|██████▏   | 421/680 [08:35<05:17,  1.22s/it][A
+ 62%|██████▏   | 422/680 [08:36<05:15,  1.22s/it][A
+ 62%|██████▏   | 423/680 [08:37<05:14,  1.22s/it][A
+ 62%|██████▏   | 424/680 [08:38<05:12,  1.22s/it][A
+ 62%|██████▎   | 425/680 [08:40<05:11,  1.22s/it][A
+ 63%|██████▎   | 426/680 [08:41<05:10,  1.22s/it][A
+ 63%|██████▎   | 427/680 [08:42<05:09,  1.22s/it][A
+ 63%|██████▎   | 428/680 [08:43<05:08,  1.22s/it][A
+ 63%|██████▎   | 429/680 [08:45<05:06,  1.22s/it][A
+ 63%|██████▎   | 430/680 [08:46<05:05,  1.22s/it][A
+ 63%|██████▎   | 431/680 [08:47<05:04,  1.22s/it][A
+ 64%|██████▎   | 432/680 [08:48<05:03,  1.22s/it][A
+ 64%|██████▎   | 433/680 [08:49<05:01,  1.22s/it][A
+ 64%|██████▍   | 434/680 [08:51<05:00,  1.22s/it][A
+ 64%|██████▍   | 435/680 [08:52<04:59,  1.22s/it][A
+ 64%|██████▍   | 436/680 [08:53<04:59,  1.23s/it][A
+ 64%|██████▍   | 437/680 [08:54<04:57,  1.22s/it][A
+ 64%|██████▍   | 438/680 [08:56<04:56,  1.22s/it][A
+ 65%|██████▍   | 439/680 [08:57<04:54,  1.22s/it][A
+ 65%|██████▍   | 440/680 [08:58<04:53,  1.22s/it][A
+ 65%|██████▍   | 441/680 [08:59<04:52,  1.22s/it][A
+ 65%|██████▌   | 442/680 [09:00<04:50,  1.22s/it][A
+ 65%|██████▌   | 443/680 [09:02<04:49,  1.22s/it][A
+ 65%|██████▌   | 444/680 [09:03<04:48,  1.22s/it][A
+ 65%|██████▌   | 445/680 [09:04<04:47,  1.22s/it][A
+ 66%|██████▌   | 446/680 [09:05<04:46,  1.22s/it][A
+ 66%|██████▌   | 447/680 [09:07<04:44,  1.22s/it][A
+ 66%|██████▌   | 448/680 [09:08<04:43,  1.22s/it][A
+ 66%|██████▌   | 449/680 [09:09<04:42,  1.22s/it][A
+ 66%|██████▌   | 450/680 [09:10<04:41,  1.22s/it][A
+ 66%|██████▋   | 451/680 [09:11<04:39,  1.22s/it][A
+ 66%|██████▋   | 452/680 [09:13<04:39,  1.22s/it][A
+ 67%|██████▋   | 453/680 [09:14<04:37,  1.22s/it][A
+ 67%|██████▋   | 454/680 [09:15<04:36,  1.22s/it][A
+ 67%|██████▋   | 455/680 [09:16<04:35,  1.22s/it][A
+ 67%|██████▋   | 456/680 [09:18<04:34,  1.22s/it][A
+ 67%|██████▋   | 457/680 [09:19<04:32,  1.22s/it][A
+ 67%|██████▋   | 458/680 [09:20<04:31,  1.22s/it][A
+ 68%|██████▊   | 459/680 [09:21<04:30,  1.22s/it][A
+ 68%|██████▊   | 460/680 [09:22<04:28,  1.22s/it][A
+ 68%|██████▊   | 461/680 [09:24<04:27,  1.22s/it][A
+ 68%|██████▊   | 462/680 [09:25<04:26,  1.22s/it][A
+ 68%|██████▊   | 463/680 [09:26<04:25,  1.22s/it][A
+ 68%|██████▊   | 464/680 [09:27<04:24,  1.22s/it][A
+ 68%|██████▊   | 465/680 [09:29<04:23,  1.22s/it][A
+ 69%|██████▊   | 466/680 [09:30<04:21,  1.22s/it][A
+ 69%|██████▊   | 467/680 [09:31<04:20,  1.22s/it][A
+ 69%|██████▉   | 468/680 [09:32<04:19,  1.22s/it][A
+ 69%|██████▉   | 469/680 [09:33<04:19,  1.23s/it][A
+ 69%|██████▉   | 470/680 [09:35<04:18,  1.23s/it][A
+ 69%|██████▉   | 471/680 [09:36<04:18,  1.24s/it][A
+ 69%|██████▉   | 472/680 [09:37<04:17,  1.24s/it][A
+ 70%|██████▉   | 473/680 [09:38<04:15,  1.24s/it][A
+ 70%|██████▉   | 474/680 [09:40<04:13,  1.23s/it][A
+ 70%|██████▉   | 475/680 [09:41<04:11,  1.23s/it][A
+ 70%|███████   | 476/680 [09:42<04:11,  1.23s/it][A
+ 70%|███████   | 477/680 [09:43<04:09,  1.23s/it][A
+ 70%|███████   | 478/680 [09:45<04:09,  1.23s/it][A
+ 70%|███████   | 479/680 [09:46<04:08,  1.24s/it][A
+ 71%|███████   | 480/680 [09:47<04:06,  1.23s/it][A
+ 71%|███████   | 481/680 [09:48<04:05,  1.23s/it][A
+ 71%|███████   | 482/680 [09:49<04:03,  1.23s/it][A
+ 71%|███████   | 483/680 [09:51<04:03,  1.24s/it][A
+ 71%|███████   | 484/680 [09:52<04:03,  1.24s/it][A
+ 71%|███████▏  | 485/680 [09:53<04:00,  1.24s/it][A
+ 71%|███████▏  | 486/680 [09:54<03:59,  1.23s/it][A
+ 72%|███████▏  | 487/680 [09:56<03:58,  1.23s/it][A
+ 72%|███████▏  | 488/680 [09:57<03:56,  1.23s/it][A
+ 72%|███████▏  | 489/680 [09:58<03:54,  1.23s/it][A
+ 72%|███████▏  | 490/680 [09:59<03:52,  1.23s/it][A
+ 72%|███████▏  | 491/680 [10:01<03:51,  1.22s/it][A
+ 72%|███████▏  | 492/680 [10:02<03:51,  1.23s/it][A
+ 72%|███████▎  | 493/680 [10:03<03:49,  1.23s/it][A
+ 73%|███████▎  | 494/680 [10:04<03:49,  1.23s/it][A
+ 73%|███████▎  | 495/680 [10:06<03:48,  1.23s/it][A
+ 73%|███████▎  | 496/680 [10:07<03:46,  1.23s/it][A
+ 73%|███████▎  | 497/680 [10:08<03:46,  1.24s/it][A
+ 73%|███████▎  | 498/680 [10:09<03:45,  1.24s/it][A
+ 73%|███████▎  | 499/680 [10:10<03:43,  1.24s/it][A
+ 74%|███████▎  | 500/680 [10:12<03:43,  1.24s/it][A
+ 74%|███████▎  | 501/680 [10:13<03:41,  1.24s/it][A
+ 74%|███████▍  | 502/680 [10:14<03:39,  1.23s/it][A
+ 74%|███████▍  | 503/680 [10:15<03:38,  1.23s/it][A
+ 74%|███████▍  | 504/680 [10:17<03:37,  1.24s/it][A
+ 74%|███████▍  | 505/680 [10:18<03:35,  1.23s/it][A
+ 74%|███████▍  | 506/680 [10:19<03:36,  1.24s/it][A
+ 75%|███████▍  | 507/680 [10:20<03:34,  1.24s/it][A
+ 75%|███████▍  | 508/680 [10:22<03:33,  1.24s/it][A
+ 75%|███████▍  | 509/680 [10:23<03:31,  1.23s/it][A
+ 75%|███████▌  | 510/680 [10:24<03:30,  1.24s/it][A
+ 75%|███████▌  | 511/680 [10:25<03:29,  1.24s/it][A
+ 75%|███████▌  | 512/680 [10:27<03:27,  1.24s/it][A
+ 75%|███████▌  | 513/680 [10:28<03:27,  1.24s/it][A
+ 76%|███████▌  | 514/680 [10:29<03:26,  1.24s/it][A
+ 76%|███████▌  | 515/680 [10:30<03:25,  1.25s/it][A
+ 76%|███████▌  | 516/680 [10:32<03:24,  1.25s/it][A
+ 76%|███████▌  | 517/680 [10:33<03:22,  1.24s/it][A
+ 76%|███████▌  | 518/680 [10:34<03:21,  1.24s/it][A
+ 76%|███████▋  | 519/680 [10:35<03:20,  1.24s/it][A
+ 76%|███████▋  | 520/680 [10:37<03:18,  1.24s/it][A
+ 77%|███████▋  | 521/680 [10:38<03:16,  1.24s/it][A
+ 77%|███████▋  | 522/680 [10:39<03:15,  1.23s/it][A
+ 77%|███████▋  | 523/680 [10:40<03:14,  1.24s/it][A
+ 77%|███████▋  | 524/680 [10:41<03:12,  1.24s/it][A
+ 77%|███████▋  | 525/680 [10:43<03:13,  1.25s/it][A
+ 77%|███████▋  | 526/680 [10:44<03:11,  1.25s/it][A
+ 78%|███████▊  | 527/680 [10:45<03:09,  1.24s/it][A
+ 78%|███████▊  | 528/680 [10:46<03:08,  1.24s/it][A
+ 78%|███████▊  | 529/680 [10:48<03:07,  1.24s/it][A
+ 78%|███████▊  | 530/680 [10:49<03:06,  1.25s/it][A
+ 78%|███████▊  | 531/680 [10:50<03:04,  1.24s/it][A
+ 78%|███████▊  | 532/680 [10:51<03:03,  1.24s/it][A
+ 78%|███████▊  | 533/680 [10:53<03:01,  1.24s/it][A
+ 79%|███████▊  | 534/680 [10:54<03:00,  1.24s/it][A
+ 79%|███████▊  | 535/680 [10:55<03:00,  1.25s/it][A
+ 79%|███████▉  | 536/680 [10:56<02:59,  1.25s/it][A
+ 79%|███████▉  | 537/680 [10:58<02:58,  1.25s/it][A
+ 79%|███████▉  | 538/680 [10:59<02:56,  1.24s/it][A
+ 79%|███████▉  | 539/680 [11:00<02:56,  1.25s/it][A
+ 79%|███████▉  | 540/680 [11:01<02:54,  1.25s/it][A
+ 80%|███████▉  | 541/680 [11:03<02:52,  1.24s/it][A
+ 80%|███████▉  | 542/680 [11:04<02:50,  1.24s/it][A
+ 80%|███████▉  | 543/680 [11:05<02:50,  1.24s/it][A
+ 80%|████████  | 544/680 [11:06<02:48,  1.24s/it][A
+ 80%|████████  | 545/680 [11:08<02:48,  1.25s/it][A
+ 80%|████████  | 546/680 [11:09<02:47,  1.25s/it][A
+ 80%|████████  | 547/680 [11:10<02:45,  1.25s/it][A
+ 81%|████████  | 548/680 [11:11<02:44,  1.25s/it][A
+ 81%|████████  | 549/680 [11:13<02:42,  1.24s/it][A
+ 81%|████████  | 550/680 [11:14<02:41,  1.25s/it][A
+ 81%|████████  | 551/680 [11:15<02:39,  1.24s/it][A
+ 81%|████████  | 552/680 [11:16<02:38,  1.24s/it][A
+ 81%|████████▏ | 553/680 [11:17<02:37,  1.24s/it][A
+ 81%|████████▏ | 554/680 [11:19<02:35,  1.24s/it][A
+ 82%|████████▏ | 555/680 [11:20<02:34,  1.24s/it][A
+ 82%|████████▏ | 556/680 [11:21<02:33,  1.24s/it][A
+ 82%|████████▏ | 557/680 [11:22<02:32,  1.24s/it][A
+ 82%|████████▏ | 558/680 [11:24<02:30,  1.24s/it][A
+ 82%|████████▏ | 559/680 [11:25<02:29,  1.24s/it][A
+ 82%|████████▏ | 560/680 [11:26<02:28,  1.24s/it][A
+ 82%|████████▎ | 561/680 [11:27<02:26,  1.23s/it][A
+ 83%|████████▎ | 562/680 [11:29<02:25,  1.23s/it][A
+ 83%|████████▎ | 563/680 [11:30<02:23,  1.23s/it][A
+ 83%|████████▎ | 564/680 [11:31<02:23,  1.23s/it][A
+ 83%|████████▎ | 565/680 [11:32<02:21,  1.23s/it][A
+ 83%|████████▎ | 566/680 [11:34<02:20,  1.23s/it][A
+ 83%|████████▎ | 567/680 [11:35<02:20,  1.24s/it][A
+ 84%|████████▎ | 568/680 [11:36<02:18,  1.23s/it][A
+ 84%|████████▎ | 569/680 [11:37<02:17,  1.24s/it][A
+ 84%|████████▍ | 570/680 [11:38<02:15,  1.24s/it][A
+ 84%|████████▍ | 571/680 [11:40<02:15,  1.24s/it][A
+ 84%|████████▍ | 572/680 [11:41<02:14,  1.25s/it][A
+ 84%|████████▍ | 573/680 [11:42<02:12,  1.24s/it][A
+ 84%|████████▍ | 574/680 [11:43<02:11,  1.24s/it][A
+ 85%|████████▍ | 575/680 [11:45<02:10,  1.24s/it][A
+ 85%|████████▍ | 576/680 [11:46<02:08,  1.24s/it][A
+ 85%|████████▍ | 577/680 [11:47<02:07,  1.24s/it][A
+ 85%|████████▌ | 578/680 [11:48<02:06,  1.24s/it][A
+ 85%|████████▌ | 579/680 [11:50<02:05,  1.24s/it][A
+ 85%|████████▌ | 580/680 [11:51<02:04,  1.24s/it][A
+ 85%|████████▌ | 581/680 [11:52<02:02,  1.24s/it][A
+ 86%|████████▌ | 582/680 [11:53<02:01,  1.24s/it][A
+ 86%|████████▌ | 583/680 [11:55<02:00,  1.24s/it][A
+ 86%|████████▌ | 584/680 [11:56<01:59,  1.24s/it][A
+ 86%|████████▌ | 585/680 [11:57<01:58,  1.25s/it][A
+ 86%|████████▌ | 586/680 [11:58<01:56,  1.24s/it][A
+ 86%|████████▋ | 587/680 [12:00<01:55,  1.24s/it][A
+ 86%|████████▋ | 588/680 [12:01<01:54,  1.24s/it][A
+ 87%|████████▋ | 589/680 [12:02<01:53,  1.25s/it][A
+ 87%|████████▋ | 590/680 [12:03<01:51,  1.24s/it][A
+ 87%|████████▋ | 591/680 [12:05<01:50,  1.24s/it][A
+ 87%|████████▋ | 592/680 [12:06<01:48,  1.24s/it][A
+ 87%|████████▋ | 593/680 [12:07<01:48,  1.24s/it][A
+ 87%|████████▋ | 594/680 [12:08<01:46,  1.24s/it][A
+ 88%|████████▊ | 595/680 [12:10<01:45,  1.24s/it][A
+ 88%|████████▊ | 596/680 [12:11<01:44,  1.25s/it][A
+ 88%|████████▊ | 597/680 [12:12<01:43,  1.24s/it][A
+ 88%|████████▊ | 598/680 [12:13<01:42,  1.24s/it][A
+ 88%|████████▊ | 599/680 [12:14<01:40,  1.24s/it][A
+ 88%|████████▊ | 600/680 [12:16<01:39,  1.24s/it][A
+ 88%|████████▊ | 601/680 [12:17<01:37,  1.23s/it][A
+ 89%|████████▊ | 602/680 [12:18<01:35,  1.23s/it][A
+ 89%|████████▊ | 603/680 [12:19<01:34,  1.23s/it][A
+ 89%|████████▉ | 604/680 [12:21<01:33,  1.23s/it][A
+ 89%|████████▉ | 605/680 [12:22<01:32,  1.23s/it][A
+ 89%|████████▉ | 606/680 [12:23<01:31,  1.23s/it][A
+ 89%|████████▉ | 607/680 [12:24<01:29,  1.23s/it][A
+ 89%|████████▉ | 608/680 [12:26<01:28,  1.23s/it][A
+ 90%|████████▉ | 609/680 [12:27<01:27,  1.23s/it][A
+ 90%|████████▉ | 610/680 [12:28<01:25,  1.23s/it][A
+ 90%|████████▉ | 611/680 [12:29<01:24,  1.23s/it][A
+ 90%|█████████ | 612/680 [12:30<01:23,  1.23s/it][A
+ 90%|█████████ | 613/680 [12:32<01:22,  1.23s/it][A
+ 90%|█████████ | 614/680 [12:33<01:21,  1.23s/it][A
+ 90%|█████████ | 615/680 [12:34<01:20,  1.24s/it][A
+ 91%|█████████ | 616/680 [12:35<01:19,  1.25s/it][A
+ 91%|█████████ | 617/680 [12:37<01:18,  1.24s/it][A
+ 91%|█████████ | 618/680 [12:38<01:16,  1.24s/it][A
+ 91%|█████████ | 619/680 [12:39<01:15,  1.24s/it][A
+ 91%|█████████ | 620/680 [12:40<01:14,  1.23s/it][A
+ 91%|█████████▏| 621/680 [12:42<01:12,  1.23s/it][A
+ 91%|█████████▏| 622/680 [12:43<01:11,  1.23s/it][A
+ 92%|█████████▏| 623/680 [12:44<01:10,  1.24s/it][A
+ 92%|█████████▏| 624/680 [12:45<01:09,  1.24s/it][A
+ 92%|█████████▏| 625/680 [12:47<01:07,  1.23s/it][A
+ 92%|█████████▏| 626/680 [12:48<01:06,  1.23s/it][A
+ 92%|█████████▏| 627/680 [12:49<01:05,  1.23s/it][A
+ 92%|█████████▏| 628/680 [12:50<01:04,  1.24s/it][A
+ 92%|█████████▎| 629/680 [12:51<01:03,  1.24s/it][A
+ 93%|█████████▎| 630/680 [12:53<01:01,  1.24s/it][A
+ 93%|█████████▎| 631/680 [12:54<01:00,  1.23s/it][A
+ 93%|█████████▎| 632/680 [12:55<00:59,  1.24s/it][A
+ 93%|█████████▎| 633/680 [12:56<00:58,  1.24s/it][A
+ 93%|█████████▎| 634/680 [12:58<00:56,  1.24s/it][A
+ 93%|█████████▎| 635/680 [12:59<00:55,  1.23s/it][A
+ 94%|█████████▎| 636/680 [13:00<00:54,  1.23s/it][A
+ 94%|█████████▎| 637/680 [13:01<00:53,  1.24s/it][A
+ 94%|█████████▍| 638/680 [13:03<00:52,  1.24s/it][A
+ 94%|█████████▍| 639/680 [13:04<00:50,  1.24s/it][A
+ 94%|█████████▍| 640/680 [13:05<00:49,  1.23s/it][A
+ 94%|█████████▍| 641/680 [13:06<00:48,  1.23s/it][A
+ 94%|█████████▍| 642/680 [13:08<00:46,  1.24s/it][A
+ 95%|█████████▍| 643/680 [13:09<00:46,  1.24s/it][A
+ 95%|█████████▍| 644/680 [13:10<00:44,  1.24s/it][A
+ 95%|█████████▍| 645/680 [13:11<00:43,  1.24s/it][A
+ 95%|█████████▌| 646/680 [13:13<00:41,  1.23s/it][A
+ 95%|█████████▌| 647/680 [13:14<00:40,  1.24s/it][A
+ 95%|█████████▌| 648/680 [13:15<00:39,  1.23s/it][A
+ 95%|█████████▌| 649/680 [13:16<00:38,  1.23s/it][A
+ 96%|█████████▌| 650/680 [13:17<00:36,  1.23s/it][A
+ 96%|█████████▌| 651/680 [13:19<00:35,  1.23s/it][A
+ 96%|█████████▌| 652/680 [13:20<00:34,  1.23s/it][A
+ 96%|█████████▌| 653/680 [13:21<00:33,  1.22s/it][A
+ 96%|█████████▌| 654/680 [13:22<00:31,  1.22s/it][A
+ 96%|█████████▋| 655/680 [13:24<00:30,  1.22s/it][A
+ 96%|█████████▋| 656/680 [13:25<00:29,  1.22s/it][A
+ 97%|█████████▋| 657/680 [13:26<00:28,  1.22s/it][A
+ 97%|█████████▋| 658/680 [13:27<00:26,  1.22s/it][A
+ 97%|█████████▋| 659/680 [13:28<00:25,  1.22s/it][A
+ 97%|█████████▋| 660/680 [13:30<00:24,  1.22s/it][A
+ 97%|█████████▋| 661/680 [13:31<00:23,  1.22s/it][A
+ 97%|█████████▋| 662/680 [13:32<00:21,  1.22s/it][A
+ 98%|█████████▊| 663/680 [13:33<00:20,  1.22s/it][A
+ 98%|█████████▊| 664/680 [13:35<00:19,  1.22s/it][A
+ 98%|█████████▊| 665/680 [13:36<00:18,  1.22s/it][A
+ 98%|█████████▊| 666/680 [13:37<00:17,  1.22s/it][A
+ 98%|█████████▊| 667/680 [13:38<00:15,  1.22s/it][A
+ 98%|█████████▊| 668/680 [13:39<00:14,  1.22s/it][A
+ 98%|█████████▊| 669/680 [13:41<00:13,  1.22s/it][A
+ 99%|█████████▊| 670/680 [13:42<00:12,  1.22s/it][A
+ 99%|█████████▊| 671/680 [13:43<00:11,  1.22s/it][A
+ 99%|█████████▉| 672/680 [13:44<00:09,  1.22s/it][A
+ 99%|█████████▉| 673/680 [13:46<00:08,  1.22s/it][A
+ 99%|█████████▉| 674/680 [13:47<00:07,  1.22s/it][A
+ 99%|█████████▉| 675/680 [13:48<00:06,  1.22s/it][A
+ 99%|█████████▉| 676/680 [13:49<00:04,  1.22s/it][A
+100%|█████████▉| 677/680 [13:50<00:03,  1.22s/it][A
+100%|█████████▉| 678/680 [13:52<00:02,  1.22s/it][A
+100%|█████████▉| 679/680 [13:53<00:01,  1.22s/it][A
+100%|██████████| 680/680 [13:54<00:00,  1.22s/it][A                                             
+                                                 [A100%|██████████| 3/3 [18:29<00:00, 81.01s/it]
+100%|██████████| 680/680 [13:54<00:00,  1.22s/it][A
+                                                 [A10:48:32  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:48:32  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+                                             100%|██████████| 3/3 [18:32<00:00, 81.01s/it]100%|██████████| 3/3 [18:33<00:00, 371.00s/it]
+10:48:33  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:48:33  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+[rank0]:[W729 10:48:48.472065465 ProcessGroupNCCL.cpp:1647] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

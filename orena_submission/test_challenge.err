@@ -1,0 +1,74 @@
++ SIF=/home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif
++ SUB=/home/ajenane/orena/orena_submission
++ IN=/home/ajenane/orena/orena_submission/real_batch/interface_1
++ OUT=/home/ajenane/orena/orena_submission/real_batch/output
++ nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
++ rm -rf /home/ajenane/orena/orena_submission/real_batch/output
++ mkdir -p /home/ajenane/orena/orena_submission/real_batch/output
++ echo '########## FULL RUN (timed as the platform times it) ##########'
+++ date +%s.%N
++ START=1785143040.127658939
++ apptainer exec --nv --pwd /opt/app --no-home --bind /home/ajenane/orena/orena_submission/real_batch/interface_1:/input:ro --bind /home/ajenane/orena/orena_submission/real_batch/output:/output /home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif bash -c 'export HOME=/home/user; exec python inference.py'
+11:04:14  INFO      __main__  === ORena SAVE FOCUS — inference start ===
+11:04:14  INFO      __main__  Device: cuda
+11:04:14  INFO      __main__    GPU: NVIDIA H200 NVL
+11:04:14  INFO      __main__  --- Loading inputs ---
+11:04:14  INFO      __main__  Batch of 20 question(s)
+11:04:14  INFO      __main__  --- Loading model (once for the batch) ---
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights:   1%|          | 6/760 [00:00<00:25, 29.82it/s]Loading weights:   1%|          | 9/760 [00:00<00:25, 29.10it/s]Loading weights:   4%|▎         | 27/760 [00:00<00:11, 64.03it/s]Loading weights:   7%|▋         | 53/760 [00:00<00:07, 90.98it/s]Loading weights:   8%|▊         | 64/760 [00:00<00:07, 93.15it/s]Loading weights:  10%|▉         | 74/760 [00:01<00:10, 65.71it/s]Loading weights:  11%|█▏        | 86/760 [00:01<00:09, 74.05it/s]Loading weights:  14%|█▍        | 105/760 [00:01<00:08, 73.32it/s]Loading weights:  15%|█▌        | 116/760 [00:01<00:08, 76.05it/s]Loading weights:  16%|█▋        | 125/760 [00:01<00:08, 73.84it/s]Loading weights:  18%|█▊        | 133/760 [00:01<00:09, 69.46it/s]Loading weights:  19%|█▊        | 141/760 [00:02<00:09, 65.28it/s]Loading weights:  20%|██        | 152/760 [00:02<00:09, 62.67it/s]Loading weights:  22%|██▏       | 165/760 [00:02<00:12, 48.43it/s]Loading weights:  22%|██▎       | 171/760 [00:02<00:12, 47.88it/s]Loading weights:  26%|██▌       | 198/760 [00:02<00:07, 75.68it/s]Loading weights:  27%|██▋       | 206/760 [00:03<00:08, 66.06it/s]Loading weights:  28%|██▊       | 213/760 [00:03<00:08, 64.85it/s]Loading weights:  29%|██▉       | 220/760 [00:03<00:10, 50.62it/s]Loading weights:  30%|██▉       | 226/760 [00:03<00:13, 38.60it/s]Loading weights:  30%|███       | 231/760 [00:03<00:13, 38.19it/s]Loading weights:  31%|███▏      | 239/760 [00:04<00:15, 33.46it/s]Loading weights:  33%|███▎      | 251/760 [00:04<00:12, 40.06it/s]Loading weights:  34%|███▎      | 256/760 [00:04<00:14, 35.68it/s]Loading weights:  34%|███▍      | 262/760 [00:04<00:15, 32.20it/s]Loading weights:  36%|███▌      | 275/760 [00:05<00:14, 33.67it/s]Loading weights:  37%|███▋      | 279/760 [00:05<00:15, 31.66it/s]Loading weights:  39%|███▉      | 298/760 [00:05<00:11, 38.52it/s]Loading weights:  41%|████      | 308/760 [00:05<00:10, 44.00it/s]Loading weights:  41%|████      | 313/760 [00:06<00:11, 40.24it/s]Loading weights:  42%|████▏     | 318/760 [00:06<00:10, 40.30it/s]Loading weights:  42%|████▎     | 323/760 [00:06<00:12, 35.38it/s]Loading weights:  43%|████▎     | 327/760 [00:06<00:13, 31.54it/s]Loading weights:  46%|████▌     | 346/760 [00:07<00:10, 39.55it/s]Loading weights:  48%|████▊     | 364/760 [00:07<00:07, 50.84it/s]Loading weights:  50%|████▉     | 379/760 [00:07<00:06, 54.81it/s]Loading weights:  51%|█████▏    | 391/760 [00:07<00:08, 45.43it/s]Loading weights:  53%|█████▎    | 402/760 [00:08<00:08, 44.08it/s]Loading weights:  54%|█████▍    | 409/760 [00:08<00:07, 47.32it/s]Loading weights:  55%|█████▌    | 419/760 [00:08<00:07, 47.33it/s]Loading weights:  56%|█████▌    | 425/760 [00:08<00:07, 46.50it/s]Loading weights:  57%|█████▋    | 430/760 [00:08<00:07, 43.77it/s]Loading weights:  57%|█████▋    | 435/760 [00:08<00:08, 38.02it/s]Loading weights:  58%|█████▊    | 441/760 [00:09<00:08, 36.56it/s]Loading weights:  59%|█████▊    | 445/760 [00:09<00:09, 33.35it/s]Loading weights:  60%|█████▉    | 453/760 [00:09<00:07, 40.93it/s]Loading weights:  64%|██████▍   | 485/760 [00:09<00:03, 79.77it/s]Loading weights:  65%|██████▍   | 493/760 [00:09<00:03, 76.60it/s]Loading weights:  68%|██████▊   | 514/760 [00:09<00:02, 83.69it/s]Loading weights:  69%|██████▉   | 527/760 [00:10<00:02, 86.63it/s]Loading weights:  72%|███████▏  | 544/760 [00:10<00:02, 96.44it/s]Loading weights:  73%|███████▎  | 558/760 [00:10<00:02, 99.58it/s]Loading weights:  75%|███████▍  | 568/760 [00:10<00:02, 79.62it/s]Loading weights:  76%|███████▌  | 577/760 [00:10<00:02, 65.33it/s]Loading weights:  78%|███████▊  | 593/760 [00:10<00:02, 74.26it/s]Loading weights:  79%|███████▉  | 603/760 [00:11<00:02, 74.13it/s]Loading weights:  81%|████████  | 614/760 [00:11<00:01, 73.32it/s]Loading weights:  83%|████████▎ | 632/760 [00:11<00:01, 87.03it/s]Loading weights:  84%|████████▍ | 641/760 [00:11<00:01, 74.04it/s]Loading weights:  86%|████████▌ | 655/760 [00:11<00:01, 77.24it/s]Loading weights:  87%|████████▋ | 663/760 [00:11<00:01, 72.65it/s]Loading weights:  88%|████████▊ | 671/760 [00:12<00:01, 63.97it/s]Loading weights:  90%|█████████ | 686/760 [00:12<00:01, 55.94it/s]Loading weights:  93%|█████████▎| 708/760 [00:12<00:00, 72.07it/s]Loading weights:  95%|█████████▍| 719/760 [00:12<00:00, 77.62it/s]Loading weights:  96%|█████████▌| 728/760 [00:12<00:00, 77.31it/s]Loading weights:  97%|█████████▋| 740/760 [00:12<00:00, 75.19it/s]Loading weights: 100%|██████████| 760/760 [00:12<00:00, 58.57it/s]
+11:06:35  INFO      __main__  Model loaded and set to eval mode (setup took 141.08 s)
+11:06:35  INFO      __main__  --- Running inference over 20 question(s) ---
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+/home/user/.local/lib/python3.11/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py:1457: UserWarning: Specified kernel cache directory could not be created! This disables kernel caching. Specified directory is /home/user/.cache/torch/kernels. This warning will appear only once per process. (Triggered internally at ../aten/src/ATen/native/cuda/jit_utils.cpp:1442.)
+  split_sizes = (image_grid_thw.prod(-1) // self.visual.spatial_merge_size**2).tolist()
+11:06:42  INFO      __main__  [1/20] qID=q001 answered in 6.535 s: 'Clip, Sponge'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:42  INFO      __main__  [2/20] qID=q002 answered in 0.224 s: 'Clip'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:42  INFO      __main__  [3/20] qID=q003 answered in 0.255 s: 'External drain'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:43  INFO      __main__  [4/20] qID=q004 answered in 0.278 s: 'Sponge'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:43  INFO      __main__  [5/20] qID=q005 answered in 0.235 s: 'Clip'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:43  INFO      __main__  [6/20] qID=q006 answered in 0.275 s: 'Clip, Sponge'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:43  INFO      __main__  [7/20] qID=q007 answered in 0.241 s: 'External drain'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:44  INFO      __main__  [8/20] qID=q008 answered in 0.266 s: 'Sponge'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:44  INFO      __main__  [9/20] qID=q009 answered in 0.226 s: 'Clip'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:44  INFO      __main__  [10/20] qID=q010 answered in 0.251 s: 'External drain'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:44  INFO      __main__  [11/20] qID=q011 answered in 0.264 s: 'Specimen'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:45  INFO      __main__  [12/20] qID=q012 answered in 0.255 s: 'Specimen bag'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:45  INFO      __main__  [13/20] qID=q013 answered in 0.243 s: 'Specimen'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:45  INFO      __main__  [14/20] qID=q014 answered in 0.203 s: 'Clip'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:45  INFO      __main__  [15/20] qID=q015 answered in 0.305 s: 'Specimen, Specimen bag'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:46  INFO      __main__  [16/20] qID=q016 answered in 0.230 s: 'Needle'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:46  INFO      __main__  [17/20] qID=q017 answered in 0.240 s: 'Specimen'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:46  INFO      __main__  [18/20] qID=q018 answered in 0.227 s: 'Sponge'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:46  INFO      __main__  [19/20] qID=q019 answered in 0.255 s: 'No'
+[transformers] Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+11:06:47  INFO      __main__  [20/20] qID=q020 answered in 0.247 s: 'none'
+11:06:47  INFO      __main__  Inference complete: 20 answered (0 failed)
+11:06:47  INFO      __main__  Wrote 20 response(s) to /output/answer.json
+11:06:47  INFO      __main__  === inference done in 152.34 s total ===
++ RC=0
+++ date +%s.%N
++ END=1785143209.481029032
+++ echo '1785143209.481029032 - 1785143040.127658939'
+++ bc
++ ELAPSED=169.353370093
++ echo '########## VERDICT ##########'
++ python3 - 169.353370093 0

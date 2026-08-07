@@ -1,0 +1,16 @@
+Node: cgm-gpu38
+name, memory.total [MiB], memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 0 MiB
+
+[heico] evaluating 4 segment clips (64 frames each)...
+  [heico] 4/4  (last total 5.3s)
+[heico] wrote raw generations to /home/ajenane/orena/segment_track/eval_base/Qwen3.6-27B/heico/predictions.jsonl
+
+[heico] summary:
+         level                  name  accuracy  ci_low  ci_high  count
+          leaf temporal_localization       0.5     0.0      1.0      4
+         group    temporal_grounding       0.5     0.0      1.0      4
+ answer_format                  time       0.5     0.0      1.0      4
+       overall                  MEAN       0.5     0.0      1.0      4
+       latency             timed_out       NaN     NaN      NaN      0
+pre_evaluation                 SCORE       0.5     NaN      NaN      1

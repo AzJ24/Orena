@@ -1,0 +1,12 @@
+name, memory.total [MiB], driver_version
+NVIDIA H200 NVL, 143771 MiB, 580.173.02
+########## 1. CUDA inside the shipped image ##########
+torch       : 2.5.1+cu124
+CUDA build  : 12.4
+available   : True
+device      : NVIDIA H200 NVL
+capability  : sm_90
+matmul      : 45792.4375
+>>> CUDA OK INSIDE IMAGE <<<
+########## 2. full batch through the real entrypoint ##########
+########## 3. answer.json ##########

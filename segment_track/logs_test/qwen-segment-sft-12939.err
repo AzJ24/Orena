@@ -1,0 +1,258 @@
+W0729 10:22:42.365000 318234 torch/distributed/run.py:862] 
+W0729 10:22:42.365000 318234 torch/distributed/run.py:862] *****************************************
+W0729 10:22:42.365000 318234 torch/distributed/run.py:862] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0729 10:22:42.365000 318234 torch/distributed/run.py:862] *****************************************
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:23  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+10:23:23  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.json "HTTP/1.1 404 Not Found"
+10:23:23  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.json "HTTP/1.1 404 Not Found"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.jinja "HTTP/1.1 307 Temporary Redirect"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/chat_template.jinja "HTTP/1.1 200 OK"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.jinja "HTTP/1.1 307 Temporary Redirect"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/chat_template.jinja "HTTP/1.1 200 OK"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:24  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:23:25  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:25  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+10:23:25  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:25  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+10:23:25  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:25  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:25  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+10:23:25  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+10:23:25  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+10:23:25  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+10:23:25  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+10:23:25  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+10:23:26  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B "HTTP/1.1 200 OK"
+10:23:26  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B "HTTP/1.1 200 OK"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:26  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/model.safetensors.index.json "HTTP/1.1 200 OK"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+10:23:27  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/model.safetensors.index.json "HTTP/1.1 200 OK"
+10:23:27  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/revision/main "HTTP/1.1 200 OK"
+Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]10:23:27  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/revision/main "HTTP/1.1 200 OK"
+Fetching 15 files: 100%|██████████| 15/15 [00:00<00:00, 240.27it/s]
+Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Fetching 15 files: 100%|██████████| 15/15 [00:00<00:00, 47268.64it/s]
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/1184 [00:00<?, ?it/s]Loading weights:   0%|          | 0/1184 [00:00<?, ?it/s]Loading weights:   0%|          | 1/1184 [00:00<03:25,  5.75it/s]Loading weights:   0%|          | 1/1184 [00:00<03:17,  5.99it/s]Loading weights:   0%|          | 2/1184 [00:00<03:32,  5.56it/s]Loading weights:   0%|          | 2/1184 [00:00<03:44,  5.26it/s]Loading weights:   2%|▏         | 21/1184 [00:00<00:18, 63.53it/s]Loading weights:   2%|▏         | 19/1184 [00:00<00:21, 54.83it/s]Loading weights:   3%|▎         | 39/1184 [00:00<00:12, 93.90it/s]Loading weights:   3%|▎         | 41/1184 [00:00<00:11, 98.77it/s]Loading weights:   4%|▍         | 51/1184 [00:00<00:11, 99.28it/s]Loading weights:   4%|▍         | 53/1184 [00:00<00:11, 95.24it/s]Loading weights:   6%|▌         | 68/1184 [00:00<00:09, 113.95it/s]Loading weights:   6%|▋         | 74/1184 [00:00<00:09, 122.75it/s]Loading weights:   8%|▊         | 90/1184 [00:00<00:07, 140.86it/s]Loading weights:   8%|▊         | 89/1184 [00:00<00:08, 128.92it/s]Loading weights:   9%|▉         | 105/1184 [00:01<00:08, 124.85it/s]Loading weights:   9%|▊         | 103/1184 [00:01<00:09, 118.64it/s]Loading weights:  10%|█         | 121/1184 [00:01<00:08, 130.73it/s]Loading weights:  10%|█         | 121/1184 [00:01<00:08, 127.98it/s]Loading weights:  12%|█▏        | 140/1184 [00:01<00:07, 137.89it/s]Loading weights:  12%|█▏        | 142/1184 [00:01<00:07, 145.21it/s]Loading weights:  13%|█▎        | 155/1184 [00:01<00:07, 131.16it/s]Loading weights:  15%|█▍        | 174/1184 [00:01<00:07, 139.44it/s]Loading weights:  13%|█▎        | 158/1184 [00:01<00:08, 124.90it/s]Loading weights:  17%|█▋        | 196/1184 [00:01<00:06, 157.45it/s]Loading weights:  15%|█▌        | 180/1184 [00:01<00:07, 141.28it/s]Loading weights:  17%|█▋        | 199/1184 [00:01<00:06, 152.06it/s]Loading weights:  18%|█▊        | 213/1184 [00:01<00:07, 135.83it/s]Loading weights:  20%|█▉        | 235/1184 [00:01<00:06, 153.24it/s]Loading weights:  18%|█▊        | 215/1184 [00:01<00:07, 133.77it/s]Loading weights:  21%|██▏       | 252/1184 [00:02<00:06, 153.63it/s]Loading weights:  20%|█▉        | 231/1184 [00:01<00:07, 134.18it/s]Loading weights:  21%|██▏       | 252/1184 [00:02<00:06, 151.71it/s]Loading weights:  23%|██▎       | 268/1184 [00:02<00:06, 135.98it/s]Loading weights:  24%|██▍       | 286/1184 [00:02<00:06, 141.58it/s]Loading weights:  23%|██▎       | 268/1184 [00:02<00:06, 133.59it/s]Loading weights:  26%|██▌       | 305/1184 [00:02<00:05, 153.55it/s]Loading weights:  24%|██▍       | 288/1184 [00:02<00:06, 146.41it/s]Loading weights:  26%|██▌       | 304/1184 [00:02<00:05, 148.81it/s]Loading weights:  27%|██▋       | 321/1184 [00:02<00:06, 135.91it/s]Loading weights:  29%|██▉       | 341/1184 [00:02<00:05, 149.69it/s]Loading weights:  27%|██▋       | 320/1184 [00:02<00:06, 129.83it/s]Loading weights:  30%|███       | 357/1184 [00:02<00:05, 151.72it/s]Loading weights:  29%|██▊       | 339/1184 [00:02<00:06, 139.09it/s]Loading weights:  30%|███       | 357/1184 [00:02<00:05, 148.30it/s]Loading weights:  32%|███▏      | 373/1184 [00:02<00:06, 131.67it/s]Loading weights:  33%|███▎      | 391/1184 [00:03<00:05, 139.00it/s]Loading weights:  32%|███▏      | 373/1184 [00:03<00:06, 130.88it/s]Loading weights:  35%|███▍      | 411/1184 [00:03<00:05, 154.25it/s]Loading weights:  33%|███▎      | 393/1184 [00:03<00:05, 146.25it/s]Loading weights:  35%|███▍      | 409/1184 [00:03<00:05, 146.34it/s]Loading weights:  36%|███▌      | 428/1184 [00:03<00:05, 138.23it/s]Loading weights:  38%|███▊      | 447/1184 [00:03<00:05, 146.19it/s]Loading weights:  36%|███▌      | 425/1184 [00:03<00:05, 127.92it/s]Loading weights:  39%|███▉      | 464/1184 [00:03<00:04, 150.16it/s]Loading weights:  38%|███▊      | 446/1184 [00:03<00:05, 141.44it/s]Loading weights:  39%|███▉      | 464/1184 [00:03<00:04, 149.56it/s]Loading weights:  41%|████      | 480/1184 [00:03<00:05, 133.93it/s]Loading weights:  42%|████▏     | 498/1184 [00:03<00:04, 140.73it/s]Loading weights:  41%|████      | 480/1184 [00:03<00:05, 132.14it/s]Loading weights:  44%|████▎     | 516/1184 [00:03<00:04, 142.68it/s]Loading weights:  42%|████▏     | 499/1184 [00:03<00:04, 143.25it/s]Loading weights:  43%|████▎     | 514/1184 [00:03<00:04, 143.50it/s]Loading weights:  45%|████▍     | 531/1184 [00:04<00:04, 134.41it/s]Loading weights:  46%|████▋     | 549/1184 [00:04<00:04, 143.51it/s]Loading weights:  45%|████▍     | 529/1184 [00:04<00:05, 128.57it/s]Loading weights:  48%|████▊     | 568/1184 [00:04<00:03, 155.51it/s]Loading weights:  46%|████▌     | 545/1184 [00:04<00:04, 132.60it/s]Loading weights:  49%|████▉     | 584/1184 [00:04<00:04, 135.10it/s]Loading weights:  48%|████▊     | 563/1184 [00:04<00:04, 141.33it/s]Loading weights:  51%|█████     | 603/1184 [00:04<00:03, 146.53it/s]Loading weights:  49%|████▉     | 578/1184 [00:04<00:04, 127.39it/s]Loading weights:  53%|█████▎    | 623/1184 [00:04<00:03, 157.72it/s]Loading weights:  50%|█████     | 597/1184 [00:04<00:04, 135.76it/s]Loading weights:  54%|█████▍    | 640/1184 [00:04<00:03, 140.78it/s]Loading weights:  52%|█████▏    | 620/1184 [00:04<00:03, 156.23it/s]Loading weights:  55%|█████▌    | 657/1184 [00:04<00:03, 143.47it/s]Loading weights:  54%|█████▍    | 637/1184 [00:04<00:04, 134.26it/s]Loading weights:  57%|█████▋    | 677/1184 [00:05<00:03, 150.04it/s]Loading weights:  56%|█████▌    | 659/1184 [00:05<00:03, 150.78it/s]Loading weights:  59%|█████▊    | 693/1184 [00:05<00:03, 141.14it/s]Loading weights:  57%|█████▋    | 675/1184 [00:05<00:03, 151.53it/s]Loading weights:  60%|██████    | 711/1184 [00:05<00:03, 149.21it/s]Loading weights:  58%|█████▊    | 691/1184 [00:05<00:03, 130.97it/s]Loading weights:  62%|██████▏   | 729/1184 [00:05<00:02, 154.46it/s]Loading weights:  60%|█████▉    | 708/1184 [00:05<00:03, 137.02it/s]Loading weights:  63%|██████▎   | 745/1184 [00:05<00:03, 136.41it/s]Loading weights:  61%|██████▏   | 726/1184 [00:05<00:03, 146.88it/s]Loading weights:  64%|██████▍   | 762/1184 [00:05<00:02, 142.74it/s]Loading weights:  63%|██████▎   | 742/1184 [00:05<00:03, 132.73it/s]Loading weights:  66%|██████▌   | 782/1184 [00:05<00:02, 154.84it/s]Loading weights:  64%|██████▍   | 757/1184 [00:05<00:03, 133.52it/s]Loading weights:  67%|██████▋   | 798/1184 [00:05<00:02, 136.84it/s]Loading weights:  66%|██████▌   | 777/1184 [00:05<00:02, 143.70it/s]Loading weights:  69%|██████▉   | 815/1184 [00:05<00:02, 140.54it/s]Loading weights:  67%|██████▋   | 792/1184 [00:06<00:02, 131.96it/s]Loading weights:  71%|███████   | 836/1184 [00:06<00:02, 150.34it/s]Loading weights:  68%|██████▊   | 808/1184 [00:06<00:02, 138.46it/s]Loading weights:  72%|███████▏  | 852/1184 [00:06<00:02, 141.45it/s]Loading weights:  70%|██████▉   | 824/1184 [00:06<00:02, 137.41it/s]Loading weights:  95%|█████████▍| 1124/1184 [00:06<00:00, 799.60it/s]Loading weights: 100%|██████████| 1184/1184 [00:06<00:00, 185.97it/s]
+Loading weights:  71%|███████   | 841/1184 [00:06<00:02, 139.63it/s]Loading weights:  79%|███████▊  | 932/1184 [00:06<00:00, 344.00it/s]Loading weights: 100%|█████████▉| 1179/1184 [00:06<00:00, 913.03it/s]Loading weights: 100%|██████████| 1184/1184 [00:06<00:00, 180.44it/s]
+10:23:35  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:35  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/generation_config.json "HTTP/1.1 200 OK"
+10:23:35  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+10:23:35  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/generation_config.json "HTTP/1.1 200 OK"
+10:23:36  INFO      httpx  HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+10:23:36  INFO      httpx  HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ajenane/.netrc.
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046, 'bos_token_id': None, 'pad_token_id': 248044}.
+wandb: Currently logged in as: azza-jenane2 (azza-jenane2-technical-university-of-munich) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /home/ajenane/orena/wandb/run-20260729_102338-640b5xqu
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fla-timing-1022
+wandb: ⭐️ View project at https://wandb.ai/azza-jenane2-technical-university-of-munich/orena-segment-sft
+wandb: 🚀 View run at https://wandb.ai/azza-jenane2-technical-university-of-munich/orena-segment-sft/runs/640b5xqu
+10:23:44  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/telemetry/trl/SFTTrainer "HTTP/1.1 200 OK"
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046, 'bos_token_id': None, 'pad_token_id': 248044}.
+  0%|          | 0/3 [00:00<?, ?it/s][rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/ajenane/orena/segment_track/sft_train_qwen_segment_ddp.py", line 333, in <module>
+[rank0]:     main()
+[rank0]:   File "/home/ajenane/orena/segment_track/sft_train_qwen_segment_ddp.py", line 324, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/transformers/trainer.py", line 1427, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/transformers/trainer.py", line 1509, in _inner_training_loop
+[rank0]:     self._run_epoch(
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/transformers/trainer.py", line 1737, in _run_epoch
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 1844, in training_step
+[rank0]:     return super().training_step(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/transformers/trainer.py", line 1937, in training_step
+[rank0]:     self.accelerator.backward(loss, **kwargs)
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/accelerate/accelerator.py", line 2850, in backward
+[rank0]:     loss.backward(**kwargs)
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/_tensor.py", line 631, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/autograd/__init__.py", line 379, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/autograd/graph.py", line 882, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/autograd/function.py", line 317, in apply
+[rank0]:     return user_fn(self, *args)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/fla/utils/_decorators.py", line 152, in wrapper
+[rank0]:     return fn(*processed_args, **processed_kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 539, in decorate_bwd
+[rank0]:     return bwd(*args, **kwargs)  # pyrefly: ignore [not-callable]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/fla/ops/gated_delta_rule/chunk.py", line 362, in backward
+[rank0]:     dq, dk, dv, db, dg, dh0, dA_log, ddt_bias = chunk_gated_delta_rule_bwd(
+[rank0]:                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/fla/ops/gated_delta_rule/chunk.py", line 217, in chunk_gated_delta_rule_bwd
+[rank0]:     dq, dk, dw, dg = chunk_bwd_dqkwg(
+[rank0]:                      ^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1298, in _fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/fla/ops/backends/__init__.py", line 214, in wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/fla/ops/common/chunk_o.py", line 705, in chunk_bwd_dqkwg
+[rank0]:     raise RuntimeError(
+[rank0]: RuntimeError: Triton >= 3.4.0 and < 3.7.1 on Hopper GPUs produces incorrect results for gated chunk_bwd_dqkwg (see #640). Please upgrade Triton to >= 3.7.1 or install tilelang: `pip install tilelang`
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/ajenane/orena/segment_track/sft_train_qwen_segment_ddp.py", line 333, in <module>
+[rank1]:     main()
+[rank1]:   File "/home/ajenane/orena/segment_track/sft_train_qwen_segment_ddp.py", line 324, in main
+[rank1]:     trainer.train()
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/transformers/trainer.py", line 1427, in train
+[rank1]:     return inner_training_loop(
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/transformers/trainer.py", line 1509, in _inner_training_loop
+[rank1]:     self._run_epoch(
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/transformers/trainer.py", line 1737, in _run_epoch
+[rank1]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank1]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 1844, in training_step
+[rank1]:     return super().training_step(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/transformers/trainer.py", line 1937, in training_step
+[rank1]:     self.accelerator.backward(loss, **kwargs)
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/accelerate/accelerator.py", line 2850, in backward
+[rank1]:     loss.backward(**kwargs)
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/_tensor.py", line 631, in backward
+[rank1]:     torch.autograd.backward(
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/autograd/__init__.py", line 379, in backward
+[rank1]:     _engine_run_backward(
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/autograd/graph.py", line 882, in _engine_run_backward
+[rank1]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/autograd/function.py", line 317, in apply
+[rank1]:     return user_fn(self, *args)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/fla/utils/_decorators.py", line 152, in wrapper
+[rank1]:     return fn(*processed_args, **processed_kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 539, in decorate_bwd
+[rank1]:     return bwd(*args, **kwargs)  # pyrefly: ignore [not-callable]
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/fla/ops/gated_delta_rule/chunk.py", line 362, in backward
+[rank1]:     dq, dk, dv, db, dg, dh0, dA_log, ddt_bias = chunk_gated_delta_rule_bwd(
+[rank1]:                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/fla/ops/gated_delta_rule/chunk.py", line 217, in chunk_gated_delta_rule_bwd
+[rank1]:     dq, dk, dw, dg = chunk_bwd_dqkwg(
+[rank1]:                      ^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1298, in _fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/fla/ops/backends/__init__.py", line 214, in wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/fla/ops/common/chunk_o.py", line 705, in chunk_bwd_dqkwg
+[rank1]:     raise RuntimeError(
+[rank1]: RuntimeError: Triton >= 3.4.0 and < 3.7.1 on Hopper GPUs produces incorrect results for gated chunk_bwd_dqkwg (see #640). Please upgrade Triton to >= 3.7.1 or install tilelang: `pip install tilelang`
+E0729 10:26:32.678000 318234 torch/distributed/elastic/multiprocessing/api.py:988] failed (exitcode: 1) local_rank: 0 (pid: 318316) of binary: /home/ajenane/orena/venv3.12/bin/python
+Traceback (most recent call last):
+  File "/home/ajenane/orena/venv3.12/bin/torchrun", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 367, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/distributed/run.py", line 1016, in main
+    run(args)
+  File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/distributed/run.py", line 1007, in run
+    elastic_launch(
+  File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 191, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ajenane/orena/venv3.12/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 371, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/ajenane/orena/segment_track/sft_train_qwen_segment_ddp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-07-29_10:26:32
+  host      : cgm-gpu38
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 318317) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-07-29_10:26:32
+  host      : cgm-gpu38
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 318316) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

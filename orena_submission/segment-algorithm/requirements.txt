@@ -1,0 +1,41 @@
+# ADDITIONAL deps only -- torch 2.11.0 + torchvision come from the base image
+# (CUDA 12.8) and must NOT be pinned here. Pinning torch, or letting a dependency
+# drag one in, replaces the base image's build with a PyPI wheel built for a
+# different CUDA. The failure is silent in both directions: the wrong CUDA either
+# reports no GPU and runs on CPU, or -- as the first submission found -- reports
+# cuda.is_available() == True on a Blackwell card and then dies at the first kernel
+# launch. The base image tag is the single source of truth for the torch/CUDA pair,
+# and the Dockerfile asserts it at build time via verify_env.py.
+#
+# CUDA 12.8 is required for the challenge's RTX PRO 6000 Blackwell (sm_120); see the
+# Dockerfile. Verified: this set leaves the base image's torch untouched.
+
+# transformers 5.9.0 supplies Qwen3_5ForConditionalGeneration and the Qwen3-VL
+# processor whose timestamp rendering resources/clip_frames.py is written against.
+transformers==5.9.0
+
+# accelerate lets from_pretrained() stream the 55 GB checkpoint straight onto the
+# GPU (device_map). Without it the weights land in host RAM first and are copied.
+accelerate==1.14.0
+
+# orena-focus is pinned because the FO class names baked into the system prompt
+# (resources/prompts.py reads FOType.names() at import) come from this exact release.
+orena-focus==0.3.5
+
+# decord decodes the platform's clips. The template's own segment requirements.txt
+# lists it; it is the one dependency SEGMENT adds over FRAME.
+decord==0.6.0
+
+# Direct imports of inference.py / resources/clip_frames.py. They also arrive as
+# transitive dependencies of orena-focus, but anything imported directly is
+# declared explicitly.
+numpy>=1.23.0
+pillow>=9.0
+
+# NOT flash-linear-attention. It supplies fused Gated DeltaNet kernels for the 48
+# linear-attention layers, and on torch 2.11 it would now install and work -- the
+# triton >= 3.3 requirement that made it crash at import on the old CUDA 12.4 base
+# is satisfied here. It is still left out on purpose: it would cut ~6.1 s/question
+# to ~2.9 s, against a 15 s budget already only 40% used, and reintroducing it means
+# reintroducing the dependency whose constraints drove two base-image changes.
+# The shipped environment is exactly the one measured on Blackwell.

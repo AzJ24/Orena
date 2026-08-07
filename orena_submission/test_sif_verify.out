@@ -1,0 +1,5 @@
+name, memory.total [MiB], driver_version
+Quadro RTX 5000, 16384 MiB, 580.173.02
+########## CHECK 1: CUDA inside the shipped image ##########
+########## CHECK 2: full entrypoint on CPU ##########
+########## CHECK 3: answer.json contract ##########

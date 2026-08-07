@@ -1,0 +1,54 @@
+name, memory.total [MiB]
+NVIDIA H200 NVL, 143771 MiB
+======================================================================
+A. DATA PATH (CPU, per sample)
+   collate (64 JPEG reads + resize + processor): 2.00 s/sample
+   seq len 8113, video patches (28160, 1536), grid [[32, 22, 40]]
+
+B. LOADING MODEL (bf16, LoRA r=8, gradient checkpointing)
+
+C. WARMUP (excluded from all timings)
+
+D. COMPONENT TIMINGS (median of 3, GPU-synchronised)
+   vision tower (forward only)      :   0.11 s
+   full forward (no grad)           :   2.36 s
+     -> language model share        :   2.25 s
+   full forward (grad enabled)      :   3.50 s
+   forward + backward (a micro-step):  16.94 s
+     -> backward + recompute        :  13.44 s
+
+E. GPU UTILIZATION during 3 forward+backward passes
+
+   peak VRAM 93.1 GB
+
+F. TOP CUDA KERNELS (one forward+backward)
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                             aten::add_         0.75%     160.013ms         2.80%     601.040ms       6.748us        4.626s        31.09%        4.626s      51.938us         89073  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us        4.620s        31.05%        4.620s      37.018us        124791  
+                                            aten::copy_         1.57%     336.347ms         7.83%        1.679s      11.673us        2.362s        15.88%        2.362s      16.423us        143849  
+                                               aten::mm         1.88%     402.953ms         2.08%     446.599ms     126.229us        2.272s        15.27%        2.273s     642.329us          3538  
+                                            aten::fill_         0.60%     129.356ms         6.71%        1.440s      16.129us        1.561s        10.49%        1.561s      17.488us         89270  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us        1.557s        10.46%        1.557s      17.529us         88805  
+                                              aten::mul         3.52%     755.136ms        11.34%        2.433s      18.216us        1.368s         9.19%        1.370s      10.256us        133553  
+                                              aten::bmm         8.83%        1.894s        13.29%        2.852s      23.318us        1.068s         7.18%        1.075s       8.786us        122305  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us     854.976ms         5.75%     854.976ms       8.646us         98884  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us     785.200ms         5.28%     785.200ms       6.115us        128402  
+                         Memcpy DtoD (Device -> Device)         0.00%       0.000us         0.00%       0.000us       0.000us     774.719ms         5.21%     774.719ms      81.369us          9521  
+         nvjet_sm90_tst_256x152_64x4_1x2_h_bz_coopA_TNT         0.00%       0.000us         0.00%       0.000us       0.000us     529.126ms         3.56%     529.126ms       2.059ms           257  
+         nvjet_sm90_tst_128x248_64x4_2x1_v_bz_coopA_TNT         0.00%       0.000us         0.00%       0.000us       0.000us     456.666ms         3.07%     456.666ms       1.098ms           416  
+                                              aten::sum         0.68%     145.031ms         1.55%     333.364ms       9.776us     384.186ms         2.58%     384.211ms      11.267us         34100  
+sm80_xmma_gemm_f32f32_f32f32_f32_nn_n_tilesize32x32x...         0.00%       0.000us         0.00%       0.000us       0.000us     365.665ms         2.46%     365.665ms       7.505us         48721  
+         nvjet_sm90_tst_128x248_64x4_2x1_v_bz_coopA_NNT         0.00%       0.000us         0.00%       0.000us       0.000us     337.326ms         2.27%     337.326ms       1.499ms           225  
+void at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us     337.028ms         2.27%     337.028ms     137.226us          2456  
+void cutlass::Kernel2<cutlass_75_tensorop_bf16_s1688...         0.00%       0.000us         0.00%       0.000us       0.000us     319.739ms         2.15%     319.739ms       6.661ms            48  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 21.455s
+Self CUDA time total: 14.879s
+
+
+G. ARITHMETIC
+   27.4B params x 8113 tokens -> 445 TFLOP forward
+   forward measured 2.36s -> 188 TFLOPS (19% of H200 bf16 peak)
+   step measured 16.94s -> effective 79 TFLOPS (8% MFU)

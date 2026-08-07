@@ -1,0 +1,468 @@
+W0728 19:59:44.020000 272219 torch/distributed/run.py:862] 
+W0728 19:59:44.020000 272219 torch/distributed/run.py:862] *****************************************
+W0728 19:59:44.020000 272219 torch/distributed/run.py:862] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0728 19:59:44.020000 272219 torch/distributed/run.py:862] *****************************************
+19:59:54  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:54  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:54  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:55  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:55  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:55  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:55  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+19:59:55  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:55  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.json "HTTP/1.1 404 Not Found"
+19:59:55  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.jinja "HTTP/1.1 307 Temporary Redirect"
+19:59:55  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/chat_template.jinja "HTTP/1.1 200 OK"
+19:59:55  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+19:59:55  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:56  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:56  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:56  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:57  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.json "HTTP/1.1 404 Not Found"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.jinja "HTTP/1.1 307 Temporary Redirect"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/chat_template.jinja "HTTP/1.1 200 OK"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+19:59:57  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B "HTTP/1.1 200 OK"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:57  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+19:59:58  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/model.safetensors.index.json "HTTP/1.1 200 OK"
+19:59:58  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/revision/main "HTTP/1.1 200 OK"
+Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Fetching 15 files: 100%|██████████| 15/15 [00:00<00:00, 21509.25it/s]
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/1184 [00:00<?, ?it/s]Loading weights:   0%|          | 1/1184 [00:00<02:01,  9.77it/s]19:59:59  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 2/1184 [00:00<02:40,  7.38it/s]19:59:59  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+Loading weights:   2%|▏         | 27/1184 [00:00<00:11, 96.90it/s]19:59:59  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:59  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+Loading weights:   4%|▎         | 42/1184 [00:00<00:09, 115.19it/s]19:59:59  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:59:59  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+Loading weights:   5%|▌         | 62/1184 [00:00<00:08, 139.95it/s]19:59:59  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+Loading weights:   7%|▋         | 80/1184 [00:00<00:07, 143.43it/s]20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+Loading weights:   8%|▊         | 95/1184 [00:00<00:07, 139.09it/s]20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+Loading weights:   9%|▉         | 110/1184 [00:00<00:07, 137.47it/s]20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+Loading weights:  11%|█         | 129/1184 [00:01<00:07, 146.60it/s]20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+Loading weights:  12%|█▏        | 146/1184 [00:01<00:07, 143.92it/s]20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+Loading weights:  14%|█▎        | 161/1184 [00:01<00:07, 133.48it/s]20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+Loading weights:  15%|█▌        | 182/1184 [00:01<00:06, 150.48it/s]20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+20:00:00  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/model.safetensors.index.json "HTTP/1.1 200 OK"
+Loading weights:  17%|█▋        | 198/1184 [00:01<00:06, 152.54it/s]20:00:00  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/revision/main "HTTP/1.1 200 OK"
+Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Fetching 15 files: 100%|██████████| 15/15 [00:00<00:00, 7953.80it/s]
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:  18%|█▊        | 214/1184 [00:01<00:07, 131.88it/s]Loading weights:  20%|█▉        | 235/1184 [00:01<00:06, 147.97it/s]Loading weights:   0%|          | 0/1184 [00:00<?, ?it/s]Loading weights:  21%|██        | 251/1184 [00:01<00:06, 150.37it/s]Loading weights:  23%|██▎       | 267/1184 [00:02<00:07, 130.99it/s]Loading weights:  24%|██▍       | 287/1184 [00:02<00:06, 145.33it/s]Loading weights:  26%|██▌       | 303/1184 [00:02<00:05, 148.37it/s]Loading weights:   0%|          | 1/1184 [00:00<08:10,  2.41it/s]Loading weights:   2%|▏         | 27/1184 [00:00<00:17, 66.95it/s]Loading weights:  27%|██▋       | 319/1184 [00:02<00:06, 130.25it/s]Loading weights:   4%|▎         | 42/1184 [00:00<00:13, 83.09it/s]Loading weights:  29%|██▉       | 341/1184 [00:02<00:05, 149.51it/s]Loading weights:   5%|▌         | 61/1184 [00:00<00:10, 109.70it/s]Loading weights:  30%|███       | 357/1184 [00:02<00:05, 148.47it/s]Loading weights:   7%|▋         | 77/1184 [00:00<00:09, 119.36it/s]Loading weights:  32%|███▏      | 373/1184 [00:02<00:06, 132.18it/s]Loading weights:   8%|▊         | 94/1184 [00:00<00:08, 126.64it/s]Loading weights:  33%|███▎      | 393/1184 [00:02<00:05, 146.26it/s]Loading weights:   9%|▉         | 109/1184 [00:01<00:08, 121.50it/s]Loading weights:  35%|███▍      | 409/1184 [00:02<00:05, 149.35it/s]Loading weights:  11%|█         | 129/1184 [00:01<00:07, 138.81it/s]Loading weights:  36%|███▌      | 425/1184 [00:03<00:05, 130.92it/s]Loading weights:  12%|█▏        | 145/1184 [00:01<00:07, 143.13it/s]Loading weights:  38%|███▊      | 446/1184 [00:03<00:04, 147.72it/s]Loading weights:  14%|█▎        | 161/1184 [00:01<00:08, 125.44it/s]Loading weights:  39%|███▉      | 462/1184 [00:03<00:04, 150.41it/s]Loading weights:  15%|█▌        | 181/1184 [00:01<00:07, 140.67it/s]Loading weights:  40%|████      | 478/1184 [00:03<00:05, 131.97it/s]Loading weights:  17%|█▋        | 197/1184 [00:01<00:06, 141.86it/s]Loading weights:  42%|████▏     | 498/1184 [00:03<00:04, 146.13it/s]Loading weights:  18%|█▊        | 212/1184 [00:01<00:07, 130.23it/s]Loading weights:  44%|████▎     | 516/1184 [00:03<00:04, 154.87it/s]Loading weights:  19%|█▉        | 227/1184 [00:01<00:07, 131.24it/s]Loading weights:  45%|████▌     | 533/1184 [00:03<00:04, 136.68it/s]Loading weights:  21%|██        | 248/1184 [00:02<00:06, 144.71it/s]Loading weights:  47%|████▋     | 553/1184 [00:04<00:04, 147.75it/s]Loading weights:  22%|██▏       | 263/1184 [00:02<00:07, 131.35it/s]Loading weights:  48%|████▊     | 570/1184 [00:04<00:04, 153.11it/s]Loading weights:  24%|██▎       | 279/1184 [00:02<00:06, 131.64it/s]Loading weights:  49%|████▉     | 586/1184 [00:04<00:04, 135.25it/s]Loading weights:  26%|██▌       | 302/1184 [00:02<00:05, 152.66it/s]Loading weights:  51%|█████     | 605/1184 [00:04<00:03, 148.64it/s]Loading weights:  52%|█████▏    | 621/1184 [00:04<00:03, 150.02it/s]Loading weights:  27%|██▋       | 318/1184 [00:02<00:06, 130.03it/s]Loading weights:  29%|██▉       | 341/1184 [00:02<00:05, 150.29it/s]Loading weights:  54%|█████▍    | 637/1184 [00:04<00:04, 131.42it/s]Loading weights:  30%|███       | 357/1184 [00:02<00:05, 144.07it/s]Loading weights:  56%|█████▌    | 659/1184 [00:04<00:03, 150.91it/s]Loading weights:  57%|█████▋    | 675/1184 [00:04<00:03, 150.25it/s]Loading weights:  31%|███▏      | 372/1184 [00:03<00:06, 130.78it/s]Loading weights:  33%|███▎      | 393/1184 [00:03<00:05, 148.23it/s]Loading weights:  58%|█████▊    | 691/1184 [00:04<00:03, 133.88it/s]Loading weights:  35%|███▍      | 412/1184 [00:03<00:05, 152.31it/s]Loading weights:  60%|██████    | 712/1184 [00:05<00:03, 150.47it/s]Loading weights:  62%|██████▏   | 729/1184 [00:05<00:02, 152.94it/s]Loading weights:  36%|███▌      | 428/1184 [00:03<00:05, 149.29it/s]Loading weights:  38%|███▊      | 450/1184 [00:03<00:04, 167.10it/s]Loading weights:  63%|██████▎   | 745/1184 [00:05<00:03, 135.50it/s]Loading weights:  40%|███▉      | 468/1184 [00:03<00:04, 154.18it/s]Loading weights:  64%|██████▍   | 763/1184 [00:05<00:02, 144.31it/s]Loading weights:  41%|████      | 484/1184 [00:03<00:04, 150.43it/s]Loading weights:  66%|██████▌   | 780/1184 [00:05<00:02, 149.76it/s]Loading weights:  43%|████▎     | 504/1184 [00:03<00:04, 161.89it/s]Loading weights:  67%|██████▋   | 796/1184 [00:05<00:02, 131.75it/s]Loading weights:  44%|████▍     | 521/1184 [00:03<00:04, 148.29it/s]Loading weights:  69%|██████▉   | 817/1184 [00:05<00:02, 145.97it/s]Loading weights:  46%|████▌     | 539/1184 [00:04<00:04, 154.82it/s]Loading weights:  71%|███████   | 836/1184 [00:05<00:02, 149.12it/s]Loading weights:  47%|████▋     | 555/1184 [00:04<00:04, 155.91it/s]Loading weights:  72%|███████▏  | 852/1184 [00:06<00:02, 140.53it/s]Loading weights:  48%|████▊     | 571/1184 [00:04<00:04, 146.34it/s]Loading weights:  96%|█████████▌| 1131/1184 [00:06<00:00, 811.74it/s]Loading weights: 100%|██████████| 1184/1184 [00:06<00:00, 190.33it/s]
+Loading weights:  49%|████▉     | 586/1184 [00:04<00:04, 133.73it/s]Loading weights:  51%|█████     | 600/1184 [00:04<00:04, 135.09it/s]Loading weights:  52%|█████▏    | 620/1184 [00:04<00:03, 149.21it/s]Loading weights:  54%|█████▎    | 636/1184 [00:04<00:04, 123.42it/s]20:00:05  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+20:00:06  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/generation_config.json "HTTP/1.1 200 OK"
+Loading weights:  55%|█████▍    | 651/1184 [00:04<00:04, 128.79it/s]Loading weights:  56%|█████▌    | 665/1184 [00:05<00:03, 130.82it/s]Loading weights:  57%|█████▋    | 679/1184 [00:05<00:03, 132.80it/s]Loading weights:  59%|█████▊    | 695/1184 [00:05<00:03, 135.34it/s]Loading weights:  60%|█████▉    | 710/1184 [00:05<00:03, 138.53it/s]Loading weights:  61%|██████▏   | 726/1184 [00:05<00:03, 142.80it/s]20:00:06  INFO      httpx  HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ajenane/.netrc.
+Loading weights:  63%|██████▎   | 741/1184 [00:05<00:03, 117.04it/s]Loading weights:  64%|██████▍   | 757/1184 [00:05<00:03, 126.89it/s]Loading weights:  65%|██████▌   | 771/1184 [00:05<00:03, 129.61it/s]wandb: Currently logged in as: azza-jenane2 (azza-jenane2-technical-university-of-munich) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+Loading weights:  66%|██████▋   | 785/1184 [00:05<00:03, 131.67it/s]Loading weights:  68%|██████▊   | 804/1184 [00:06<00:02, 143.05it/s]Loading weights:  69%|██████▉   | 819/1184 [00:06<00:02, 141.53it/s]Loading weights:  70%|███████   | 834/1184 [00:06<00:02, 143.27it/s]Loading weights:  72%|███████▏  | 849/1184 [00:06<00:02, 119.92it/s]Loading weights:  94%|█████████▎| 1109/1184 [00:06<00:00, 740.51it/s]Loading weights: 100%|██████████| 1184/1184 [00:06<00:00, 180.41it/s]
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /home/ajenane/orena/wandb/run-20260728_200007-nr8ueod3
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run bs2-1959
+wandb: ⭐️ View project at https://wandb.ai/azza-jenane2-technical-university-of-munich/orena-segment-sft
+wandb: 🚀 View run at https://wandb.ai/azza-jenane2-technical-university-of-munich/orena-segment-sft/runs/nr8ueod3
+20:00:08  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+20:00:08  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/generation_config.json "HTTP/1.1 200 OK"
+20:00:08  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/telemetry/trl/SFTTrainer "HTTP/1.1 200 OK"
+20:00:08  INFO      httpx  HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046, 'bos_token_id': None, 'pad_token_id': 248044}.
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046, 'bos_token_id': None, 'pad_token_id': 248044}.
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [04:04<08:08, 244.04s/it]                                               33%|███▎      | 1/3 [04:04<08:08, 244.04s/it] 67%|██████▋   | 2/3 [07:48<03:52, 232.74s/it]                                               67%|██████▋   | 2/3 [07:48<03:52, 232.74s/it]100%|██████████| 3/3 [11:33<00:00, 228.90s/it]                                              100%|██████████| 3/3 [11:33<00:00, 228.90s/it]
+  0%|          | 0/340 [00:00<?, ?it/s][A
+  1%|          | 2/340 [00:04<12:05,  2.15s/it][A
+  1%|          | 3/340 [00:08<17:06,  3.05s/it][A
+  1%|          | 4/340 [00:12<19:40,  3.51s/it][A
+  1%|▏         | 5/340 [00:17<21:11,  3.79s/it][A
+  2%|▏         | 6/340 [00:21<22:05,  3.97s/it][A
+  2%|▏         | 7/340 [00:25<22:36,  4.07s/it][A
+  2%|▏         | 8/340 [00:30<22:49,  4.13s/it][A
+  3%|▎         | 9/340 [00:34<23:08,  4.19s/it][A
+  3%|▎         | 10/340 [00:38<23:16,  4.23s/it][A
+  3%|▎         | 11/340 [00:43<23:25,  4.27s/it][A
+  4%|▎         | 12/340 [00:47<23:24,  4.28s/it][A
+  4%|▍         | 13/340 [00:51<23:11,  4.26s/it][A
+  4%|▍         | 14/340 [00:55<23:06,  4.25s/it][A
+  4%|▍         | 15/340 [01:00<23:10,  4.28s/it][A
+  5%|▍         | 16/340 [01:04<23:02,  4.27s/it][A
+  5%|▌         | 17/340 [01:08<23:06,  4.29s/it][A
+  5%|▌         | 18/340 [01:13<23:05,  4.30s/it][A
+  6%|▌         | 19/340 [01:17<22:52,  4.28s/it][A
+  6%|▌         | 20/340 [01:21<22:53,  4.29s/it][A
+  6%|▌         | 21/340 [01:25<22:15,  4.19s/it][A
+  6%|▋         | 22/340 [01:29<22:21,  4.22s/it][A
+  7%|▋         | 23/340 [01:34<22:26,  4.25s/it][A
+  7%|▋         | 24/340 [01:38<22:19,  4.24s/it][A
+  7%|▋         | 25/340 [01:42<22:16,  4.24s/it][A
+  8%|▊         | 26/340 [01:46<21:45,  4.16s/it][A
+  8%|▊         | 27/340 [01:50<21:23,  4.10s/it][A
+  8%|▊         | 28/340 [01:54<21:07,  4.06s/it][A
+  9%|▊         | 29/340 [01:58<20:53,  4.03s/it][A
+  9%|▉         | 30/340 [02:02<20:42,  4.01s/it][A
+  9%|▉         | 31/340 [02:06<20:30,  3.98s/it][A
+  9%|▉         | 32/340 [02:10<20:47,  4.05s/it][A
+ 10%|▉         | 33/340 [02:14<20:58,  4.10s/it][A
+ 10%|█         | 34/340 [02:19<21:07,  4.14s/it][A
+ 10%|█         | 35/340 [02:23<21:05,  4.15s/it][A
+ 11%|█         | 36/340 [02:27<21:07,  4.17s/it][A
+ 11%|█         | 37/340 [02:31<21:09,  4.19s/it][A
+ 11%|█         | 38/340 [02:35<21:15,  4.22s/it][A
+ 11%|█▏        | 39/340 [02:40<21:22,  4.26s/it][A
+ 12%|█▏        | 40/340 [02:44<21:24,  4.28s/it][A
+ 12%|█▏        | 41/340 [02:48<21:23,  4.29s/it][A
+ 12%|█▏        | 42/340 [02:53<21:11,  4.27s/it][A
+ 13%|█▎        | 43/340 [02:57<21:01,  4.25s/it][A
+ 13%|█▎        | 44/340 [03:01<21:04,  4.27s/it][A
+ 13%|█▎        | 45/340 [03:06<21:05,  4.29s/it][A
+ 14%|█▎        | 46/340 [03:10<20:31,  4.19s/it][A
+ 14%|█▍        | 47/340 [03:14<20:37,  4.22s/it][A
+ 14%|█▍        | 48/340 [03:18<20:33,  4.22s/it][A
+ 14%|█▍        | 49/340 [03:22<20:05,  4.14s/it][A
+ 15%|█▍        | 50/340 [03:26<19:45,  4.09s/it][A
+ 15%|█▌        | 51/340 [03:30<19:51,  4.12s/it][A
+ 15%|█▌        | 52/340 [03:34<20:01,  4.17s/it][A
+ 16%|█▌        | 53/340 [03:39<20:01,  4.19s/it][A
+ 16%|█▌        | 54/340 [03:43<20:11,  4.24s/it][A
+ 16%|█▌        | 55/340 [03:47<20:07,  4.24s/it][A
+ 16%|█▋        | 56/340 [03:52<20:10,  4.26s/it][A
+ 17%|█▋        | 57/340 [03:56<20:12,  4.29s/it][A
+ 17%|█▋        | 58/340 [04:00<20:14,  4.31s/it][A
+ 17%|█▋        | 59/340 [04:05<20:12,  4.31s/it][A
+ 18%|█▊        | 60/340 [04:09<20:12,  4.33s/it][A
+ 18%|█▊        | 61/340 [04:13<20:08,  4.33s/it][A
+ 18%|█▊        | 62/340 [04:18<20:03,  4.33s/it][A
+ 19%|█▊        | 63/340 [04:22<20:01,  4.34s/it][A
+ 19%|█▉        | 64/340 [04:26<19:58,  4.34s/it][A
+ 19%|█▉        | 65/340 [04:31<19:54,  4.34s/it][A
+ 19%|█▉        | 66/340 [04:35<19:17,  4.23s/it][A
+ 20%|█▉        | 67/340 [04:39<19:23,  4.26s/it][A
+ 20%|██        | 68/340 [04:43<19:19,  4.26s/it][A
+ 20%|██        | 69/340 [04:47<19:12,  4.25s/it][A
+ 21%|██        | 70/340 [04:52<19:07,  4.25s/it][A
+ 21%|██        | 71/340 [04:56<19:09,  4.27s/it][A
+ 21%|██        | 72/340 [05:00<19:12,  4.30s/it][A
+ 21%|██▏       | 73/340 [05:05<19:03,  4.28s/it][A
+ 22%|██▏       | 74/340 [05:09<19:05,  4.30s/it][A
+ 22%|██▏       | 75/340 [05:13<19:01,  4.31s/it][A
+ 22%|██▏       | 76/340 [05:18<18:57,  4.31s/it][A
+ 23%|██▎       | 77/340 [05:22<18:25,  4.20s/it][A
+ 23%|██▎       | 78/340 [05:26<18:03,  4.13s/it][A
+ 23%|██▎       | 79/340 [05:30<18:08,  4.17s/it][A
+ 24%|██▎       | 80/340 [05:34<18:18,  4.23s/it][A
+ 24%|██▍       | 81/340 [05:39<18:22,  4.26s/it][A
+ 24%|██▍       | 82/340 [05:43<18:23,  4.28s/it][A
+ 24%|██▍       | 83/340 [05:47<17:53,  4.18s/it][A
+ 25%|██▍       | 84/340 [05:51<18:01,  4.22s/it][A
+ 25%|██▌       | 85/340 [05:55<17:35,  4.14s/it][A
+ 25%|██▌       | 86/340 [05:59<17:18,  4.09s/it][A
+ 26%|██▌       | 87/340 [06:03<17:03,  4.05s/it][A
+ 26%|██▌       | 88/340 [06:07<16:53,  4.02s/it][A
+ 26%|██▌       | 89/340 [06:11<17:02,  4.07s/it][A
+ 26%|██▋       | 90/340 [06:15<17:09,  4.12s/it][A
+ 27%|██▋       | 91/340 [06:20<17:20,  4.18s/it][A
+ 27%|██▋       | 92/340 [06:24<17:28,  4.23s/it][A
+ 27%|██▋       | 93/340 [06:28<17:24,  4.23s/it][A
+ 28%|██▊       | 94/340 [06:32<17:21,  4.23s/it][A
+ 28%|██▊       | 95/340 [06:37<17:18,  4.24s/it][A
+ 28%|██▊       | 96/340 [06:41<17:14,  4.24s/it][A
+ 29%|██▊       | 97/340 [06:45<17:17,  4.27s/it][A
+ 29%|██▉       | 98/340 [06:50<17:17,  4.29s/it][A
+ 29%|██▉       | 99/340 [06:54<17:15,  4.30s/it][A
+ 29%|██▉       | 100/340 [06:58<17:11,  4.30s/it][A
+ 30%|██▉       | 101/340 [07:03<17:08,  4.30s/it][A
+ 30%|███       | 102/340 [07:07<17:05,  4.31s/it][A
+ 30%|███       | 103/340 [07:11<16:36,  4.21s/it][A
+ 31%|███       | 104/340 [07:15<16:34,  4.21s/it][A
+ 31%|███       | 105/340 [07:19<16:37,  4.25s/it][A
+ 31%|███       | 106/340 [07:24<16:40,  4.28s/it][A
+ 31%|███▏      | 107/340 [07:28<16:39,  4.29s/it][A
+ 32%|███▏      | 108/340 [07:32<16:38,  4.30s/it][A
+ 32%|███▏      | 109/340 [07:37<16:36,  4.32s/it][A
+ 32%|███▏      | 110/340 [07:41<16:34,  4.32s/it][A
+ 33%|███▎      | 111/340 [07:45<16:24,  4.30s/it][A
+ 33%|███▎      | 112/340 [07:50<16:18,  4.29s/it][A
+ 33%|███▎      | 113/340 [07:54<16:44,  4.42s/it][A
+ 34%|███▎      | 114/340 [07:59<16:33,  4.40s/it][A
+ 34%|███▍      | 115/340 [08:03<15:58,  4.26s/it][A
+ 34%|███▍      | 116/340 [08:07<15:52,  4.25s/it][A
+ 34%|███▍      | 117/340 [08:11<15:27,  4.16s/it][A
+ 35%|███▍      | 118/340 [08:15<15:09,  4.10s/it][A
+ 35%|███▌      | 119/340 [08:19<15:22,  4.18s/it][A
+ 35%|███▌      | 120/340 [08:23<15:03,  4.11s/it][A
+ 36%|███▌      | 121/340 [08:27<15:07,  4.14s/it][A
+ 36%|███▌      | 122/340 [08:31<14:50,  4.08s/it][A
+ 36%|███▌      | 123/340 [08:35<14:38,  4.05s/it][A
+ 36%|███▋      | 124/340 [08:39<14:46,  4.10s/it][A
+ 37%|███▋      | 125/340 [08:44<14:50,  4.14s/it][A
+ 37%|███▋      | 126/340 [08:48<14:34,  4.09s/it][A
+ 37%|███▋      | 127/340 [08:52<14:38,  4.13s/it][A
+ 38%|███▊      | 128/340 [08:56<14:23,  4.07s/it][A
+ 38%|███▊      | 129/340 [09:00<14:10,  4.03s/it][A
+ 38%|███▊      | 130/340 [09:04<14:00,  4.00s/it][A
+ 39%|███▊      | 131/340 [09:08<14:16,  4.10s/it][A
+ 39%|███▉      | 132/340 [09:12<14:26,  4.17s/it][A
+ 39%|███▉      | 133/340 [09:17<14:34,  4.22s/it][A
+ 39%|███▉      | 134/340 [09:21<14:37,  4.26s/it][A
+ 40%|███▉      | 135/340 [09:25<14:31,  4.25s/it][A
+ 40%|████      | 136/340 [09:29<14:24,  4.24s/it][A
+ 40%|████      | 137/340 [09:34<14:26,  4.27s/it][A
+ 41%|████      | 138/340 [09:38<14:24,  4.28s/it][A
+ 41%|████      | 139/340 [09:42<14:21,  4.29s/it][A
+ 41%|████      | 140/340 [09:47<14:13,  4.27s/it][A
+ 41%|████▏     | 141/340 [09:51<14:11,  4.28s/it][A
+ 42%|████▏     | 142/340 [09:55<14:09,  4.29s/it][A
+ 42%|████▏     | 143/340 [09:59<14:01,  4.27s/it][A
+ 42%|████▏     | 144/340 [10:04<13:55,  4.26s/it][A
+ 43%|████▎     | 145/340 [10:08<13:48,  4.25s/it][A
+ 43%|████▎     | 146/340 [10:12<13:50,  4.28s/it][A
+ 43%|████▎     | 147/340 [10:17<13:43,  4.27s/it][A
+ 44%|████▎     | 148/340 [10:21<13:43,  4.29s/it][A
+ 44%|████▍     | 149/340 [10:25<13:37,  4.28s/it][A
+ 44%|████▍     | 150/340 [10:29<13:32,  4.27s/it][A
+ 44%|████▍     | 151/340 [10:34<13:25,  4.26s/it][A
+ 45%|████▍     | 152/340 [10:38<13:25,  4.28s/it][A
+ 45%|████▌     | 153/340 [10:42<13:24,  4.30s/it][A
+ 45%|████▌     | 154/340 [10:47<13:17,  4.29s/it][A
+ 46%|████▌     | 155/340 [10:51<13:09,  4.27s/it][A
+ 46%|████▌     | 156/340 [10:55<13:04,  4.26s/it][A
+ 46%|████▌     | 157/340 [10:59<12:58,  4.25s/it][A
+ 46%|████▋     | 158/340 [11:04<12:57,  4.27s/it][A
+ 47%|████▋     | 159/340 [11:08<12:51,  4.26s/it][A
+ 47%|████▋     | 160/340 [11:12<12:51,  4.28s/it][A
+ 47%|████▋     | 161/340 [11:16<12:48,  4.29s/it][A
+ 48%|████▊     | 162/340 [11:21<12:40,  4.27s/it][A
+ 48%|████▊     | 163/340 [11:25<12:34,  4.26s/it][A
+ 48%|████▊     | 164/340 [11:29<12:34,  4.29s/it][A
+ 49%|████▊     | 165/340 [11:34<12:27,  4.27s/it][A
+ 49%|████▉     | 166/340 [11:38<12:26,  4.29s/it][A
+ 49%|████▉     | 167/340 [11:42<12:07,  4.21s/it][A
+ 49%|████▉     | 168/340 [11:46<12:10,  4.25s/it][A
+ 50%|████▉     | 169/340 [11:51<12:10,  4.27s/it][A
+ 50%|█████     | 170/340 [11:55<12:10,  4.29s/it][A
+ 50%|█████     | 171/340 [11:59<12:06,  4.30s/it][A
+ 51%|█████     | 172/340 [12:03<11:44,  4.19s/it][A
+ 51%|█████     | 173/340 [12:07<11:27,  4.12s/it][A
+ 51%|█████     | 174/340 [12:11<11:28,  4.15s/it][A
+ 51%|█████▏    | 175/340 [12:15<11:14,  4.09s/it][A
+ 52%|█████▏    | 176/340 [12:19<11:04,  4.05s/it][A
+ 52%|█████▏    | 177/340 [12:23<11:08,  4.10s/it][A
+ 52%|█████▏    | 178/340 [12:28<11:11,  4.14s/it][A
+ 53%|█████▎    | 179/340 [12:32<10:57,  4.08s/it][A
+ 53%|█████▎    | 180/340 [12:36<10:48,  4.05s/it][A
+ 53%|█████▎    | 181/340 [12:40<10:39,  4.02s/it][A
+ 54%|█████▎    | 182/340 [12:44<10:32,  4.01s/it][A
+ 54%|█████▍    | 183/340 [12:48<10:43,  4.10s/it][A
+ 54%|█████▍    | 184/340 [12:52<10:50,  4.17s/it][A
+ 54%|█████▍    | 185/340 [12:56<10:37,  4.11s/it][A
+ 55%|█████▍    | 186/340 [13:00<10:44,  4.18s/it][A
+ 55%|█████▌    | 187/340 [13:05<10:43,  4.20s/it][A
+ 55%|█████▌    | 188/340 [13:09<10:45,  4.25s/it][A
+ 56%|█████▌    | 189/340 [13:13<10:45,  4.27s/it][A
+ 56%|█████▌    | 190/340 [13:18<10:44,  4.29s/it][A
+ 56%|█████▌    | 191/340 [13:22<10:42,  4.31s/it][A
+ 56%|█████▋    | 192/340 [13:26<10:34,  4.29s/it][A
+ 57%|█████▋    | 193/340 [13:30<10:15,  4.19s/it][A
+ 57%|█████▋    | 194/340 [13:34<10:01,  4.12s/it][A
+ 57%|█████▋    | 195/340 [13:39<10:07,  4.19s/it][A
+ 58%|█████▊    | 196/340 [13:43<10:09,  4.23s/it][A
+ 58%|█████▊    | 197/340 [13:47<10:09,  4.26s/it][A
+ 58%|█████▊    | 198/340 [13:52<10:10,  4.30s/it][A
+ 59%|█████▊    | 199/340 [13:56<10:07,  4.31s/it][A
+ 59%|█████▉    | 200/340 [14:00<10:03,  4.31s/it][A
+ 59%|█████▉    | 201/340 [14:05<10:00,  4.32s/it][A
+ 59%|█████▉    | 202/340 [14:09<09:56,  4.32s/it][A
+ 60%|█████▉    | 203/340 [14:13<09:51,  4.32s/it][A
+ 60%|██████    | 204/340 [14:18<09:48,  4.33s/it][A
+ 60%|██████    | 205/340 [14:22<09:44,  4.33s/it][A
+ 61%|██████    | 206/340 [14:26<09:39,  4.33s/it][A
+ 61%|██████    | 207/340 [14:31<09:35,  4.32s/it][A
+ 61%|██████    | 208/340 [14:35<09:28,  4.30s/it][A
+ 61%|██████▏   | 209/340 [14:39<09:24,  4.31s/it][A
+ 62%|██████▏   | 210/340 [14:43<09:06,  4.20s/it][A
+ 62%|██████▏   | 211/340 [14:47<09:02,  4.20s/it][A
+ 62%|██████▏   | 212/340 [14:51<08:48,  4.13s/it][A
+ 63%|██████▎   | 213/340 [14:55<08:38,  4.08s/it][A
+ 63%|██████▎   | 214/340 [14:59<08:39,  4.12s/it][A
+ 63%|██████▎   | 215/340 [15:03<08:29,  4.08s/it][A
+ 64%|██████▎   | 216/340 [15:08<08:31,  4.12s/it][A
+ 64%|██████▍   | 217/340 [15:12<08:31,  4.16s/it][A
+ 64%|██████▍   | 218/340 [15:16<08:34,  4.21s/it][A
+ 64%|██████▍   | 219/340 [15:21<08:33,  4.25s/it][A
+ 65%|██████▍   | 220/340 [15:25<08:32,  4.27s/it][A
+ 65%|██████▌   | 221/340 [15:29<08:29,  4.29s/it][A
+ 65%|██████▌   | 222/340 [15:34<08:27,  4.30s/it][A
+ 66%|██████▌   | 223/340 [15:38<08:24,  4.31s/it][A
+ 66%|██████▌   | 224/340 [15:42<08:20,  4.32s/it][A
+ 66%|██████▌   | 225/340 [15:47<08:16,  4.32s/it][A
+ 66%|██████▋   | 226/340 [15:51<08:10,  4.30s/it][A
+ 67%|██████▋   | 227/340 [15:55<08:07,  4.31s/it][A
+ 67%|██████▋   | 228/340 [15:59<08:03,  4.31s/it][A
+ 67%|██████▋   | 229/340 [16:04<07:59,  4.32s/it][A
+ 68%|██████▊   | 230/340 [16:08<07:43,  4.21s/it][A
+ 68%|██████▊   | 231/340 [16:12<07:42,  4.24s/it][A
+ 68%|██████▊   | 232/340 [16:16<07:37,  4.24s/it][A
+ 69%|██████▊   | 233/340 [16:20<07:23,  4.15s/it][A
+ 69%|██████▉   | 234/340 [16:24<07:21,  4.17s/it][A
+ 69%|██████▉   | 235/340 [16:29<07:19,  4.18s/it][A
+ 69%|██████▉   | 236/340 [16:33<07:15,  4.19s/it][A
+ 70%|██████▉   | 237/340 [16:37<07:16,  4.24s/it][A
+ 70%|███████   | 238/340 [16:42<07:14,  4.26s/it][A
+ 70%|███████   | 239/340 [16:46<07:08,  4.24s/it][A
+ 71%|███████   | 240/340 [16:50<07:03,  4.24s/it][A
+ 71%|███████   | 241/340 [16:54<07:01,  4.26s/it][A
+ 71%|███████   | 242/340 [16:59<06:59,  4.28s/it][A
+ 71%|███████▏  | 243/340 [17:03<06:56,  4.30s/it][A
+ 72%|███████▏  | 244/340 [17:07<06:53,  4.31s/it][A
+ 72%|███████▏  | 245/340 [17:11<06:38,  4.20s/it][A
+ 72%|███████▏  | 246/340 [17:15<06:27,  4.12s/it][A
+ 73%|███████▎  | 247/340 [17:19<06:18,  4.07s/it][A
+ 73%|███████▎  | 248/340 [17:23<06:10,  4.03s/it][A
+ 73%|███████▎  | 249/340 [17:27<06:12,  4.09s/it][A
+ 74%|███████▎  | 250/340 [17:31<06:04,  4.05s/it][A
+ 74%|███████▍  | 251/340 [17:35<06:05,  4.11s/it][A
+ 74%|███████▍  | 252/340 [17:40<06:06,  4.16s/it][A
+ 74%|███████▍  | 253/340 [17:44<06:05,  4.20s/it][A
+ 75%|███████▍  | 254/340 [17:48<06:03,  4.23s/it][A
+ 75%|███████▌  | 255/340 [17:53<06:01,  4.25s/it][A
+ 75%|███████▌  | 256/340 [17:57<05:58,  4.27s/it][A
+ 76%|███████▌  | 257/340 [18:01<05:55,  4.28s/it][A
+ 76%|███████▌  | 258/340 [18:06<05:51,  4.28s/it][A
+ 76%|███████▌  | 259/340 [18:10<05:46,  4.28s/it][A
+ 76%|███████▋  | 260/340 [18:14<05:42,  4.28s/it][A
+ 77%|███████▋  | 261/340 [18:18<05:39,  4.30s/it][A
+ 77%|███████▋  | 262/340 [18:23<05:32,  4.26s/it][A
+ 77%|███████▋  | 263/340 [18:27<05:20,  4.17s/it][A
+ 78%|███████▊  | 264/340 [18:31<05:20,  4.21s/it][A
+ 78%|███████▊  | 265/340 [18:35<05:09,  4.12s/it][A
+ 78%|███████▊  | 266/340 [18:39<05:09,  4.18s/it][A
+ 79%|███████▊  | 267/340 [18:43<05:08,  4.22s/it][A
+ 79%|███████▉  | 268/340 [18:48<05:04,  4.23s/it][A
+ 79%|███████▉  | 269/340 [18:52<05:02,  4.26s/it][A
+ 79%|███████▉  | 270/340 [18:56<05:00,  4.29s/it][A
+ 80%|███████▉  | 271/340 [19:01<04:55,  4.28s/it][A
+ 80%|████████  | 272/340 [19:05<04:52,  4.30s/it][A
+ 80%|████████  | 273/340 [19:09<04:47,  4.28s/it][A
+ 81%|████████  | 274/340 [19:13<04:36,  4.19s/it][A
+ 81%|████████  | 275/340 [19:18<04:34,  4.22s/it][A
+ 81%|████████  | 276/340 [19:21<04:24,  4.13s/it][A
+ 81%|████████▏ | 277/340 [19:26<04:23,  4.19s/it][A
+ 82%|████████▏ | 278/340 [19:30<04:20,  4.20s/it][A
+ 82%|████████▏ | 279/340 [19:34<04:11,  4.12s/it][A
+ 82%|████████▏ | 280/340 [19:38<04:09,  4.15s/it][A
+ 83%|████████▎ | 281/340 [19:42<04:00,  4.08s/it][A
+ 83%|████████▎ | 282/340 [19:46<03:54,  4.04s/it][A
+ 83%|████████▎ | 283/340 [19:50<03:55,  4.13s/it][A
+ 84%|████████▎ | 284/340 [19:55<03:55,  4.20s/it][A
+ 84%|████████▍ | 285/340 [19:59<03:52,  4.23s/it][A
+ 84%|████████▍ | 286/340 [20:03<03:50,  4.27s/it][A
+ 84%|████████▍ | 287/340 [20:08<03:45,  4.26s/it][A
+ 85%|████████▍ | 288/340 [20:12<03:42,  4.28s/it][A
+ 85%|████████▌ | 289/340 [20:16<03:39,  4.30s/it][A
+ 85%|████████▌ | 290/340 [20:21<03:34,  4.28s/it][A
+ 86%|████████▌ | 291/340 [20:24<03:24,  4.18s/it][A
+ 86%|████████▌ | 292/340 [20:29<03:21,  4.20s/it][A
+ 86%|████████▌ | 293/340 [20:33<03:13,  4.13s/it][A
+ 86%|████████▋ | 294/340 [20:37<03:11,  4.15s/it][A
+ 87%|████████▋ | 295/340 [20:41<03:04,  4.09s/it][A
+ 87%|████████▋ | 296/340 [20:45<02:58,  4.05s/it][A
+ 87%|████████▋ | 297/340 [20:49<02:52,  4.02s/it][A
+ 88%|████████▊ | 298/340 [20:53<02:51,  4.09s/it][A
+ 88%|████████▊ | 299/340 [20:57<02:50,  4.16s/it][A
+ 88%|████████▊ | 300/340 [21:02<02:48,  4.21s/it][A
+ 89%|████████▊ | 301/340 [21:06<02:45,  4.25s/it][A
+ 89%|████████▉ | 302/340 [21:10<02:42,  4.27s/it][A
+ 89%|████████▉ | 303/340 [21:15<02:38,  4.29s/it][A
+ 89%|████████▉ | 304/340 [21:19<02:34,  4.30s/it][A
+ 90%|████████▉ | 305/340 [21:23<02:29,  4.28s/it][A
+ 90%|█████████ | 306/340 [21:27<02:25,  4.27s/it][A
+ 90%|█████████ | 307/340 [21:32<02:20,  4.26s/it][A
+ 91%|█████████ | 308/340 [21:36<02:15,  4.24s/it][A
+ 91%|█████████ | 309/340 [21:40<02:12,  4.27s/it][A
+ 91%|█████████ | 310/340 [21:44<02:07,  4.26s/it][A
+ 91%|█████████▏| 311/340 [21:49<02:04,  4.28s/it][A
+ 92%|█████████▏| 312/340 [21:53<02:00,  4.30s/it][A
+ 92%|█████████▏| 313/340 [21:57<01:53,  4.19s/it][A
+ 92%|█████████▏| 314/340 [22:01<01:50,  4.24s/it][A
+ 93%|█████████▎| 315/340 [22:05<01:43,  4.14s/it][A
+ 93%|█████████▎| 316/340 [22:10<01:40,  4.20s/it][A
+ 93%|█████████▎| 317/340 [22:14<01:36,  4.20s/it][A
+ 94%|█████████▎| 318/340 [22:18<01:33,  4.23s/it][A
+ 94%|█████████▍| 319/340 [22:23<01:29,  4.26s/it][A
+ 94%|█████████▍| 320/340 [22:27<01:25,  4.27s/it][A
+ 94%|█████████▍| 321/340 [22:31<01:21,  4.28s/it][A
+ 95%|█████████▍| 322/340 [22:35<01:17,  4.29s/it][A
+ 95%|█████████▌| 323/340 [22:40<01:12,  4.27s/it][A
+ 95%|█████████▌| 324/340 [22:44<01:08,  4.26s/it][A
+ 96%|█████████▌| 325/340 [22:48<01:03,  4.25s/it][A
+ 96%|█████████▌| 326/340 [22:52<00:59,  4.28s/it][A
+ 96%|█████████▌| 327/340 [22:57<00:55,  4.26s/it][A
+ 96%|█████████▋| 328/340 [23:01<00:49,  4.17s/it][A
+ 97%|█████████▋| 329/340 [23:05<00:45,  4.10s/it][A
+ 97%|█████████▋| 330/340 [23:09<00:41,  4.13s/it][A
+ 97%|█████████▋| 331/340 [23:13<00:37,  4.14s/it][A
+ 98%|█████████▊| 332/340 [23:17<00:32,  4.10s/it][A
+ 98%|█████████▊| 333/340 [23:21<00:28,  4.14s/it][A
+ 98%|█████████▊| 334/340 [23:25<00:24,  4.16s/it][A
+ 99%|█████████▊| 335/340 [23:30<00:20,  4.17s/it][A
+ 99%|█████████▉| 336/340 [23:34<00:16,  4.18s/it][A
+ 99%|█████████▉| 337/340 [23:38<00:12,  4.19s/it][A
+ 99%|█████████▉| 338/340 [23:42<00:08,  4.23s/it][A
+100%|█████████▉| 339/340 [23:47<00:04,  4.25s/it][A
+100%|██████████| 340/340 [23:51<00:00,  4.27s/it][A                                              
+                                                 [A100%|██████████| 3/3 [35:46<00:00, 228.90s/it]
+100%|██████████| 340/340 [23:51<00:00,  4.27s/it][A
+                                                 [A20:36:02  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+20:36:02  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+                                              100%|██████████| 3/3 [35:50<00:00, 228.90s/it]100%|██████████| 3/3 [35:51<00:00, 717.01s/it]
+20:36:04  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+20:36:04  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+[rank0]:[W728 20:36:07.880910619 ProcessGroupNCCL.cpp:1647] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

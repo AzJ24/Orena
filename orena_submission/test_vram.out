@@ -1,0 +1,7 @@
+########## VRAM / GPU UTILISATION ##########
+samples            : 281 @0.5s
+PEAK VRAM used     : 19107 MiB  (18.7 GiB) of 143771 MiB (140.4 GiB)
+  as % of H200     : 13.3%
+  as % of L40S 48GB: 38.9%  <- platform GPU
+steady-state VRAM  : 9577 MiB
+peak GPU util      : 93%   mean 3%

@@ -1,0 +1,49 @@
++ SIF=/home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif
++ SUB=/home/ajenane/orena/orena_submission
++ OUT=/home/ajenane/orena/orena_submission/test_output/interface_1
++ nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
++ echo '########## 1. CUDA inside the shipped image ##########'
++ apptainer exec --nv /home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif python -c '
+import torch
+print('\''torch       :'\'', torch.__version__)
+print('\''CUDA build  :'\'', torch.version.cuda)
+print('\''available   :'\'', torch.cuda.is_available())
+assert torch.cuda.is_available(), '\''FATAL: CUDA NOT AVAILABLE INSIDE THE IMAGE'\''
+print('\''device      :'\'', torch.cuda.get_device_name(0))
+print('\''capability  : sm_%d%d'\'' % torch.cuda.get_device_capability(0))
+x = torch.randn(1024, 1024, device='\''cuda'\'')
+print('\''matmul      :'\'', float((x @ x).sum()))
+print('\''>>> CUDA OK INSIDE IMAGE <<<'\'')
+'
++ echo '########## 2. full batch through the real entrypoint ##########'
++ rm -rf /home/ajenane/orena/orena_submission/test_output/interface_1
++ mkdir -p /home/ajenane/orena/orena_submission/test_output/interface_1
++ apptainer run --nv --pwd /opt/app --no-home --env HOME=/home/user --bind /home/ajenane/orena/orena_submission/frame-algorithm/test/input/interface_1:/input:ro --bind /home/ajenane/orena/orena_submission/test_output/interface_1:/output /home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif
+WARNING: Overriding HOME environment variable with APPTAINERENV_HOME is not permitted
+Traceback (most recent call last):
+  File "/opt/app/inference.py", line 18, in <module>
+    from focus import Request, Response, load_requests, save_items
+ModuleNotFoundError: No module named 'focus'
+
+real	0m3.883s
+user	0m9.740s
+sys	0m0.470s
++ echo '########## 3. answer.json ##########'
++ cat /home/ajenane/orena/orena_submission/test_output/interface_1/answer.json
+cat: /home/ajenane/orena/orena_submission/test_output/interface_1/answer.json: No such file or directory
++ python3 -c '
+import json
+a = json.load(open('\''/home/ajenane/orena/orena_submission/test_output/interface_1/answer.json'\''))
+r = json.load(open('\''/home/ajenane/orena/orena_submission/frame-algorithm/test/input/interface_1/request.json'\''))
+print()
+print('\''responses:'\'', len(a), '\''| requests:'\'', len(r))
+assert len(a) == len(r), '\''FATAL: response count mismatch'\''
+assert {x['\''qID'\''] for x in a} == {x['\''qID'\''] for x in r}, '\''FATAL: qID mismatch'\''
+for x in a: print(f"  {x['\''qID'\'']}: {x['\''content'\'']!r}  ({x['\''latency'\'']:.2f}s)")
+print('\''>>> OUTPUT CONTRACT OK <<<'\'')
+'
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+    a = json.load(open('/home/ajenane/orena/orena_submission/test_output/interface_1/answer.json'))
+                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ajenane/orena/orena_submission/test_output/interface_1/answer.json'

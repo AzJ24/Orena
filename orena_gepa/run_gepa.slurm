@@ -37,6 +37,8 @@ MODEL_ID="${MODEL_ID:-Qwen/Qwen3.5-9B}"
 SEED_STYLE="${SEED_STYLE:-direct}"
 REFLECTION_LM="${REFLECTION_LM:-openrouter/openai/gpt-4.1}"
 MAX_METRIC_CALLS="${MAX_METRIC_CALLS:-3000}"
+BATCH_SIZE="${BATCH_SIZE:-32}"          # VLM rollout batch (task model throughput)
+MAX_NEW_TOKENS="${MAX_NEW_TOKENS:-64}"  # answers are short; smaller = faster
 DATASETS="${DATASETS:-heico lapchole}"
 # Set FO_DEFINITIONS=1 to seed GEPA with the richer prompt that includes the
 # per-class visual descriptions (the definitions the text-only reflection LM
@@ -74,5 +76,7 @@ fi
     "${DEFS_ARG[@]}" \
     --reflection-lm "$REFLECTION_LM" \
     --max-metric-calls "$MAX_METRIC_CALLS" \
+    --batch-size "$BATCH_SIZE" \
+    --max-new-tokens "$MAX_NEW_TOKENS" \
     "${OUT_DIR_ARGS[@]}" \
     $EXTRA_ARGS

@@ -1,0 +1,32 @@
+[
+  {
+    "qID": "q006",
+    "format": "time",
+    "gold": "02:36:13",
+    "duration": 29.0
+  },
+  {
+    "qID": "q008",
+    "format": "fo_class",
+    "gold": "External drain",
+    "duration": 29.0
+  },
+  {
+    "qID": "q003",
+    "format": "number",
+    "gold": "1",
+    "duration": 29.0
+  },
+  {
+    "qID": "q004",
+    "format": "open_ended",
+    "gold": "no.",
+    "duration": 10.0
+  },
+  {
+    "qID": "q010",
+    "format": "open_ended",
+    "gold": "White.",
+    "duration": 10.0
+  }
+]

@@ -1,0 +1,43 @@
++ SIF=/home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif
++ SUB=/home/ajenane/orena/orena_submission
++ OUT=/home/ajenane/orena/orena_submission/test_output/interface_1
++ nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv
++ echo '########## CHECK 1: CUDA inside the shipped image ##########'
++ apptainer exec --nv /home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif python -c '
+import torch
+print('\''torch       :'\'', torch.__version__)
+print('\''CUDA build  :'\'', torch.version.cuda)
+print('\''available   :'\'', torch.cuda.is_available())
+assert torch.cuda.is_available(), '\''FATAL: CUDA NOT AVAILABLE INSIDE THE IMAGE'\''
+print('\''device      :'\'', torch.cuda.get_device_name(0))
+print('\''capability  : sm_%d%d'\'' % torch.cuda.get_device_capability(0))
+x = torch.randn(1024, 1024, device='\''cuda'\'')
+print('\''matmul      :'\'', float((x @ x).sum()))
+print('\''>>> CHECK 1 PASS: CUDA OK INSIDE IMAGE <<<'\'')
+'
+/var/lib/slurm/job12743/slurm_script: line 30: apptainer: command not found
++ echo '########## CHECK 2: full entrypoint on CPU ##########'
++ rm -rf /home/ajenane/orena/orena_submission/test_output/interface_1
++ mkdir -p /home/ajenane/orena/orena_submission/test_output/interface_1
++ apptainer run --bind /home/ajenane/orena/orena_submission/frame-algorithm/test/input/interface_1:/input:ro --bind /home/ajenane/orena/orena_submission/test_output/interface_1:/output /home/ajenane/images/frame-algorithm-2026-07-27_09-45-04.sif
+/var/lib/slurm/job12743/slurm_script: line 45: apptainer: command not found
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
++ echo '########## CHECK 3: answer.json contract ##########'
++ python3 -c '
+import json
+a = json.load(open('\''/home/ajenane/orena/orena_submission/test_output/interface_1/answer.json'\''))
+r = json.load(open('\''/home/ajenane/orena/orena_submission/frame-algorithm/test/input/interface_1/request.json'\''))
+print('\''responses:'\'', len(a), '\''| requests:'\'', len(r))
+assert len(a) == len(r), '\''FATAL: response count mismatch'\''
+assert {x['\''qID'\''] for x in a} == {x['\''qID'\''] for x in r}, '\''FATAL: qID mismatch'\''
+for x in a: print(f"  {x['\''qID'\'']}: {x['\''content'\'']!r}")
+print('\''>>> CHECK 3 PASS: OUTPUT CONTRACT OK <<<'\'')
+'
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+    a = json.load(open('/home/ajenane/orena/orena_submission/test_output/interface_1/answer.json'))
+                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ajenane/orena/orena_submission/test_output/interface_1/answer.json'

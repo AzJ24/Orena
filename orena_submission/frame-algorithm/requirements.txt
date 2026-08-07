@@ -1,0 +1,16 @@
+# ADDITIONAL deps only -- torch/torchvision come from the base image
+# (2.5.1, CUDA 12.4) and must NOT be pinned here: pip resolves torch==2.12.0 to
+# a CUDA 13.0 wheel, which needs driver >= 580 and silently fails to initialise
+# on the CUDA 12.4 platform, so torch.cuda.is_available() returns False and
+# inference falls back to CPU (~650x slower).
+#
+# transformers is pinned because Qwen3_5ForConditionalGeneration needs 5.x, and
+# orena-focus is pinned because the FO class names baked into the system prompt
+# (resources/prompts.py) come from this exact release.
+orena-focus==0.3.4
+transformers==5.9.0
+
+# Direct imports of inference.py. They also arrive as transitive dependencies
+# of orena-focus, but anything imported directly is declared explicitly.
+numpy>=1.23.0
+pillow>=9.0

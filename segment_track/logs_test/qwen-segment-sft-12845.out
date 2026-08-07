@@ -1,0 +1,74 @@
+Node: cgm-gpu38
+name, memory.total [MiB], memory.used [MiB]
+NVIDIA H200 NVL, 143771 MiB, 0 MiB
+NVIDIA H200 NVL, 143771 MiB, 0 MiB
+trainable params: 39,845,888 || all params: 27,396,574,448 || trainable%: 0.1454
+trainable params: 39,845,888 || all params: 27,396,574,448 || trainable%: 0.1454
+
+================================================================================
+EXAMPLE PREVIEW (before training)
+================================================================================
+--- CLIP: 119s, 64 frames, format=fo_class ---
+--- RENDERED CHAT (vision blocks collapsed) ---
+<|im_start|>system
+You are a surgical video analysis assistant. You are shown a short clip from a laparoscopic procedure and asked a single question about it.
+
+The clip is given as a sequence of frames in chronological order. Each frame is preceded by its timestamp in the source video, written as <SECONDS seconds> -- a frame marked <1234.5 seconds> was taken 1234.5 seconds (00:20:34) after the video began. Consecutive frames may be several seconds apart, so an event can happen between two of them.
+
+A foreign object (FO) is any object fully introduced into the patient's body
+cavity during surgery that must be retrieved or accounted for. Importantly,
+standard surgical instruments that remain connected to the external environment
+(e.g., graspers, scissors, trocars, staplers, cameras) are not considered foreign
+objects. Furthermore, we exclude detachable parts of surgical instruments,
+particularly anvil components of staplers.
+
+The foreign object classes are exactly: Sponge, Clip, Specimen Bag, Silicone Loop, External Drain, Needle, Gallstone, Specimen, Mesh, Absorbable Hemostatic Agent.
+
+Reply with the answer and nothing else -- no reasoning, no preamble, no
+explanation, no restating the question. A single short line.
+
+Rules for the answer:
+- Write the value only. No sentence, no explanation, no units, no trailing
+  period, and never repeat the question.
+- Asks yes or no -> write exactly: yes   or   no
+- Asks how many / for a count -> write digits only, e.g. 0 or 1 or 2.
+- Asks which foreign object class(es) -> write class names exactly as spelled
+  in the list above, comma-separated (e.g. Clip, Sponge), or exactly: none
+  Never answer with a generic description such as "surgical instrument".
+- Asks when something happens -> write hh:mm:ss, read off the frame timestamps.
+  Those timestamps count from the START OF THE VIDEO, not from the start of this
+  clip, so <1234.5 seconds> is 00:20:34. Convert carefully: 3600 seconds is one
+  hour, 60 seconds is one minute. If the event falls between two frames, give
+  your best estimate between their timestamps rather than snapping to one.
+  For several time points, separate them with commas: 00:09:19, 00:12:44
+- Asks for a percentage or a share -> write the number only, e.g. 40
+- Lists options to choose from -> copy exactly one of those options, verbatim.
+- Anything else -> a short phrase, at most a few words.
+
+If you are unsure, still commit to your single best answer in the required
+form. An empty, hedged, or explanatory answer is scored as wrong.<|im_end|>
+<|im_start|>user
+<|vision_start|>[…video…]<|vision_end|>Which surgical foreign object is inserted or created (in case of a specimen) in the abdominal cavity in this video? Please provide a class name or answer with none.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+Clip<|im_end|>
+
+--- GROUND-TRUTH ANSWER (training target) ---
+'Clip'
+--- GENERATION FROM CURRENT (untrained-adapter) WEIGHTS ---
+'none'
+--- SEQUENCE LENGTH: 8076 prompt tokens ---
+================================================================================
+
+{'loss': '0.8395', 'grad_norm': '2.93', 'learning_rate': '0.0001', 'entropy': '0.3496', 'num_tokens': '2.586e+05', 'mean_token_accuracy': '0.7737', 'epoch': '0.002583'}
+{'loss': '0.9864', 'grad_norm': '1.68', 'learning_rate': '6.667e-05', 'entropy': '0.5113', 'num_tokens': '5.171e+05', 'mean_token_accuracy': '0.7328', 'epoch': '0.005166'}
+{'loss': '0.7305', 'grad_norm': '1.647', 'learning_rate': '3.333e-05', 'entropy': '0.4587', 'num_tokens': '7.756e+05', 'mean_token_accuracy': '0.7586', 'epoch': '0.007749'}
+{'eval_loss': '0.7453', 'eval_runtime': '1453', 'eval_samples_per_second': '0.936', 'eval_steps_per_second': '0.234', 'eval_entropy': '0.4422', 'eval_num_tokens': '7.756e+05', 'eval_mean_token_accuracy': '0.7674', 'epoch': '0.007749'}
+{'train_runtime': '2151', 'train_samples_per_second': '0.045', 'train_steps_per_second': '0.001', 'train_loss': '0.8521', 'epoch': '0.007749'}
+peak VRAM: 89.5 GB
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mbs2-1959[0m at: [34mhttps://wandb.ai/azza-jenane2-technical-university-of-munich/orena-segment-sft/runs/nr8ueod3[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260728_200007-nr8ueod3/logs[0m

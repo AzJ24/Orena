@@ -1,0 +1,462 @@
+W0728 19:53:23.101000 271241 torch/distributed/run.py:862] 
+W0728 19:53:23.101000 271241 torch/distributed/run.py:862] *****************************************
+W0728 19:53:23.101000 271241 torch/distributed/run.py:862] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0728 19:53:23.101000 271241 torch/distributed/run.py:862] *****************************************
+19:53:35  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:36  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:36  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:36  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:36  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:36  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:36  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+19:53:36  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:36  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.json "HTTP/1.1 404 Not Found"
+19:53:36  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.jinja "HTTP/1.1 307 Temporary Redirect"
+19:53:36  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/chat_template.jinja "HTTP/1.1 200 OK"
+19:53:36  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+19:53:37  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+19:53:37  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.json "HTTP/1.1 404 Not Found"
+19:53:37  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/chat_template.jinja "HTTP/1.1 307 Temporary Redirect"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/chat_template.jinja "HTTP/1.1 200 OK"
+19:53:38  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/audio_tokenizer_config.json "HTTP/1.1 404 Not Found"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+19:53:38  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B "HTTP/1.1 200 OK"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+19:53:38  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/tokenizer_config.json "HTTP/1.1 200 OK"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:39  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:39  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+19:53:39  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B "HTTP/1.1 200 OK"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+19:53:39  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/model.safetensors.index.json "HTTP/1.1 200 OK"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:40  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/revision/main "HTTP/1.1 200 OK"
+Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Fetching 15 files: 100%|██████████| 15/15 [00:00<00:00, 1022.55it/s]
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/1184 [00:00<?, ?it/s]19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/video_preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/video_preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/preprocessor_config.json "HTTP/1.1 200 OK"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 1/1184 [00:00<07:43,  2.55it/s]19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:40  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/config.json "HTTP/1.1 200 OK"
+Loading weights:   2%|▏         | 25/1184 [00:00<00:18, 62.55it/s]19:53:41  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+Loading weights:   3%|▎         | 41/1184 [00:00<00:13, 87.79it/s]19:53:41  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/model.safetensors.index.json "HTTP/1.1 307 Temporary Redirect"
+19:53:41  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/model.safetensors.index.json "HTTP/1.1 200 OK"
+Loading weights:   5%|▍         | 55/1184 [00:00<00:11, 95.31it/s]Loading weights:   6%|▋         | 76/1184 [00:00<00:08, 123.68it/s]19:53:41  INFO      httpx  HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen3.6-27B/revision/main "HTTP/1.1 200 OK"
+Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Fetching 15 files: 100%|██████████| 15/15 [00:00<00:00, 22696.45it/s]
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   8%|▊         | 94/1184 [00:00<00:08, 134.46it/s]Loading weights:   9%|▉         | 110/1184 [00:01<00:08, 129.06it/s]Loading weights:   0%|          | 0/1184 [00:00<?, ?it/s]Loading weights:  11%|█         | 128/1184 [00:01<00:07, 137.06it/s]Loading weights:   0%|          | 1/1184 [00:00<02:34,  7.68it/s]Loading weights:  12%|█▏        | 147/1184 [00:01<00:07, 144.00it/s]Loading weights:   0%|          | 2/1184 [00:00<03:02,  6.47it/s]Loading weights:  14%|█▍        | 163/1184 [00:01<00:07, 135.33it/s]Loading weights:   2%|▏         | 28/1184 [00:00<00:12, 93.83it/s]Loading weights:  15%|█▌        | 183/1184 [00:01<00:06, 149.17it/s]Loading weights:   4%|▎         | 43/1184 [00:00<00:10, 111.41it/s]Loading weights:  17%|█▋        | 200/1184 [00:01<00:06, 147.59it/s]Loading weights:   5%|▌         | 62/1184 [00:00<00:08, 134.73it/s]Loading weights:  18%|█▊        | 216/1184 [00:01<00:06, 138.66it/s]Loading weights:   7%|▋         | 80/1184 [00:00<00:08, 134.67it/s]Loading weights:  20%|█▉        | 231/1184 [00:01<00:06, 139.37it/s]Loading weights:   8%|▊         | 96/1184 [00:00<00:07, 139.02it/s]Loading weights:  21%|██▏       | 252/1184 [00:02<00:05, 156.32it/s]Loading weights:  10%|▉         | 115/1184 [00:00<00:07, 152.63it/s]Loading weights:  23%|██▎       | 268/1184 [00:02<00:06, 138.35it/s]Loading weights:  11%|█         | 133/1184 [00:01<00:06, 154.48it/s]Loading weights:  24%|██▍       | 285/1184 [00:02<00:06, 146.15it/s]Loading weights:  13%|█▎        | 149/1184 [00:01<00:07, 144.95it/s]Loading weights:  26%|██▌       | 305/1184 [00:02<00:05, 148.28it/s]Loading weights:  14%|█▍        | 169/1184 [00:01<00:06, 157.96it/s]Loading weights:  16%|█▌        | 186/1184 [00:01<00:06, 155.06it/s]Loading weights:  27%|██▋       | 321/1184 [00:02<00:06, 135.27it/s]Loading weights:  28%|██▊       | 335/1184 [00:02<00:06, 136.02it/s]Loading weights:  17%|█▋        | 202/1184 [00:01<00:06, 147.35it/s]Loading weights:  19%|█▊        | 220/1184 [00:01<00:06, 154.52it/s]Loading weights:  30%|██▉       | 355/1184 [00:02<00:05, 147.38it/s]Loading weights:  20%|██        | 239/1184 [00:01<00:05, 158.27it/s]Loading weights:  31%|███▏      | 370/1184 [00:02<00:06, 134.15it/s]Loading weights:  22%|██▏       | 255/1184 [00:01<00:06, 147.41it/s]Loading weights:  33%|███▎      | 386/1184 [00:03<00:05, 137.66it/s]Loading weights:  23%|██▎       | 272/1184 [00:01<00:05, 152.20it/s]Loading weights:  34%|███▍      | 407/1184 [00:03<00:05, 151.46it/s]Loading weights:  25%|██▍       | 292/1184 [00:02<00:05, 159.56it/s]Loading weights:  36%|███▌      | 423/1184 [00:03<00:05, 132.51it/s]Loading weights:  26%|██▌       | 309/1184 [00:02<00:05, 151.19it/s]Loading weights:  38%|███▊      | 447/1184 [00:03<00:04, 157.49it/s]Loading weights:  27%|██▋       | 325/1184 [00:02<00:05, 152.88it/s]Loading weights:  39%|███▉      | 465/1184 [00:03<00:04, 154.24it/s]Loading weights:  29%|██▉       | 345/1184 [00:02<00:05, 160.04it/s]Loading weights:  41%|████      | 481/1184 [00:03<00:04, 148.38it/s]Loading weights:  31%|███       | 362/1184 [00:02<00:05, 151.07it/s]Loading weights:  42%|████▏     | 498/1184 [00:03<00:04, 152.83it/s]Loading weights:  32%|███▏      | 381/1184 [00:02<00:05, 160.17it/s]Loading weights:  44%|████▎     | 517/1184 [00:03<00:04, 162.62it/s]Loading weights:  34%|███▎      | 398/1184 [00:02<00:05, 156.76it/s]Loading weights:  45%|████▌     | 534/1184 [00:03<00:04, 145.51it/s]Loading weights:  35%|███▍      | 414/1184 [00:02<00:05, 146.60it/s]Loading weights:  47%|████▋     | 551/1184 [00:04<00:04, 151.85it/s]Loading weights:  36%|███▋      | 431/1184 [00:03<00:04, 151.21it/s]Loading weights:  48%|████▊     | 570/1184 [00:04<00:03, 161.12it/s]Loading weights:  38%|███▊      | 451/1184 [00:03<00:04, 159.24it/s]Loading weights:  50%|████▉     | 587/1184 [00:04<00:04, 145.33it/s]Loading weights:  40%|███▉      | 468/1184 [00:03<00:04, 151.08it/s]Loading weights:  51%|█████     | 604/1184 [00:04<00:03, 150.21it/s]Loading weights:  41%|████      | 487/1184 [00:03<00:04, 160.98it/s]Loading weights:  52%|█████▏    | 620/1184 [00:04<00:03, 150.17it/s]Loading weights:  43%|████▎     | 504/1184 [00:03<00:04, 157.93it/s]Loading weights:  44%|████▍     | 520/1184 [00:03<00:04, 147.62it/s]Loading weights:  54%|█████▎    | 636/1184 [00:04<00:04, 125.62it/s]Loading weights:  46%|████▌     | 540/1184 [00:03<00:04, 157.81it/s]Loading weights:  56%|█████▌    | 658/1184 [00:04<00:03, 146.46it/s]Loading weights:  47%|████▋     | 557/1184 [00:03<00:03, 158.40it/s]Loading weights:  57%|█████▋    | 677/1184 [00:04<00:03, 151.91it/s]Loading weights:  48%|████▊     | 573/1184 [00:03<00:04, 147.96it/s]Loading weights:  59%|█████▊    | 693/1184 [00:05<00:03, 141.94it/s]Loading weights:  50%|█████     | 592/1184 [00:04<00:03, 158.38it/s]Loading weights:  60%|██████    | 712/1184 [00:05<00:03, 147.94it/s]Loading weights:  51%|█████▏    | 609/1184 [00:04<00:03, 155.54it/s]Loading weights:  62%|██████▏   | 729/1184 [00:05<00:03, 151.67it/s]Loading weights:  53%|█████▎    | 625/1184 [00:04<00:03, 146.47it/s]Loading weights:  63%|██████▎   | 745/1184 [00:05<00:03, 130.25it/s]Loading weights:  54%|█████▍    | 643/1184 [00:04<00:03, 153.92it/s]Loading weights:  65%|██████▍   | 764/1184 [00:05<00:02, 144.86it/s]Loading weights:  56%|█████▌    | 663/1184 [00:04<00:03, 160.84it/s]Loading weights:  66%|██████▌   | 780/1184 [00:05<00:02, 140.22it/s]Loading weights:  57%|█████▋    | 680/1184 [00:04<00:03, 152.07it/s]Loading weights:  59%|█████▉    | 699/1184 [00:04<00:03, 161.35it/s]Loading weights:  67%|██████▋   | 795/1184 [00:05<00:03, 119.50it/s]Loading weights:  60%|██████    | 716/1184 [00:04<00:02, 157.49it/s]Loading weights:  68%|██████▊   | 810/1184 [00:05<00:02, 125.76it/s]Loading weights:  70%|██████▉   | 824/1184 [00:06<00:02, 128.33it/s]Loading weights:  62%|██████▏   | 732/1184 [00:04<00:03, 149.31it/s]Loading weights:  71%|███████   | 838/1184 [00:06<00:02, 130.75it/s]Loading weights:  64%|██████▎   | 752/1184 [00:05<00:02, 160.18it/s]Loading weights:  72%|███████▏  | 857/1184 [00:06<00:02, 146.58it/s]Loading weights:  65%|██████▍   | 769/1184 [00:05<00:02, 156.66it/s]Loading weights:  95%|█████████▍| 1121/1184 [00:06<00:00, 842.19it/s]Loading weights: 100%|██████████| 1184/1184 [00:06<00:00, 184.54it/s]
+Loading weights:  66%|██████▋   | 785/1184 [00:05<00:02, 146.71it/s]Loading weights:  68%|██████▊   | 802/1184 [00:05<00:02, 151.82it/s]Loading weights:  69%|██████▉   | 822/1184 [00:05<00:02, 159.56it/s]Loading weights:  71%|███████   | 839/1184 [00:05<00:02, 150.09it/s]Loading weights:  74%|███████▍  | 881/1184 [00:05<00:01, 221.73it/s]19:53:47  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:47  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/generation_config.json "HTTP/1.1 200 OK"
+Loading weights:  99%|█████████▉| 1171/1184 [00:05<00:00, 957.26it/s]Loading weights: 100%|██████████| 1184/1184 [00:05<00:00, 201.56it/s]
+19:53:47  INFO      httpx  HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+19:53:48  INFO      httpx  HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3.6-27B/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+19:53:48  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3.6-27B/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/generation_config.json "HTTP/1.1 200 OK"
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046, 'bos_token_id': None, 'pad_token_id': 248044}.
+19:53:48  INFO      httpx  HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ajenane/.netrc.
+wandb: Currently logged in as: azza-jenane2 (azza-jenane2-technical-university-of-munich) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run oc5985z2
+wandb: Tracking run with wandb version 0.27.0
+wandb: Run data is saved locally in /home/ajenane/orena/wandb/run-20260728_195349-oc5985z2
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run nockpt-1953
+wandb: ⭐️ View project at https://wandb.ai/azza-jenane2-technical-university-of-munich/orena-segment-sft
+wandb: 🚀 View run at https://wandb.ai/azza-jenane2-technical-university-of-munich/orena-segment-sft/runs/oc5985z2
+19:53:51  INFO      httpx  HTTP Request: HEAD https://huggingface.co/api/telemetry/trl/SFTTrainer "HTTP/1.1 200 OK"
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046, 'bos_token_id': None, 'pad_token_id': 248044}.
+  0%|          | 0/3 [00:00<?, ?it/s][rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/ajenane/orena/segment_track/sft_train_qwen_segment_ddp.py", line 333, in <module>
+[rank1]:     main()
+[rank1]:     ~~~~^^
+[rank1]:   File "/home/ajenane/orena/segment_track/sft_train_qwen_segment_ddp.py", line 324, in main
+[rank1]:     trainer.train()
+[rank1]:     ~~~~~~~~~~~~~^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/trainer.py", line 1427, in train
+[rank1]:     return inner_training_loop(
+[rank1]:         args=args,
+[rank1]:     ...<2 lines>...
+[rank1]:         ignore_keys_for_eval=ignore_keys_for_eval,
+[rank1]:     )
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/trainer.py", line 1509, in _inner_training_loop
+[rank1]:     self._run_epoch(
+[rank1]:     ~~~~~~~~~~~~~~~^
+[rank1]:         model=model,
+[rank1]:         ^^^^^^^^^^^^
+[rank1]:     ...<9 lines>...
+[rank1]:         steps_trained_in_current_epoch=steps_trained_in_current_epoch,
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/trainer.py", line 1737, in _run_epoch
+[rank1]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/trl/trainer/sft_trainer.py", line 1844, in training_step
+[rank1]:     return super().training_step(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/trainer.py", line 1909, in training_step
+[rank1]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/trl/trainer/sft_trainer.py", line 1742, in compute_loss
+[rank1]:     (loss, outputs) = super().compute_loss(
+[rank1]:                       ~~~~~~~~~~~~~~~~~~~~^
+[rank1]:         model, inputs, return_outputs=True, num_items_in_batch=num_items_in_batch
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/trainer.py", line 1981, in compute_loss
+[rank1]:     outputs = model(**inputs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1832, in forward
+[rank1]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank1]:          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1657, in _run_ddp_forward
+[rank1]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank1]:            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/accelerate/utils/operations.py", line 943, in forward
+[rank1]:     return model_forward(*args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/accelerate/utils/operations.py", line 931, in __call__
+[rank1]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank1]:                            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank1]:     return func(*args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/peft/peft_model.py", line 1993, in forward
+[rank1]:     return self.base_model(
+[rank1]:            ~~~~~~~~~~~~~~~^
+[rank1]:         input_ids=input_ids,
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^
+[rank1]:     ...<6 lines>...
+[rank1]:         **kwargs,
+[rank1]:         ^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/peft/tuners/tuners_utils.py", line 330, in forward
+[rank1]:     return self.model.forward(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/trl/trainer/sft_trainer.py", line 325, in _chunked_ce_forward
+[rank1]:     outputs: BaseModelOutputWithPast = backbone(
+[rank1]:                                        ~~~~~~~~^
+[rank1]:         input_ids=input_ids, attention_mask=attention_mask, use_cache=False, **decoder_kwargs, **kwargs
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+[rank1]:     output = func(self, *args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1614, in forward
+[rank1]:     outputs = self.language_model(
+[rank1]:         input_ids=None,
+[rank1]:     ...<4 lines>...
+[rank1]:         **kwargs,
+[rank1]:     )
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 1032, in wrapper
+[rank1]:     output = func(self, *args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+[rank1]:     outputs = func(self, *args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1219, in forward
+[rank1]:     hidden_states = decoder_layer(
+[rank1]:         hidden_states,
+[rank1]:     ...<5 lines>...
+[rank1]:         **kwargs,
+[rank1]:     )
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+[rank1]:     return super().__call__(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 785, in forward
+[rank1]:     hidden_states = self.linear_attn(
+[rank1]:         hidden_states=hidden_states,
+[rank1]:     ...<2 lines>...
+[rank1]:         **kwargs,
+[rank1]:     )
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 535, in forward
+[rank1]:     core_attn_out, last_recurrent_state = self.chunk_gated_delta_rule(
+[rank1]:                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank1]:         query,
+[rank1]:         ^^^^^^
+[rank1]:     ...<8 lines>...
+[rank1]:         cu_seqlens=kwargs.get("cu_seq_lens_q"),
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 294, in torch_chunk_gated_delta_rule
+[rank1]:     attn[..., i, :i] = row + (row.unsqueeze(-1) * sub).sum(-2)
+[rank1]:                               ~~~~~~~~~~~~~~~~~~^~~~~
+[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 84.00 MiB. GPU 1 has a total capacity of 139.80 GiB of which 59.06 MiB is free. Including non-PyTorch memory, this process has 139.72 GiB memory in use. Of the allocated memory 137.54 GiB is allocated by PyTorch, and 702.60 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/ajenane/orena/segment_track/sft_train_qwen_segment_ddp.py", line 333, in <module>
+[rank0]:     main()
+[rank0]:     ~~~~^^
+[rank0]:   File "/home/ajenane/orena/segment_track/sft_train_qwen_segment_ddp.py", line 324, in main
+[rank0]:     trainer.train()
+[rank0]:     ~~~~~~~~~~~~~^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/trainer.py", line 1427, in train
+[rank0]:     return inner_training_loop(
+[rank0]:         args=args,
+[rank0]:     ...<2 lines>...
+[rank0]:         ignore_keys_for_eval=ignore_keys_for_eval,
+[rank0]:     )
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/trainer.py", line 1509, in _inner_training_loop
+[rank0]:     self._run_epoch(
+[rank0]:     ~~~~~~~~~~~~~~~^
+[rank0]:         model=model,
+[rank0]:         ^^^^^^^^^^^^
+[rank0]:     ...<9 lines>...
+[rank0]:         steps_trained_in_current_epoch=steps_trained_in_current_epoch,
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/trainer.py", line 1737, in _run_epoch
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/trl/trainer/sft_trainer.py", line 1844, in training_step
+[rank0]:     return super().training_step(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/trainer.py", line 1909, in training_step
+[rank0]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/trl/trainer/sft_trainer.py", line 1742, in compute_loss
+[rank0]:     (loss, outputs) = super().compute_loss(
+[rank0]:                       ~~~~~~~~~~~~~~~~~~~~^
+[rank0]:         model, inputs, return_outputs=True, num_items_in_batch=num_items_in_batch
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/trainer.py", line 1981, in compute_loss
+[rank0]:     outputs = model(**inputs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1832, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/parallel/distributed.py", line 1657, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/accelerate/utils/operations.py", line 943, in forward
+[rank0]:     return model_forward(*args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/accelerate/utils/operations.py", line 931, in __call__
+[rank0]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank0]:                            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank0]:     return func(*args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/peft/peft_model.py", line 1993, in forward
+[rank0]:     return self.base_model(
+[rank0]:            ~~~~~~~~~~~~~~~^
+[rank0]:         input_ids=input_ids,
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^
+[rank0]:     ...<6 lines>...
+[rank0]:         **kwargs,
+[rank0]:         ^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/peft/tuners/tuners_utils.py", line 330, in forward
+[rank0]:     return self.model.forward(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/trl/trainer/sft_trainer.py", line 325, in _chunked_ce_forward
+[rank0]:     outputs: BaseModelOutputWithPast = backbone(
+[rank0]:                                        ~~~~~~~~^
+[rank0]:         input_ids=input_ids, attention_mask=attention_mask, use_cache=False, **decoder_kwargs, **kwargs
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 903, in wrapper
+[rank0]:     output = func(self, *args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1614, in forward
+[rank0]:     outputs = self.language_model(
+[rank0]:         input_ids=None,
+[rank0]:     ...<4 lines>...
+[rank0]:         **kwargs,
+[rank0]:     )
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/utils/generic.py", line 1032, in wrapper
+[rank0]:     output = func(self, *args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 252, in wrapper
+[rank0]:     outputs = func(self, *args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1219, in forward
+[rank0]:     hidden_states = decoder_layer(
+[rank0]:         hidden_states,
+[rank0]:     ...<5 lines>...
+[rank0]:         **kwargs,
+[rank0]:     )
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/modeling_layers.py", line 93, in __call__
+[rank0]:     return super().__call__(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 785, in forward
+[rank0]:     hidden_states = self.linear_attn(
+[rank0]:         hidden_states=hidden_states,
+[rank0]:     ...<2 lines>...
+[rank0]:         **kwargs,
+[rank0]:     )
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 535, in forward
+[rank0]:     core_attn_out, last_recurrent_state = self.chunk_gated_delta_rule(
+[rank0]:                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[rank0]:         query,
+[rank0]:         ^^^^^^
+[rank0]:     ...<8 lines>...
+[rank0]:         cu_seqlens=kwargs.get("cu_seq_lens_q"),
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 294, in torch_chunk_gated_delta_rule
+[rank0]:     attn[..., i, :i] = row + (row.unsqueeze(-1) * sub).sum(-2)
+[rank0]:                               ~~~~~~~~~~~~~~~~~~^~~~~
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 84.00 MiB. GPU 0 has a total capacity of 139.80 GiB of which 45.06 MiB is free. Including non-PyTorch memory, this process has 139.73 GiB memory in use. Of the allocated memory 137.59 GiB is allocated by PyTorch, and 661.87 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+W0728 19:55:33.031000 271241 torch/distributed/elastic/multiprocessing/api.py:1014] Sending process 271318 closing signal SIGTERM
+E0728 19:55:34.248000 271241 torch/distributed/elastic/multiprocessing/api.py:988] failed (exitcode: 1) local_rank: 1 (pid: 271319) of binary: /home/ajenane/orena/.venv/bin/python3
+Traceback (most recent call last):
+  File "/home/ajenane/orena/.venv/bin/torchrun", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 367, in wrapper
+    return f(*args, **kwargs)
+  File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/distributed/run.py", line 1016, in main
+    run(args)
+    ~~~^^^^^^
+  File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/distributed/run.py", line 1007, in run
+    elastic_launch(
+    ~~~~~~~~~~~~~~~
+        config=config,
+        ~~~~~~~~~~~~~~
+        entrypoint=cmd,
+        ~~~~~~~~~~~~~~~
+    )(*cmd_args)
+    ~^^^^^^^^^^^
+  File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 191, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/ajenane/orena/.venv/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 371, in launch_agent
+    raise ChildFailedError(
+    ...<2 lines>...
+    )
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/ajenane/orena/segment_track/sft_train_qwen_segment_ddp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-07-28_19:55:34
+  host      : cgm-gpu38
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 271318)  (SIGTERM)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 271318
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-07-28_19:55:33
+  host      : cgm-gpu38
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 271319) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
