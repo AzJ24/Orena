@@ -201,25 +201,29 @@ what was mistaken for "objects become visible".
 `eval_res.slurm` now defaults to `--prompt-style direct` and writes to
 `res<MINPX>_<PSTYLE>_...` so the confounded outputs stay distinguishable.
 
-### Stage 4 CORRECTED -- resolution is null (lapchole; heico pending)
+### Stage 4 CORRECTED -- resolution is null (both datasets)
 
-With the prompt style matched, the entire effect disappears. Paired McNemar,
-n=2252:
+With the prompt style matched, the effect collapses. Paired McNemar on `number`:
 
-| lapchole `number` | native | 2x | delta | p |
-|---|---|---|---|---|
-| base 9B (was 0.092 -> 0.234) | 0.0859 | 0.0898 | +0.004 | 0.72 |
-| SFT (trained AND evaluated at 2x) | 0.3503 | 0.3724 | +0.022 | 0.23 |
+| arm | lapchole | heico |
+|---|---|---|
+| base 9B (was 0.092->0.234 / 0.193->0.375) | 0.086 -> 0.090, p=0.72 | 0.184 -> 0.213, p=0.0002 |
+| SFT trained AND evaluated at 2x | 0.350 -> 0.372, p=0.23 | 0.489 -> 0.479, p=0.45 |
 
-Base overall is identical (0.2163 vs 0.2167, p=1.00); no format moves. The 2x
-SFT retrain is likewise a null overall (0.5377 -> 0.5413, p=0.73) with no
-significant per-format change (fo_class -0.002 p=0.93, open_ended -0.040 p=0.10,
-number +0.022 p=0.23).
+Overall accuracy is a null everywhere: base 0.2163->0.2167 (p=1.00) and
+0.2110->0.2145 (p=0.49); SFT 0.5377->0.5413 (p=0.73) and 0.6130->0.6042
+(p=0.20).
 
-The counting error structure barely moves: instance subtype 0.287 -> 0.307,
-mean predicted count 2.90 -> 3.08 against gt mean 3.28, and the gt>=4 undercount
-persists (gt=5: 0.17 -> 0.15). Doubling visual tokens does not make clips
-individuable.
+The one surviving effect -- base heico `number` +0.029 -- is real but small (vs
+the +0.182 claimed under the confound), comes with significant *losses* on
+fo_class (-0.018, p=0.009) and open_ended (-0.043, p=0.003), and does not
+survive fine-tuning: the 2x-trained model is slightly worse at heico counting
+than the native one. SFT heico binary also drops significantly (-0.046, p=0.016).
+
+The counting error structure barely moves: lapchole instance subtype 0.287 ->
+0.307, mean predicted count 2.90 -> 3.08 against gt mean 3.28, and the gt>=4
+undercount persists (gt=5: 0.17 -> 0.15). Doubling visual tokens does not make
+clips individuable.
 
 **Resolution joins the null list.** The apparent gain was entirely the missing
 FO definition inflating counts (mean pred 0.45 -> 1.40) toward the gt mean --
