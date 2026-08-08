@@ -309,6 +309,13 @@ def main():
                           "auto-failed above 300 characters by OpenEnded.verify.")
     ap.add_argument("--batch-size", type=int, default=32,
                      help="number of (image, question) pairs generated together per forward pass")
+    ap.add_argument("--min-pixels", type=int, default=None,
+                     help="override the image processor's minimum pixel AREA (size.shortest_edge). "
+                          "Frames below this area are upscaled before patching, raising the visual "
+                          "token count -- e.g. 2073600 forces ~2x linear upscale of a 960x540 frame "
+                          "(~510 -> ~2000 tokens). Native frames are never resized by default.")
+    ap.add_argument("--max-pixels", type=int, default=None,
+                     help="override the image processor's maximum pixel AREA (size.longest_edge).")
     ap.add_argument("--limit", type=int, default=None,
                      help="cap the number of test examples per dataset, for a quick sanity check")
     ap.add_argument("--judge-device", default="cuda",
@@ -366,6 +373,13 @@ def main():
     set_config(cfg)
 
     processor, model = load_model(args.checkpoint_dir, args.base_model_id, not args.no_merge_lora)
+
+    if args.min_pixels is not None:
+        processor.image_processor.size["shortest_edge"] = args.min_pixels
+    if args.max_pixels is not None:
+        processor.image_processor.size["longest_edge"] = args.max_pixels
+    if args.min_pixels or args.max_pixels:
+        print(f"Image processor size overridden: {processor.image_processor.size}")
 
     for dataset in args.datasets:
         evaluate_dataset(processor, model, dataset, cfg, args)

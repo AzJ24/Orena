@@ -21,12 +21,17 @@ from sft_train_qwen_frame_ddp import (  # noqa: E402
     build_collate_fn,
 )
 
-BATCH = int(os.environ.get("SMOKE_BATCH", "32"))
-MODEL_ID = "Qwen/Qwen3.5-9B"
+BATCHES = [int(b) for b in os.environ.get("SMOKE_BATCH", "32").split(",")]
+MODEL_ID = os.environ.get("SMOKE_MODEL_ID", "Qwen/Qwen3.5-9B")
 WANT_VISION = os.environ.get("LORA_VISION", "0") == "1"
 WANT_LINEAR_ATTN = os.environ.get("LORA_LINEAR_ATTN", "0") == "1"
+MIN_PIXELS = int(os.environ.get("MIN_PIXELS", "0"))
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)
+if MIN_PIXELS:
+    # Must match the training override: an area floor upscales every frame to
+    # ~the same token count, so the sweep sizes the real 2x-resolution load.
+    processor.image_processor.size["shortest_edge"] = MIN_PIXELS
 model = Qwen3_5ForConditionalGeneration.from_pretrained(
     MODEL_ID, dtype=torch.bfloat16, device_map={"": 0},
 )
@@ -48,15 +53,55 @@ model.train()
 
 system_prompt = build_system_prompt(False, style="direct")
 ds = load_dataset("json", data_files={"train": str(SFT_DIR / "sft_export" / "combined" / "train.jsonl")})["train"]
-batch = [ds[i] for i in range(BATCH)]
-inputs = build_collate_fn(processor, system_prompt)(batch)
-inputs = {k: v.to(model.device) for k, v in inputs.items()}
-print(f"batch={BATCH} seq_len={inputs['input_ids'].shape[1]} "
-      f"vis_tokens={int(inputs['mm_token_type_ids'].sum())}", flush=True)
+collate = build_collate_fn(processor, system_prompt)
 
-torch.cuda.reset_peak_memory_stats()
-out = model(**inputs)
-out.loss.backward()
+# Size against the WORST case, not the first N rows: visual tokens scale with
+# source resolution (1280x720 -> 880 tokens vs 960x540 -> 510), so a batch of
+# the largest frames is ~1.7x the activations of a batch of the smallest. The
+# first rows happen to be all heico, which would under-size the batch and OOM
+# hours into training once shuffling produced a lapchole-heavy batch.
+if os.environ.get("SMOKE_WORST_CASE", "1") == "1":
+    from PIL import Image as _I
+
+    def _px(i):
+        try:
+            w, h = _I.open(ds[i]["messages"][0]["content"][0]["image"]).size
+            return w * h
+        except Exception:
+            return 0
+
+    probe = sorted(range(len(ds)), key=_px, reverse=True)[:max(BATCHES)]
+    print(f"worst-case probe: {max(BATCHES)} largest frames", flush=True)
+else:
+    probe = list(range(max(BATCHES)))
+
+# Sweep descending batch sizes on one model load: the largest that fits is the
+# per-device batch to train with. Gradients are only inspected for the one that
+# fits, since an OOM aborts the backward before any grad exists.
+out = None
+for BATCH in BATCHES:
+    model.zero_grad(set_to_none=True)
+    torch.cuda.empty_cache()
+    torch.cuda.reset_peak_memory_stats()
+    inputs = collate([ds[i] for i in probe[:BATCH]])
+    inputs = {k: v.to(model.device) for k, v in inputs.items()}
+    try:
+        o = model(**inputs)
+        o.loss.backward()
+    except torch.OutOfMemoryError:
+        print(f"batch={BATCH:<4} OOM", flush=True)
+        del inputs
+        continue
+    print(f"batch={BATCH:<4} seq_len={inputs['input_ids'].shape[1]:<6} "
+          f"vis_tokens={int(inputs['mm_token_type_ids'].sum()):<7} "
+          f"peak={torch.cuda.max_memory_allocated()/2**30:.1f} GiB  FITS", flush=True)
+    out = o
+    break
+
+if out is None:
+    print(f"\nRESULT: FAIL - OOM at every batch size tried ({BATCHES})")
+    sys.exit(1)
+print(f"\n>>> use --batch-size {BATCH}", flush=True)
 
 # Only lora_B is informative on the first step: it is zero-initialised, so
 # dL/dA is proportional to B == 0 and EVERY lora_A legitimately reads zero here.

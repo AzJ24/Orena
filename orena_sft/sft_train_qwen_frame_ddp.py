@@ -304,6 +304,11 @@ def main():
                      help="prepend 'Procedure type: <name>.' to each training question (from the "
                           "record's procedure_type). Train and eval must match, so evaluate the "
                           "checkpoint with the same --condition-procedure.")
+    ap.add_argument("--min-pixels", type=int, default=None,
+                     help="minimum pixel AREA (image_processor size.shortest_edge). Frames below it "
+                          "are upscaled before patching: 2073600 turns a native ~510-token frame into "
+                          "~2040 tokens. A checkpoint trained with this MUST be evaluated with the "
+                          "same --min-pixels (the eval script loads the processor from the base id).")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--wandb-project", default="orena-frame-sft")
     ap.add_argument("--run-name", default=None,
@@ -345,6 +350,10 @@ def main():
     args.output_dir = args.output_dir or str(SFT_DIR / "checkpoints" / run_name)
 
     processor = AutoProcessor.from_pretrained(args.model_id)
+    if args.min_pixels is not None:
+        # Shared by the collator, eval-loss pass and preview callback, so one
+        # override keeps every image path in the run at the same resolution.
+        processor.image_processor.size["shortest_edge"] = args.min_pixels
     # DDP: each process loads a FULL replica on its own GPU (torchrun sets
     # LOCAL_RANK). Falls back to "auto" for a plain single-GPU/`python` launch.
     local_rank = int(os.environ.get("LOCAL_RANK", -1))
@@ -414,6 +423,7 @@ def main():
             "lora_alpha": args.lora_alpha,
             "lora_vision": args.lora_vision,
             "lora_linear_attn": args.lora_linear_attn,
+            "min_pixels": args.min_pixels,
             "train_file": args.train_file,
             "eval_file": args.eval_file,
             "n_train_examples": len(dataset["train"]),
