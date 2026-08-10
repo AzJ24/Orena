@@ -32,16 +32,35 @@ set -euo pipefail
 REPO_ROOT="${REPO_ROOT:-$PWD}"
 SFT_DIR="$REPO_ROOT/orena_sft"
 PY="${PY:-$REPO_ROOT/.venv/bin/python}"
-DATA_ROOT="${DATA_ROOT:?set DATA_ROOT to the dir containing <dataset>/frames/ on this cluster}"
+DATA_ROOT="${DATA_ROOT:-/mnt/vast/workspaces/VL_LeJepa/data/orena}"
+MODEL_ID="${MODEL_ID:-Qwen/Qwen3.6-27B}"
 mkdir -p "$REPO_ROOT/logs"
 
-echo "Node: $(hostname) | repo=$REPO_ROOT | data=$DATA_ROOT"
+echo "Node: $(hostname) | repo=$REPO_ROOT | data=$DATA_ROOT | model=$MODEL_ID"
 nvidia-smi --query-gpu=name,memory.total --format=csv
 
+for d in heico lapchole; do
+    [[ -d "$DATA_ROOT/$d/frames" ]] || { echo "MISSING: $DATA_ROOT/$d/frames" >&2; exit 1; }
+done
+
 export TOKENIZERS_PARALLELISM=false
-export HF_HUB_OFFLINE=1          # both ranks resolving against the Hub races
 export NCCL_IB_DISABLE=1
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
+# Weights must already be cached: 8 ranks resolving against the Hub race each
+# other, and compute nodes are usually offline. Run prefetch_assets.sh on a
+# login node first.
+if "$PY" -c "
+import sys
+from huggingface_hub import snapshot_download
+snapshot_download('$MODEL_ID', local_files_only=True)" 2>/dev/null; then
+    export HF_HUB_OFFLINE=1
+    echo "model cached -> HF_HUB_OFFLINE=1"
+else
+    echo "ERROR: $MODEL_ID is not in the HF cache." >&2
+    echo "Run on a LOGIN node first:  bash orena_sft/prefetch_assets.sh" >&2
+    exit 1
+fi
 
 # The export is gitignored and stores ABSOLUTE frame paths, so it must be
 # rebuilt here rather than copied from the other cluster.
@@ -59,7 +78,7 @@ fi
 MONITOR="$SFT_DIR/sft_export/combined_alldata/monitor.jsonl"
 [[ -f "$MONITOR" ]] || head -n 400 "$SFT_DIR/sft_export/combined_alldata/train.jsonl" > "$MONITOR"
 
-export SMOKE_MODEL_ID="Qwen/Qwen3.6-27B"
+export SMOKE_MODEL_ID="$MODEL_ID"
 export SMOKE_BATCH="4,2"
 export SMOKE_WORST_CASE=1
 echo "=== PREFLIGHT: 27B memory on this GPU (sweeps $SMOKE_BATCH) ==="
@@ -70,7 +89,7 @@ echo "=== PREFLIGHT PASSED ==="
     "$SFT_DIR/sft_train_qwen_frame_ddp.py" \
     --train-file "$SFT_DIR/sft_export/combined_alldata/train.jsonl" \
     --eval-file  "$MONITOR" \
-    --model-id "Qwen/Qwen3.6-27B" \
+    --model-id "$MODEL_ID" \
     --run-name combined-27b-8r-direct-alldata \
     --prompt-style direct \
     --lora-r 8 --lora-alpha 16 \
