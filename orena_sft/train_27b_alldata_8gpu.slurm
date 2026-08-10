@@ -57,6 +57,15 @@ export TOKENIZERS_PARALLELISM=false
 export NCCL_IB_DISABLE=1
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
+# wandb.init() raises on an unconfigured cluster and takes the whole run with
+# it. Log offline instead -- the run is still recorded and can be uploaded later
+# with `wandb sync wandb/offline-run-*`. Checking credentials rather than
+# calling the API keeps this from hanging on a compute node with no network.
+if [[ -z "${WANDB_API_KEY:-}" ]] && ! grep -qs "api.wandb.ai" "$HOME/.netrc"; then
+    export WANDB_MODE=offline
+    echo "wandb: no credentials found -> WANDB_MODE=offline"
+fi
+
 # Weights must already be cached: 8 ranks resolving against the Hub race each
 # other, and compute nodes are usually offline. Run prefetch_assets.sh on a
 # login node first.
