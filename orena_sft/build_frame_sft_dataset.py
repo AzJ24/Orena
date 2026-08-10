@@ -271,6 +271,10 @@ def main():
     ap.add_argument("--max-eval-rows-per-video", type=int, default=80,
                      help="cap eval rows per video (format mix preserved). 0 disables. Stops dense "
                           "heico videos (400 rows) from swamping lapchole ones (~80).")
+    ap.add_argument("--all-data", action="store_true",
+                     help="final-submission mode: put EVERY non-test row in train.jsonl (no eval "
+                          "holdout) and assert no test row leaks in. Fix the step count in advance "
+                          "-- there is nothing left to early-stop on.")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--manifest", type=Path, default=None,
                      help="write a manifest pinning the split (videos + eval qIDs + hashes) here")
@@ -288,6 +292,24 @@ def main():
         print(f"  test:  {len(ds_test)} usable rows")
         train_records += ds_train
         test_records += ds_test
+
+    if args.all_data:
+        # sft_export/combined_all was built with test rows folded into train, so
+        # anything evaluated on it scored its own training data. Assert instead.
+        test_keys = {(r["source_dataset"], r["qID"]) for r in test_records}
+        leaked = [r for r in train_records if (r["source_dataset"], r["qID"]) in test_keys]
+        if leaked:
+            raise SystemExit(f"ABORT: {len(leaked)} test rows present in the train pool.")
+        print(f"\nALL-DATA mode: {len(train_records)} rows (train + eval, no holdout); "
+              f"verified disjoint from {len(test_records)} test rows.")
+        args.out_dir.mkdir(parents=True, exist_ok=True)
+        write_jsonl(train_records, args.out_dir / "train.jsonl")
+        write_jsonl(test_records, args.out_dir / "test.jsonl")
+        print(f"Wrote train.jsonl, test.jsonl to {args.out_dir}/")
+        if args.manifest:
+            write_manifest(args, train_records, [], test_records)
+            print(f"Wrote split manifest to {args.manifest}")
+        return
 
     eval_videos = make_eval_video_split(train_records, args.eval_frac, args.seed,
                                         args.min_eval_videos_per_stratum)
