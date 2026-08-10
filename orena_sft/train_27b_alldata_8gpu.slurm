@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --partition=gpu
+#SBATCH --partition=all
 #SBATCH --gres=gpu:h100:8
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -25,7 +25,11 @@
 # before the run starts -- if batch 4 OOMs, use 2 with --grad-accum 2 and
 # --nproc_per_node 8 (still 32), or fall back to 16 GPUs.
 #
-# Adjust partition/gres names for the target cluster's Slurm config.
+# Cluster: partition 'all' carries gpu:h100:8 nodes (cn01-35); an 'h200'
+# partition with gpu:h200:8 also exists. H100 is the right target -- 8 GPUs at
+# the required effective batch 32 means per-device 4 either way, so the H200's
+# extra memory buys headroom, not throughput. Swap to --partition=h200
+# --gres=gpu:h200:8 only if the preflight cannot fit batch 4 on 80 GB.
 
 set -euo pipefail
 
