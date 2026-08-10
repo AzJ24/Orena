@@ -27,13 +27,16 @@ p = snapshot_download(sys.argv[1], allow_patterns=[
 print("cached at", p)
 EOF
 
-echo "=== 2/2  FOCUS annotations (frame track) ==="
+echo "=== 2/2  FOCUS annotations ==="
+# Go through FocusDataset itself rather than calling load_dataset by hand: it
+# loads a NAMED CONFIG ("frame"), and a data_dir= call caches under a different
+# key, so the offline job would not find it.
 "$PY" - <<'EOF'
-from datasets import load_dataset
-for repo in ("orena-dkfz/heico-focus-vqa", "orena-dkfz/lapchole-focus-vqa"):
-    for split in ("train", "test"):
-        d = load_dataset(repo, data_dir="data/frame", split=split)
-        print(f"  {repo} {split}: {len(d)} rows")
+from focus import DatasetSplit, FocusDataset, Track
+for ds in ("heico", "lapchole"):
+    for split in (DatasetSplit.TRAIN, DatasetSplit.TEST):
+        d = FocusDataset(ds, split, Track.FRAME)
+        print(f"  {ds} {split.value} (frame): {len(d)} rows")
 EOF
 
 echo
