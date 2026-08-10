@@ -91,6 +91,7 @@ MONITOR="$SFT_DIR/sft_export/combined_alldata_test/monitor.jsonl"
 export SMOKE_MODEL_ID="$MODEL_ID"
 export SMOKE_BATCH="4,2"
 export SMOKE_WORST_CASE=1
+export SMOKE_TRAIN_FILE="$SFT_DIR/sft_export/combined_alldata_test/train.jsonl"
 echo "=== PREFLIGHT: 27B memory on this GPU (sweeps $SMOKE_BATCH) ==="
 "$PY" "$SFT_DIR/preflight_vision_lora.py"
 echo "=== PREFLIGHT PASSED ==="

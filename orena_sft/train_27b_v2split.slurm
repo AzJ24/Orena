@@ -40,6 +40,7 @@ echo "=== verifying v2 split against manifest ==="
 
 export SMOKE_MODEL_ID="Qwen/Qwen3.6-27B"
 export SMOKE_BATCH=8
+export SMOKE_TRAIN_FILE="$SFT_DIR/sft_export/combined_v2/train.jsonl"
 export SMOKE_WORST_CASE=1
 echo "=== PREFLIGHT: 27B memory at batch $SMOKE_BATCH (worst-case frames) ==="
 "$REPO_ROOT/.venv/bin/python" "$SFT_DIR/preflight_vision_lora.py"

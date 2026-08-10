@@ -52,7 +52,13 @@ model.enable_input_require_grads()
 model.train()
 
 system_prompt = build_system_prompt(False, style="direct")
-ds = load_dataset("json", data_files={"train": str(SFT_DIR / "sft_export" / "combined" / "train.jsonl")})["train"]
+# Must be the file the run actually trains on: the sizing sweep is only valid if
+# it sees the same frames. Not every cluster has the default combined/ export.
+TRAIN_FILE = os.environ.get("SMOKE_TRAIN_FILE",
+                            str(SFT_DIR / "sft_export" / "combined" / "train.jsonl"))
+if not os.path.exists(TRAIN_FILE):
+    raise SystemExit(f"preflight: no train file at {TRAIN_FILE} (set SMOKE_TRAIN_FILE)")
+ds = load_dataset("json", data_files={"train": TRAIN_FILE})["train"]
 collate = build_collate_fn(processor, system_prompt)
 
 # Size against the WORST case, not the first N rows: visual tokens scale with
