@@ -97,22 +97,43 @@ fi
 MONITOR="$SFT_DIR/sft_export/combined_alldata_test/monitor.jsonl"
 [[ -f "$MONITOR" ]] || head -n 400 "$SFT_DIR/sft_export/combined_alldata_test/train.jsonl" > "$MONITOR"
 
+# LORA_VISION=1 also adapts the vision tower + patch merger. On the 9B this was
+# the only intervention whose gain replicated significantly on both datasets
+# (object_recognition +0.023 / +0.025), but it costs activation memory -- it
+# forced batch 32 -> 16 there, so expect the sweep to land lower here too.
+VISION_ARGS=()
+if [[ "${LORA_VISION:-0}" == "1" ]]; then
+    VISION_ARGS=(--lora-vision)
+    RUN_NAME="combined-27b-8r-direct-vision-alldata-withtest"
+    export LORA_VISION=1
+    export SMOKE_BATCH="${SMOKE_BATCH:-4,2,1}"
+else
+    RUN_NAME="combined-27b-8r-direct-alldata-withtest"
+    export SMOKE_BATCH="${SMOKE_BATCH:-4,2}"
+fi
+
 export SMOKE_MODEL_ID="$MODEL_ID"
-export SMOKE_BATCH="4,2"
 export SMOKE_WORST_CASE=1
 export SMOKE_TRAIN_FILE="$SFT_DIR/sft_export/combined_alldata_test/train.jsonl"
-echo "=== PREFLIGHT: 27B memory on this GPU (sweeps $SMOKE_BATCH) ==="
+echo "=== PREFLIGHT: 27B${VISION_ARGS:+ +vision} memory (sweeps $SMOKE_BATCH) ==="
 "$PY" "$SFT_DIR/preflight_vision_lora.py"
-echo "=== PREFLIGHT PASSED ==="
+echo "=== PREFLIGHT PASSED -- run=$RUN_NAME ==="
+
+# Effective batch must stay 32. With 8 GPUs: per-device 4 -> accum 1,
+# per-device 2 -> accum 2, per-device 1 -> accum 4.
+PER_DEV="${PER_DEV:-4}"
+ACCUM=$(( 32 / (8 * PER_DEV) ))
+echo "batch layout: 8 GPUs x $PER_DEV x accum $ACCUM = $(( 8 * PER_DEV * ACCUM ))"
 
 "${PY%/*}/torchrun" --standalone --nproc_per_node=8 \
     "$SFT_DIR/sft_train_qwen_frame_ddp.py" \
     --train-file "$SFT_DIR/sft_export/combined_alldata_test/train.jsonl" \
     --eval-file  "$MONITOR" \
     --model-id "$MODEL_ID" \
-    --run-name combined-27b-8r-direct-alldata-withtest \
+    --run-name "$RUN_NAME" \
     --prompt-style direct \
+    "${VISION_ARGS[@]}" \
     --lora-r 8 --lora-alpha 16 \
     --epochs 1.2 --lr 1e-4 --seed 42 \
-    --batch-size 4 --grad-accum 1 \
+    --batch-size "$PER_DEV" --grad-accum "$ACCUM" \
     --eval-steps 100 --save-steps 100
