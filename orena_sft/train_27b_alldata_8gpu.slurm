@@ -10,12 +10,18 @@
 #SBATCH --output=logs/%x-%j.out
 #SBATCH --error=logs/%x-%j.err
 
-# FINAL SUBMISSION RUN -- Qwen3.6-27B on all 13748 non-test rows, 8x H100 DDP.
+# FINAL SUBMISSION RUN -- Qwen3.6-27B on ALL 20000 labelled rows (train + eval
+# + the public test split), 8x H100 DDP. The platform scores against its own
+# hidden set, so the labelled public test split is just more training data here.
 #
-# There is NO held-out eval in all-data mode, so the step count is fixed in
-# advance from the v2-split runs: 27B's best checkpoint landed at epoch 1.20
-# (9B's at 1.44-1.51). 13748 rows / effective batch 32 = 430 steps per epoch,
-# so 1.2 epochs = ~516 steps. --epochs 1.2 expresses that directly.
+# CONSEQUENCE: this checkpoint cannot be evaluated locally. Every row of our
+# test set is in its training data, so evaluate_qwen_frame.py would report
+# memorisation. Judge it only on the submission platform.
+#
+# There is NO held-out eval, so the step count is fixed in advance from the
+# v2-split runs: 27B's best checkpoint landed at epoch 1.20 (9B's at 1.44-1.51).
+# 20000 rows / effective batch 32 = 625 steps per epoch, so 1.2 epochs = 750
+# steps. --epochs 1.2 expresses that directly.
 #
 # Effective batch must stay 32 to match every run the epoch estimate came from:
 # 8 GPUs x per-device 4 x grad_accum 1 = 32.
@@ -68,19 +74,19 @@ fi
 
 # The export is gitignored and stores ABSOLUTE frame paths, so it must be
 # rebuilt here rather than copied from the other cluster.
-if [[ ! -f "$SFT_DIR/sft_export/combined_alldata/train.jsonl" ]]; then
-    echo "=== building all-data export (asserts no test leakage) ==="
+if [[ ! -f "$SFT_DIR/sft_export/combined_alldata_test/train.jsonl" ]]; then
+    echo "=== building all-data export (train + eval + public test = 20000 rows) ==="
     "$PY" "$SFT_DIR/build_frame_sft_dataset.py" \
-        --datasets heico lapchole --all-data --root-dir "$DATA_ROOT" \
-        --out-dir "$SFT_DIR/sft_export/combined_alldata" \
-        --manifest "$SFT_DIR/split_manifest_alldata.json"
+        --datasets heico lapchole --all-data --include-test --root-dir "$DATA_ROOT" \
+        --out-dir "$SFT_DIR/sft_export/combined_alldata_test" \
+        --manifest "$SFT_DIR/split_manifest_alldata_test.json"
 fi
 
 # All-data mode has no held-out set, but the Trainer still wants an eval_dataset.
 # Use a small slice of train purely as a divergence check -- its loss is a
 # training-loss proxy and MUST NOT be used to pick a checkpoint.
-MONITOR="$SFT_DIR/sft_export/combined_alldata/monitor.jsonl"
-[[ -f "$MONITOR" ]] || head -n 400 "$SFT_DIR/sft_export/combined_alldata/train.jsonl" > "$MONITOR"
+MONITOR="$SFT_DIR/sft_export/combined_alldata_test/monitor.jsonl"
+[[ -f "$MONITOR" ]] || head -n 400 "$SFT_DIR/sft_export/combined_alldata_test/train.jsonl" > "$MONITOR"
 
 export SMOKE_MODEL_ID="$MODEL_ID"
 export SMOKE_BATCH="4,2"
@@ -91,10 +97,10 @@ echo "=== PREFLIGHT PASSED ==="
 
 "${PY%/*}/torchrun" --standalone --nproc_per_node=8 \
     "$SFT_DIR/sft_train_qwen_frame_ddp.py" \
-    --train-file "$SFT_DIR/sft_export/combined_alldata/train.jsonl" \
+    --train-file "$SFT_DIR/sft_export/combined_alldata_test/train.jsonl" \
     --eval-file  "$MONITOR" \
     --model-id "$MODEL_ID" \
-    --run-name combined-27b-8r-direct-alldata \
+    --run-name combined-27b-8r-direct-alldata-withtest \
     --prompt-style direct \
     --lora-r 8 --lora-alpha 16 \
     --epochs 1.2 --lr 1e-4 --seed 42 \

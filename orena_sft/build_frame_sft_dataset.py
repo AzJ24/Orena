@@ -275,6 +275,11 @@ def main():
                      help="final-submission mode: put EVERY non-test row in train.jsonl (no eval "
                           "holdout) and assert no test row leaks in. Fix the step count in advance "
                           "-- there is nothing left to early-stop on.")
+    ap.add_argument("--include-test", action="store_true",
+                     help="with --all-data, ALSO train on the labelled public test split (20000 "
+                          "rows total). Valid for a final submission scored on the platform's own "
+                          "hidden set, but it destroys every local yardstick: test accuracy from "
+                          "evaluate_qwen_frame.py then measures memorisation, not generalisation.")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--manifest", type=Path, default=None,
                      help="write a manifest pinning the split (videos + eval qIDs + hashes) here")
@@ -294,14 +299,22 @@ def main():
         test_records += ds_test
 
     if args.all_data:
-        # sft_export/combined_all was built with test rows folded into train, so
-        # anything evaluated on it scored its own training data. Assert instead.
         test_keys = {(r["source_dataset"], r["qID"]) for r in test_records}
-        leaked = [r for r in train_records if (r["source_dataset"], r["qID"]) in test_keys]
-        if leaked:
-            raise SystemExit(f"ABORT: {len(leaked)} test rows present in the train pool.")
-        print(f"\nALL-DATA mode: {len(train_records)} rows (train + eval, no holdout); "
-              f"verified disjoint from {len(test_records)} test rows.")
+        if args.include_test:
+            train_records = train_records + test_records
+            print(f"\nALL-DATA + TEST mode: {len(train_records)} rows "
+                  f"({len(train_records) - len(test_records)} train/eval + {len(test_records)} test).")
+            print("  WARNING: this checkpoint can no longer be evaluated locally -- every row of "
+                  "the test set is now training data. Judge it only on the submission platform.")
+        else:
+            # sft_export/combined_all was built with test folded in silently, so
+            # anything evaluated on it scored its own training data.
+            leaked = [r for r in train_records if (r["source_dataset"], r["qID"]) in test_keys]
+            if leaked:
+                raise SystemExit(f"ABORT: {len(leaked)} test rows present in the train pool. "
+                                 "Pass --include-test if that is intended.")
+            print(f"\nALL-DATA mode: {len(train_records)} rows (train + eval, no holdout); "
+                  f"verified disjoint from {len(test_records)} test rows.")
         args.out_dir.mkdir(parents=True, exist_ok=True)
         write_jsonl(train_records, args.out_dir / "train.jsonl")
         write_jsonl(test_records, args.out_dir / "test.jsonl")
