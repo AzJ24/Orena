@@ -7,8 +7,8 @@
 #SBATCH --mem=256G
 #SBATCH --time=2-00:00:00
 #SBATCH --job-name=qwen-procedure-sft
-#SBATCH --output=/home/ajenane/orena/procedure_track/logs/%x-%j.out
-#SBATCH --error=/home/ajenane/orena/procedure_track/logs/%x-%j.err
+#SBATCH --output=logs/%x-%j.out
+#SBATCH --error=logs/%x-%j.err
 
 # LoRA SFT for the FOCUS procedure track, 2 GPUs on one node.
 #
@@ -33,15 +33,16 @@
 
 set -euo pipefail
 
-REPO_ROOT="/home/ajenane/orena"
+# Submit from the repo root; $PWD keeps this working on either cluster.
+REPO_ROOT="${REPO_ROOT:-$PWD}"
 PROC_DIR="$REPO_ROOT/procedure_track"
-mkdir -p "$PROC_DIR/logs"
+mkdir -p "$REPO_ROOT/logs" "$PROC_DIR/logs"
 
 # venv3.12 carries flash-linear-attention, which supplies the fused Gated DeltaNet
 # kernels. Without it transformers falls back to a Python loop over the linear-attention
 # layers and training is CPU-launch-bound (measured 4x slower on the segment track).
 # `.venv` is Python 3.13, for which flash-linear-attention has no working build.
-VENV="${VENV:-$REPO_ROOT/venv3.12}"
+VENV="${VENV:-$([ -x "$REPO_ROOT/.venv/bin/python" ] && echo "$REPO_ROOT/.venv" || echo "$REPO_ROOT/venv3.12")}"
 
 TRAIN_FILE="${TRAIN_FILE:-$PROC_DIR/sft_export/train.jsonl}"
 EVAL_FILE="${EVAL_FILE:-$PROC_DIR/sft_export/eval.jsonl}"

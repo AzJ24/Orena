@@ -7,8 +7,8 @@
 #SBATCH --mem=128G
 #SBATCH --time=1-00:00:00
 #SBATCH --job-name=qwen-procedure-eval
-#SBATCH --output=/home/ajenane/orena/procedure_track/logs/%x-%j.out
-#SBATCH --error=/home/ajenane/orena/procedure_track/logs/%x-%j.err
+#SBATCH --output=logs/%x-%j.out
+#SBATCH --error=logs/%x-%j.err
 
 # Evaluation for the procedure track. One 96 GB RTX PRO 6000 is the same class of GPU
 # the challenge runs on, so the latency numbers here are the ones a submission sees.
@@ -30,11 +30,12 @@
 
 set -euo pipefail
 
-REPO_ROOT="/home/ajenane/orena"
+# Submit from the repo root; $PWD keeps this working on either cluster.
+REPO_ROOT="${REPO_ROOT:-$PWD}"
 PROC_DIR="$REPO_ROOT/procedure_track"
-mkdir -p "$PROC_DIR/logs"
+mkdir -p "$REPO_ROOT/logs" "$PROC_DIR/logs"
 
-VENV="${VENV:-$REPO_ROOT/venv3.12}"
+VENV="${VENV:-$([ -x "$REPO_ROOT/.venv/bin/python" ] && echo "$REPO_ROOT/.venv" || echo "$REPO_ROOT/venv3.12")}"
 SHARD="${SHARD:-0}"
 NUM_SHARDS="${NUM_SHARDS:-1}"
 MODE="${MODE:-generate}"
