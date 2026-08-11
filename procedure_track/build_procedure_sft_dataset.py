@@ -194,20 +194,33 @@ def main():
 
     if not args.no_verify_fps:
         print("\nVerifying real fps against DATASET_BASE_FPS...")
-        seen, bad = set(), []
+        seen, bad, checked = set(), [], 0
         for r in train_records + test_records:
             if r["videoID"] in seen:
                 continue
             seen.add(r["videoID"])
             dataset, vid = r["videoID"].split("/", 1)
             actual = verify_fps(args.root_dir, dataset, vid)
+            if actual is not None:
+                checked += 1
             if actual is not None and abs(actual - r["base_fps"]) > 1e-6:
                 bad.append((r["videoID"], actual, r["base_fps"]))
         if bad:
             for key, actual, expected in bad:
                 print(f"  MISMATCH {key}: real {actual} vs constant {expected}")
             raise SystemExit("fps mismatch would corrupt every frame lookup; aborting.")
-        print(f"  OK — {len(seen)} videos match their DATASET_BASE_FPS constant.")
+        # `verify_fps` returns None when the video file is absent, which is the normal
+        # case on a cluster that has the extracted frames but not the source videos.
+        # Reporting "OK, 130 videos match" after checking zero of them would be exactly
+        # the silent pass this check exists to prevent -- so say which it was.
+        if checked:
+            print(f"  OK — {checked}/{len(seen)} videos match their DATASET_BASE_FPS "
+                  f"constant{f'; {len(seen) - checked} had no video file to check' if checked < len(seen) else ''}.")
+        else:
+            print(f"  SKIPPED — none of the {len(seen)} videos were readable under "
+                  f"{args.root_dir}/*/videos/. fps is ASSUMED, not verified. That is "
+                  f"fine when the frames were extracted elsewhere with the same "
+                  f"constants; re-run where the videos live if you want it checked.")
 
     eval_videos = make_eval_video_split(train_records, args.eval_frac, args.seed)
     eval_records = [r for r in train_records if r["videoID"] in eval_videos]
