@@ -25,9 +25,10 @@
 # estimate came from. Vision adapters OOM at 32/device, hence 16.
 #
 # NO early stopping and NO eval-loss selection: eval loss picked the WORST of
-# four late checkpoints on lapchole in the earlier vision run. save_total_limit
-# is 20, so with --save-steps 50 the last 20 checkpoints (steps 1550-2500,
-# epochs 2.5-4.0) survive -- exactly the range worth submitting from.
+# four late checkpoints on lapchole in the earlier vision run. With nothing to
+# select on, every checkpoint from epoch 2 on is kept for post-hoc comparison:
+# step 1250 (epoch 2) to 2500 (epoch 4) at --save-steps 50 is 26 checkpoints,
+# so --save-total-limit 30 keeps them all (~6.6 GB) with margin.
 #
 # This checkpoint CANNOT be evaluated locally: every test row is training data.
 # Judge it only on the submission platform.
@@ -77,4 +78,4 @@ echo "=== PREFLIGHT PASSED -- starting training ==="
     --lora-r 8 --lora-alpha 16 \
     --epochs 4 --lr 1e-4 --seed 42 \
     --batch-size 16 --grad-accum 1 \
-    --eval-steps 250 --save-steps 50
+    --eval-steps 250 --save-steps 50 --save-total-limit 30

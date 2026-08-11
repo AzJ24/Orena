@@ -281,6 +281,10 @@ def main():
                           "failures; this is the controlled A/B against the LM-only default.")
     ap.add_argument("--eval-steps", type=int, default=200)
     ap.add_argument("--save-steps", type=int, default=200)
+    ap.add_argument("--save-total-limit", type=int, default=20,
+                     help="how many checkpoints to keep (oldest deleted first). Raise it when the "
+                          "run has no held-out selection signal and late checkpoints must all "
+                          "survive for post-hoc comparison.")
     ap.add_argument("--early-stopping-patience", type=int, default=None,
                      help="stop training if eval_loss doesn't improve for this many consecutive "
                           "evals (each eval happens every --eval-steps); disabled if not set. "
@@ -457,7 +461,7 @@ def main():
         eval_steps=args.eval_steps,
         save_strategy="steps",
         save_steps=args.save_steps,
-        save_total_limit=20,
+        save_total_limit=args.save_total_limit,
         report_to="wandb",
         seed=args.seed,
         remove_unused_columns=False,
