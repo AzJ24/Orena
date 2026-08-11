@@ -80,7 +80,7 @@ def build_question(question: str, procedure_type: str, condition: bool,
 SFT_DIR = Path(__file__).resolve().parent
 
 
-def load_model(checkpoint_dir: str, base_model_id: str, merge_lora: bool):
+def load_model(checkpoint_dir: str, base_model_id: str, merge_lora: bool, fp8: bool = False):
     # Load the processor from base_model_id, not checkpoint_dir: the image
     # processor/chat template never change during LoRA fine-tuning, and
     # intermediate Trainer checkpoints (checkpoint-N/, as opposed to the
@@ -96,21 +96,34 @@ def load_model(checkpoint_dir: str, base_model_id: str, merge_lora: bool):
     processor.tokenizer.padding_side = "left"
     is_lora = (Path(checkpoint_dir) / "adapter_config.json").exists()
 
+    load_kwargs = {"dtype": torch.bfloat16, "device_map": "auto"}
+    if fp8:
+        from transformers import FineGrainedFP8Config
+
+        # Same scheme as Qwen's own *-FP8 releases: e4m3 weights, dynamic
+        # activations, 128x128 blocks. Quantisation happens at load time, so no
+        # separate compression step and no 51 GB merged model on disk.
+        load_kwargs["quantization_config"] = FineGrainedFP8Config(
+            activation_scheme="dynamic", weight_block_size=[128, 128],
+        )
+
     if is_lora:
         from peft import PeftModel
 
-        print(f"Loading base model {base_model_id!r}, then LoRA adapter from {checkpoint_dir!r}...")
-        base_model = Qwen3_5ForConditionalGeneration.from_pretrained(
-            base_model_id, dtype=torch.bfloat16, device_map="auto",
-        )
+        print(f"Loading base model {base_model_id!r}"
+              + (" as FP8" if fp8 else "") + f", then LoRA adapter from {checkpoint_dir!r}...")
+        base_model = Qwen3_5ForConditionalGeneration.from_pretrained(base_model_id, **load_kwargs)
         model = PeftModel.from_pretrained(base_model, checkpoint_dir)
-        if merge_lora:
+        if merge_lora and not fp8:
             model = model.merge_and_unload()
+        elif merge_lora:
+            # merge_and_unload() cannot write bf16 deltas back into FP8 blocks.
+            # Keeping the adapter separate is also the realistic deployment
+            # shape: quantised base + small bf16 adapter.
+            print("fp8: keeping the LoRA adapter unmerged (cannot merge into quantised weights)")
     else:
         print(f"Loading full fine-tuned model from {checkpoint_dir!r}...")
-        model = Qwen3_5ForConditionalGeneration.from_pretrained(
-            checkpoint_dir, dtype=torch.bfloat16, device_map="auto",
-        )
+        model = Qwen3_5ForConditionalGeneration.from_pretrained(checkpoint_dir, **load_kwargs)
 
     model.eval()
     return processor, model
@@ -309,6 +322,11 @@ def main():
                           "auto-failed above 300 characters by OpenEnded.verify.")
     ap.add_argument("--batch-size", type=int, default=32,
                      help="number of (image, question) pairs generated together per forward pass")
+    ap.add_argument("--fp8", action="store_true",
+                     help="load the base model quantised to FP8 (e4m3, dynamic activations, "
+                          "128x128 blocks -- the scheme Qwen's own *-FP8 releases use). Halves "
+                          "weight memory; use to price the quantisation penalty before deploying "
+                          "under a VRAM ceiling.")
     ap.add_argument("--min-pixels", type=int, default=None,
                      help="override the image processor's minimum pixel AREA (size.shortest_edge). "
                           "Frames below this area are upscaled before patching, raising the visual "
@@ -372,7 +390,8 @@ def main():
     cfg = FocusConfig(root_dir=args.root_dir)
     set_config(cfg)
 
-    processor, model = load_model(args.checkpoint_dir, args.base_model_id, not args.no_merge_lora)
+    processor, model = load_model(args.checkpoint_dir, args.base_model_id,
+                                  not args.no_merge_lora, fp8=args.fp8)
 
     if args.min_pixels is not None:
         processor.image_processor.size["shortest_edge"] = args.min_pixels
