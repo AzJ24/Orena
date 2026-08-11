@@ -50,15 +50,22 @@ mkdir -p "$PROC_DIR/logs"
 # fla supplies the fused Gated DeltaNet kernels for the linear-attention layers; without
 # it transformers falls back to a Python loop, measured 4x slower on the segment track.
 # Pick whichever venv actually has it rather than hardcoding one.
+# This cluster ships .venv; the build cluster uses venv3.12. Prefer whichever has fla,
+# fall back to the first that merely exists.
 PY="${PY:-}"
 if [[ -z "$PY" ]]; then
-    for cand in "$REPO_ROOT/venv3.12/bin/python" "$REPO_ROOT/.venv/bin/python"; do
+    for cand in "$REPO_ROOT/.venv/bin/python" "$REPO_ROOT/venv3.12/bin/python"; do
         [[ -x "$cand" ]] || continue
-        if "$cand" -c "import fla" 2>/dev/null; then PY="$cand"; break; fi
-        [[ -z "$PY" ]] && PY="$cand"
+        if "$cand" -c "import fla" 2>/dev/null; then
+            PY="$cand"
+            break
+        fi
+        if [[ -z "$PY" ]]; then
+            PY="$cand"
+        fi
     done
 fi
-[[ -x "$PY" ]] || { echo "no usable python found; set PY=" >&2; exit 1; }
+[[ -x "${PY:-}" ]] || { echo "no usable python found under $REPO_ROOT; set PY=" >&2; exit 1; }
 
 echo "Node: $(hostname)"
 echo "repo=$REPO_ROOT  data=$DATA_ROOT  model=$MODEL_ID"
