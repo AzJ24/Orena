@@ -5,10 +5,10 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=400G
-#SBATCH --time=1-00:00:00
+#SBATCH --time=0-08:00:00
 #SBATCH --job-name=qwen-procedure-8xh100
-#SBATCH --output=/home/ajenane/orena/procedure_track/logs/%x-%j.out
-#SBATCH --error=/home/ajenane/orena/procedure_track/logs/%x-%j.err
+#SBATCH --output=logs/%x-%j.out
+#SBATCH --error=logs/%x-%j.err
 
 # Qwen3.5-9B LoRA SFT on the FOCUS procedure track, 8x H100 DDP.
 # Cluster conventions match orena_sft/train_27b_alldata_8gpu.slurm: partition 'all'
@@ -38,14 +38,16 @@
 
 set -euo pipefail
 
-REPO_ROOT="${REPO_ROOT:-/home/ajenane/orena}"
+# Submit from the repo root. Deriving it from $PWD is what makes one file work on
+# both clusters -- home is /home/ajenane here and /mnt/vast/home/aj45nyja there.
+REPO_ROOT="${REPO_ROOT:-$PWD}"
 PROC_DIR="$REPO_ROOT/procedure_track"
 DATA_ROOT="${DATA_ROOT:-/mnt/vast/workspaces/VL_LeJepa/data/orena}"
 MODEL_ID="${MODEL_ID:-Qwen/Qwen3.5-9B}"
 TRAIN_FILE="${TRAIN_FILE:-$PROC_DIR/sft_export/train.jsonl}"
 EVAL_FILE="${EVAL_FILE:-$PROC_DIR/sft_export/eval.jsonl}"
 EXTRA_ARGS="${EXTRA_ARGS:-}"
-mkdir -p "$PROC_DIR/logs"
+mkdir -p "$REPO_ROOT/logs" "$PROC_DIR/logs"
 
 # fla supplies the fused Gated DeltaNet kernels for the linear-attention layers; without
 # it transformers falls back to a Python loop, measured 4x slower on the segment track.
@@ -85,10 +87,18 @@ done
 export TOKENIZERS_PARALLELISM=false
 export NCCL_IB_DISABLE=1
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+# 8 ranks x dataloader workers on one node oversubscribes the CPUs without this.
+export OMP_NUM_THREADS=4
+# Fail loudly on an NCCL desync instead of hanging until the wall clock expires.
+export TORCH_NCCL_ASYNC_ERROR_HANDLING=1
 
 # wandb.init() raises on an unconfigured cluster and takes the whole run with it. Log
 # offline instead; upload later with `wandb sync wandb/offline-run-*`. Checking
 # credentials rather than calling the API keeps this from hanging on an offline node.
+# The H100 cluster keeps WANDB_API_KEY in a repo-local .env; `set -a` exports it.
+if [[ -f "$REPO_ROOT/.env" ]]; then
+    set -a; source "$REPO_ROOT/.env"; set +a
+fi
 if [[ -z "${WANDB_API_KEY:-}" ]] && ! grep -qs "api.wandb.ai" "$HOME/.netrc"; then
     export WANDB_MODE=offline
     echo "wandb: no credentials found -> WANDB_MODE=offline"
